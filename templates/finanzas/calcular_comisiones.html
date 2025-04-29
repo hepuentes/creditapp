@@ -1,0 +1,49 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Calcular Comisiones - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Calcular Comisiones</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('comisiones') }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-lg-6 mx-auto">
+        <div class="card shadow">
+            <div class="card-header">
+                <h5 class="mb-0">Período de Comisiones</h5>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('calcular_comisiones') }}">
+                    <div class="mb-3">
+                        <label for="periodo" class="form-label required">Período</label>
+                        <input type="text" class="form-control" id="periodo" name="periodo" value="{{ periodo_actual }}" required>
+                        <div class="form-text">Formato: YYYY-MM (ejemplo: 2025-04)</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="fecha_inicio" class="form-label required">Fecha Inicio</label>
+                        <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" value="{{ primer_dia.strftime('%Y-%m-%d') }}" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="fecha_fin" class="form-label required">Fecha Fin</label>
+                        <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" value="{{ ultimo_dia.strftime('%Y-%m-%d') }}" required>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Calcular Comisiones
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -73,7 +73,7 @@
 </div>
 
 <!-- Ejemplo de Gráficos (requiere Chart.js u otra librería) -->
-{# 
+{#
 <div class="row">
     <div class="col-lg-7 col-xl-8">
         <div class="card shadow mb-4">
@@ -99,7 +99,7 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
 #}
 
 <!-- Ejemplo de Tabla de Próximos Vencimientos -->
@@ -158,9 +158,9 @@
     document.addEventListener("DOMContentLoaded", function()  {
         // Aplicar formato a los valores del dashboard
         aplicarFormatoMoneda();
-        
+
         // Inicializar gráficos si existen
-        // initCharts(); 
+        // initCharts();
     });
 
     // Función de ejemplo para inicializar gráficos
@@ -185,7 +185,7 @@
                 }
             });
         }
-        
+
         const ctxFuentes = document.getElementById("fuentesChart");
         if (ctxFuentes) {
             new Chart(ctxFuentes, {

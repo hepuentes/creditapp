@@ -221,7 +221,7 @@ class Comision(db.Model):
 
 # Formularios
 class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
+    username = StringField('Usuario', validators=[DataRequired()])  # Cambiar de email a username
     password = PasswordField('Contraseña', validators=[DataRequired()])
     remember_me = BooleanField('Recordarme')
     submit = SubmitField('Iniciar Sesión')
@@ -230,6 +230,7 @@ class UsuarioForm(FlaskForm):
     nombre = StringField('Nombre', validators=[DataRequired(), Length(min=2, max=100)])
     email = StringField('Email', validators=[DataRequired(), Email(), Length(max=100)])
     password = PasswordField('Contraseña', validators=[Length(min=6, max=100)])
+    confirm_password = PasswordField('Confirmar Contraseña', validators=[Length(min=6, max=100)])  # Agregar esta línea
     rol = SelectField('Rol', choices=[('admin', 'Administrador'), ('usuario', 'Usuario'), ('cobrador', 'Cobrador'), ('vendedor', 'Vendedor')])
     activo = BooleanField('Activo', default=True)
     submit = SubmitField('Guardar')
@@ -300,7 +301,10 @@ class MovimientoCajaForm(FlaskForm):
 
 class CreditoForm(FlaskForm):
     cliente_id = HiddenField('Cliente ID', validators=[DataRequired()])
+    items_json = HiddenField('Items JSON')  # Agregar esta línea
+    monto_total = HiddenField('Monto Total')  # Agregar esta línea
     vendedor_id = SelectField('Vendedor', coerce=int, validators=[DataRequired()])
+    monto_inicial = StringField('Abono Inicial', default='0')  # Agregar si no existe
     tasa_interes = DecimalField('Tasa de Interés (%)', validators=[NumberRange(min=0, max=100)], default=0)
     numero_cuotas = IntegerField('Número de Cuotas', validators=[NumberRange(min=1)], default=1)
     periodo_pago = SelectField('Periodo de Pago', choices=[
@@ -422,12 +426,13 @@ def login():
 
     form = LoginForm()
     if form.validate_on_submit():
-        usuario = Usuario.query.filter_by(email=form.email.data).first()
+        # Cambiar de email a username
+        usuario = Usuario.query.filter_by(username=form.username.data).first()
         if usuario and usuario.check_password(form.password.data) and usuario.activo:
             login_user(usuario, remember=form.remember_me.data)
             next_page = request.args.get('next')
             return redirect(next_page or url_for('dashboard'))
-        flash('Email o contraseña incorrectos', 'danger')
+        flash('Usuario o contraseña incorrectos', 'danger')
 
     return render_template('auth/login.html', form=form)
 
@@ -603,6 +608,13 @@ def clientes():
 def crear_cliente():
     form = ClienteForm()
     if form.validate_on_submit():
+        # Verificar si ya existe un cliente con ese documento
+        cliente_existente = Cliente.query.filter_by(documento=form.documento.data).first()
+        if cliente_existente:
+            flash(f'Ya existe un cliente con el documento {form.documento.data}', 'danger')
+            return render_template('clientes/form_cliente.html', form=form)
+
+        # Si no existe, crear el nuevo cliente
         cliente = Cliente(
             nombre=form.nombre.data,
             documento=form.documento.data,
@@ -958,7 +970,7 @@ def crear_producto():
         flash('Producto creado correctamente', 'success')
         return redirect(url_for('inventario'))
 
-    return render_template('inventario/form_producto.html', form=form)
+    return render_template('inventario/crear.html', form=form)
 
 @app.route('/editar_producto/<int:producto_id>', methods=['GET', 'POST'])
 @login_required
@@ -1213,56 +1225,85 @@ def movimientos_caja_id(caja_id):
     return redirect(url_for('movimientos_caja', caja_id=caja_id))
 
 @app.route('/crear_movimiento_caja', methods=['GET', 'POST'])
-@app.route('/crear_movimiento_caja/<int:caja_id>', methods=['GET', 'POST'])
-@login_required
-def crear_movimiento_caja(caja_id=None):
-    form = MovimientoCajaForm()
-    form.caja_id.choices = [(c.id, c.nombre) for c in Caja.query.filter_by(activa=True).all()]
-    form.metodo_pago_id.choices = [(0, 'Efectivo')] + [(m.id, m.nombre) for m in MetodoPago.query.filter_by(activo=True).all()]
+def crear_movimiento_caja():
+    if request.method == 'POST':
+        try:
+            # Obtener datos del formulario
+            caja_id = request.form.get('caja')
+            tipo = request.form.get('tipo')
+            concepto = request.form.get('concepto')
+            monto = request.form.get('monto', '0').replace('.', '').replace(',', '.')
+            fecha = request.form.get('fecha')
+            notas = request.form.get('notas', '')
 
-    if caja_id:
-        form.caja_id.data = caja_id
+            # Validación básica
+            if not caja_id or not tipo or not concepto or not monto or not fecha:
+                flash('Todos los campos marcados con * son obligatorios', 'danger')
+                return redirect(url_for('crear_movimiento_caja'))
 
-    if form.validate_on_submit():
-        # Convertir monto a Decimal
-        monto = Decimal(desformatear_numero_python(form.monto.data))
+            monto = float(monto)
 
-        # Verificar que la caja exista y esté activa
-        caja = Caja.query.get_or_404(form.caja_id.data)
-        if not caja.activa:
-            flash('La caja seleccionada no está activa', 'danger')
-            return render_template('finanzas/crear_movimiento_caja.html', form=form)
+            cursor = mysql.connection.cursor()
 
-        # Verificar que haya suficiente saldo para egresos
-        if form.tipo.data == 'egreso' and monto > caja.saldo_actual:
-            flash('No hay suficiente saldo en la caja para realizar este egreso', 'danger')
-            return render_template('finanzas/crear_movimiento_caja.html', form=form)
+            # Manejar transferencia entre cajas
+            if tipo == 'transferencia':
+                caja_destino_id = request.form.get('caja_destino')
 
-        # Crear movimiento
-        movimiento = MovimientoCaja(
-            caja_id=caja.id,
-            tipo=form.tipo.data,
-            concepto=form.concepto.data,
-            monto=monto,
-            fecha=form.fecha.data,
-            usuario_id=current_user.id,
-            metodo_pago_id=form.metodo_pago_id.data if form.metodo_pago_id.data != 0 else None,
-            referencia=form.referencia.data,
-            notas=form.notas.data
-        )
-        db.session.add(movimiento)
+                if not caja_destino_id:
+                    flash('Debe seleccionar una caja destino para la transferencia', 'danger')
+                    return redirect(url_for('crear_movimiento_caja'))
 
-        # Actualizar saldo de la caja
-        if form.tipo.data == 'ingreso':
-            caja.saldo_actual += monto
-        else:
-            caja.saldo_actual -= monto
+                if caja_id == caja_destino_id:
+                    flash('No puede transferir a la misma caja', 'danger')
+                    return redirect(url_for('crear_movimiento_caja'))
 
-        db.session.commit()
-        flash('Movimiento registrado correctamente', 'success')
-        return redirect(url_for('movimientos_caja'))
+                # Registrar egreso en caja origen
+                cursor.execute(
+                    '''INSERT INTO movimientos_caja
+                       (caja_id, tipo, concepto, monto, fecha, notas, usuario_id)
+                       VALUES (%s, %s, %s, %s, %s, %s, %s)''',
+                    (caja_id, 'egreso', f"Transferencia a {request.form.get('caja_destino_nombre', 'otra caja')}: {concepto}",
+                     monto, fecha, notas, session['usuario_id'])
+                )
 
-    return render_template('finanzas/crear_movimiento_caja.html', form=form)
+                # Registrar ingreso en caja destino
+                cursor.execute(
+                    '''INSERT INTO movimientos_caja
+                       (caja_id, tipo, concepto, monto, fecha, notas, usuario_id)
+                       VALUES (%s, %s, %s, %s, %s, %s, %s)''',
+                    (caja_destino_id, 'ingreso', f"Transferencia desde {request.form.get('caja_nombre', 'otra caja')}: {concepto}",
+                     monto, fecha, notas, session['usuario_id'])
+                )
+
+                flash('Transferencia registrada exitosamente', 'success')
+            else:
+                # Movimiento normal (ingreso o egreso)
+                cursor.execute(
+                    '''INSERT INTO movimientos_caja
+                       (caja_id, tipo, concepto, monto, fecha, notas, usuario_id)
+                       VALUES (%s, %s, %s, %s, %s, %s, %s)''',
+                    (caja_id, tipo, concepto, monto, fecha, notas, session['usuario_id'])
+                )
+
+                flash('Movimiento registrado exitosamente', 'success')
+
+            mysql.connection.commit()
+            cursor.close()
+
+            return redirect(url_for('movimientos_caja'))
+
+        except Exception as e:
+            print(f"Error al crear movimiento de caja: {str(e)}")
+            flash('Error al crear movimiento de caja', 'danger')
+            return redirect(url_for('crear_movimiento_caja'))
+
+    # Para solicitudes GET
+    cursor = mysql.connection.cursor()
+    cursor.execute('SELECT id, nombre FROM cajas WHERE activa = 1 ORDER BY nombre')
+    cajas = cursor.fetchall()
+    cursor.close()
+
+    return render_template('crear_movimiento_caja.html', cajas=cajas)
 
 @app.route('/anular_movimiento_caja/<int:movimiento_id>')
 @login_required
@@ -1517,10 +1558,12 @@ def calcular_comisiones():
     else:
         ultimo_dia = date(hoy.year, hoy.month + 1, 1) - timedelta(days=1)
 
-    return render_template('finanzas/calcular_comisiones.html',
-                          periodo_actual=periodo_actual,
-                          primer_dia=primer_dia,
-                          ultimo_dia=ultimo_dia)
+    return render_template('finanzas/comisiones.html',
+                           periodos=[], vendedores=[],
+                           periodo_actual=periodo_actual,
+                           primer_dia=primer_dia,
+                           ultimo_dia=ultimo_dia,
+                           show_form=True)
 
 @app.route('/detalle_comision/<int:comision_id>')
 @login_required

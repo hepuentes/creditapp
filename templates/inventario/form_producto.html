@@ -1,0 +1,132 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}{{ 'Editar' if producto else 'Crear' }} Producto - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">{{ 'Editar' if producto else 'Crear Nuevo' }} Producto</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('inventario') }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-lg-6 mx-auto">
+        <div class="card shadow">
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('editar_producto', producto_id=producto.id) if producto else url_for('crear_producto') }}">
+                    {{ form.hidden_tag() }}
+
+                    <div class="mb-3">
+                        {{ form.codigo.label(class="form-label required") }}
+                        {{ form.codigo(class="form-control" + (" is-invalid" if form.codigo.errors else "")) }}
+                        {% if form.codigo.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.codigo.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.nombre.label(class="form-label required") }}
+                        {{ form.nombre(class="form-control" + (" is-invalid" if form.nombre.errors else "")) }}
+                        {% if form.nombre.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.nombre.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="mb-3">
+                        {{ form.descripcion.label(class="form-label") }}
+                        {{ form.descripcion(class="form-control" + (" is-invalid" if form.descripcion.errors else ""), rows="3") }}
+                        {% if form.descripcion.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.descripcion.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            {{ form.precio.label(class="form-label required") }}
+                            {{ form.precio(class="form-control formato-moneda" + (" is-invalid" if form.precio.errors else ""), data_decimales="0") }}
+                            {% if form.precio.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.precio.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.stock.label(class="form-label") }}
+                            {{ form.stock(class="form-control" + (" is-invalid" if form.stock.errors else ""), type="number", min="0") }}
+                            {% if form.stock.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.stock.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            {{ form.stock_minimo.label(class="form-label") }}
+                            {{ form.stock_minimo(class="form-control" + (" is-invalid" if form.stock_minimo.errors else ""), type="number", min="0") }}
+                            {% if form.stock_minimo.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.stock_minimo.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.categoria_id.label(class="form-label") }}
+                            {{ form.categoria_id(class="form-select" + (" is-invalid" if form.categoria_id.errors else "")) }}
+                            {% if form.categoria_id.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {% for error in form.categoria_id.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        {{ form.activo(class="form-check-input") }}
+                        {{ form.activo.label(class="form-check-label") }}
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> {{ 'Guardar Cambios' if producto else 'Crear Producto' }}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Aplicar formato a elementos monetarios
+        aplicarFormatoMoneda();
+    });
+</script>
+{% endblock %}

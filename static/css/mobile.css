@@ -1,0 +1,50 @@
+/* Archivo: static/css/mobile.css */
+
+@media (max-width: 768px) {
+    /* Ocultar inicialmente el sidebar en móvil */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        z-index: 1000;
+        transition: left 0.3s;
+    }
+    
+    /* Mostrar el sidebar cuando tiene la clase 'active' */
+    .sidebar.active {
+        left: 0;
+    }
+    
+    /* Estilo para el botón de menú hamburguesa */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1001;
+    }
+    
+    /* Ajustar el contenido principal para que no quede bajo el menú */
+    .main-content {
+        margin-left: 0;
+        padding-top: 60px;
+    }
+    
+    /* Overlay para cerrar el menú al hacer clic fuera */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    .sidebar-overlay.active {
+        display: block;
+    }
+}

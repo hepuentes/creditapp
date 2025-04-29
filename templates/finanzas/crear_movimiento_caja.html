@@ -18,7 +18,7 @@
             <div class="card-body">
                 <form method="POST" action="{{ url_for('crear_movimiento_caja') }}">
                     {{ form.hidden_tag() }}
-                    
+
                     <div class="mb-3">
                         {{ form.caja_id.label(class="form-label required") }}
                         {{ form.caja_id(class="form-select" + (" is-invalid" if form.caja_id.errors else "")) }}
@@ -30,7 +30,7 @@
                             </div>
                         {% endif %}
                     </div>
-                    
+
                     <div class="mb-3">
                         {{ form.tipo.label(class="form-label required") }}
                         {{ form.tipo(class="form-select" + (" is-invalid" if form.tipo.errors else "")) }}
@@ -42,7 +42,7 @@
                             </div>
                         {% endif %}
                     </div>
-                    
+
                     <div class="mb-3">
                         {{ form.concepto.label(class="form-label required") }}
                         {{ form.concepto(class="form-control" + (" is-invalid" if form.concepto.errors else "")) }}
@@ -54,7 +54,7 @@
                             </div>
                         {% endif %}
                     </div>
-                    
+
                     <div class="mb-3">
                         {{ form.monto.label(class="form-label required") }}
                         {{ form.monto(class="form-control formato-moneda" + (" is-invalid" if form.monto.errors else ""), data_decimales="0") }}
@@ -66,7 +66,7 @@
                             </div>
                         {% endif %}
                     </div>
-                    
+
                     <div class="mb-3">
                         {{ form.fecha.label(class="form-label required") }}
                         {{ form.fecha(class="form-control" + (" is-invalid" if form.fecha.errors else ""), type="date") }}
@@ -78,7 +78,7 @@
                             </div>
                         {% endif %}
                     </div>
-                    
+
                     <div class="mb-3">
                         {{ form.notas.label(class="form-label") }}
                         {{ form.notas(class="form-control" + (" is-invalid" if form.notas.errors else ""), rows="3") }}
@@ -90,7 +90,7 @@
                             </div>
                         {% endif %}
                     </div>
-                    
+
                     <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-save"></i> Crear Movimiento
@@ -101,6 +101,47 @@
         </div>
     </div>
 </div>
+<div class="form-group">
+    <label for="tipo">Tipo de Movimiento</label>
+    <select class="form-control" id="tipo" name="tipo" required>
+        <option value="ingreso">Ingreso</option>
+        <option value="egreso">Egreso</option>
+        <option value="transferencia">Transferencia entre cajas</option>
+    </select>
+</div>
+
+<!-- Sección que se muestra solo si es transferencia -->
+<div id="seccionTransferencia" style="display: none;">
+    <div class="form-group">
+        <label for="caja_destino">Caja Destino</label>
+        <select class="form-control" id="caja_destino" name="caja_destino">
+            <option value="">Seleccione una caja</option>
+            {% for caja in cajas %}
+                {% if caja.id != caja_actual %}
+                <option value="{{ caja.id }}">{{ caja.nombre }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<script>
+    // Mostrar/ocultar sección de transferencia según el tipo seleccionado
+    document.addEventListener('DOMContentLoaded', function() {
+        const tipoSelect = document.getElementById('tipo');
+        const seccionTransferencia = document.getElementById('seccionTransferencia');
+
+        tipoSelect.addEventListener('change', function() {
+            if (this.value === 'transferencia') {
+                seccionTransferencia.style.display = 'block';
+                document.getElementById('caja_destino').setAttribute('required', 'required');
+            } else {
+                seccionTransferencia.style.display = 'none';
+                document.getElementById('caja_destino').removeAttribute('required');
+            }
+        });
+    });
+</script>
 {% endblock %}
 
 {% block extra_js %}
