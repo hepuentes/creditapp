@@ -1,0 +1,3031 @@
+2025-04-26 23:31:11 *** Starting uWSGI 2.0.28 (64bit) on [Sat Apr 26 23:31:10 2025] ***
+2025-04-26 23:31:11 nodename: green-liveweb40
+2025-04-26 23:31:11 machine: x86_64
+2025-04-26 23:31:11 clock source: unix
+2025-04-26 23:31:11 pcre jit disabled
+2025-04-26 23:31:11 detected number of CPU cores: 4
+2025-04-26 23:31:11 current working directory: /home/creditapp
+2025-04-26 23:31:11 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-26 23:31:11 *** end of the internal routing table ***
+2025-04-26 23:31:11 chdir() to /home/creditapp/
+2025-04-26 23:31:11 your processes number limit is 256
+2025-04-26 23:31:11 your memory page size is 4096 bytes
+2025-04-26 23:31:11 detected max file descriptor number: 123456
+2025-04-26 23:31:11 building mime-types dictionary from file /etc/mime.types...
+2025-04-26 23:31:11 1516 entry found
+2025-04-26 23:31:11 lock engine: pthread robust mutexes
+2025-04-26 23:31:11 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-26 23:31:11 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-26 23:31:11 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-26 23:31:11 Python main interpreter initialized at 0x745724985ab0
+2025-04-26 23:31:11 python threads support enabled
+2025-04-26 23:31:11 your server socket listen backlog is limited to 100 connections
+2025-04-26 23:31:11 your mercy for graceful operations on workers is 60 seconds
+2025-04-26 23:31:11 setting request body buffering size to 65536 bytes
+2025-04-26 23:31:11 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-26 23:31:11 *** Operational MODE: single process ***
+2025-04-26 23:31:11 initialized 38 metrics
+2025-04-26 23:31:11 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x745724985ab0 pid: 1 (default app)
+2025-04-26 23:31:11 *** uWSGI is running in multiple interpreter mode ***
+2025-04-26 23:31:11 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-26 23:31:11 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-26 23:31:11 metrics collector thread started
+2025-04-26 23:31:11 spawned 2 offload threads for uWSGI worker 1
+2025-04-26 23:31:12 announcing my loyalty to the Emperor...
+2025-04-26 23:31:56 Sat Apr 26 23:31:56 2025 - *** /var/www/creditapp_pythonanywhere_com_wsgi.py has been touched... grace them all !!! ***
+2025-04-26 23:31:56 ...gracefully killing workers...
+2025-04-26 23:31:56 Gracefully killing worker 1 (pid: 2)...
+2025-04-26 23:33:27 Sat Apr 26 23:33:27 2025 - *** /var/www/creditapp_pythonanywhere_com_wsgi.py has been touched... grace them all !!! ***
+2025-04-26 23:33:27 ...gracefully killing workers...
+2025-04-26 23:33:27 Gracefully killing worker 1 (pid: 7)...
+2025-04-26 23:33:29 *** Starting uWSGI 2.0.28 (64bit) on [Sat Apr 26 23:33:29 2025] ***
+2025-04-26 23:33:29 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-26 23:33:29 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-26 23:33:29 nodename: green-liveweb40
+2025-04-26 23:33:29 machine: x86_64
+2025-04-26 23:33:29 clock source: unix
+2025-04-26 23:33:29 pcre jit disabled
+2025-04-26 23:33:29 detected number of CPU cores: 4
+2025-04-26 23:33:29 current working directory: /home/creditapp
+2025-04-26 23:33:29 detected binary path: /usr/local/bin/uwsgi
+2025-04-26 23:33:29 *** dumping internal routing table ***
+2025-04-26 23:33:29 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-26 23:33:29 *** end of the internal routing table ***
+2025-04-26 23:33:29 chdir() to /home/creditapp/
+2025-04-26 23:33:29 your processes number limit is 256
+2025-04-26 23:33:29 your memory page size is 4096 bytes
+2025-04-26 23:33:29 detected max file descriptor number: 123456
+2025-04-26 23:33:29 building mime-types dictionary from file /etc/mime.types...
+2025-04-26 23:33:29 1516 entry found
+2025-04-26 23:33:29 lock engine: pthread robust mutexes
+2025-04-26 23:33:29 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-26 23:33:29 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 7
+2025-04-26 23:33:29 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-26 23:33:29 Python main interpreter initialized at 0x74bb78861ab0
+2025-04-26 23:33:29 python threads support enabled
+2025-04-26 23:33:29 your server socket listen backlog is limited to 100 connections
+2025-04-26 23:33:29 your mercy for graceful operations on workers is 60 seconds
+2025-04-26 23:33:29 setting request body buffering size to 65536 bytes
+2025-04-26 23:33:29 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-26 23:33:29 *** Operational MODE: single process ***
+2025-04-26 23:33:29 initialized 38 metrics
+2025-04-26 23:33:29 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x74bb78861ab0 pid: 1 (default app)
+2025-04-26 23:33:29 *** uWSGI is running in multiple interpreter mode ***
+2025-04-26 23:33:29 spawned uWSGI master process (pid: 1)
+2025-04-26 23:33:29 spawned uWSGI worker 1 (pid: 12, cores: 1)
+2025-04-26 23:33:29 metrics collector thread started
+2025-04-26 23:33:29 spawned 2 offload threads for uWSGI worker 1
+2025-04-26 23:41:30 Sat Apr 26 23:41:30 2025 - *** /var/www/creditapp_pythonanywhere_com_wsgi.py has been touched... grace them all !!! ***
+2025-04-26 23:41:30 ...gracefully killing workers...
+2025-04-26 23:41:32 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-26 23:41:32 *** Operational MODE: single process ***
+2025-04-26 23:41:32 initialized 38 metrics
+2025-04-26 23:41:32 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x73f9f1718ab0 pid: 1 (default app)
+2025-04-26 23:47:36 announcing my loyalty to the Emperor...
+2025-04-26 23:52:36 Sat Apr 26 23:52:36 2025 - *** /var/www/creditapp_pythonanywhere_com_wsgi.py has been touched... grace them all !!! ***
+2025-04-26 23:52:36 ...gracefully killing workers...
+2025-04-26 23:52:36 Gracefully killing worker 1 (pid: 2)...
+2025-04-26 23:52:38 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-26 23:53:00 *** Starting uWSGI 2.0.28 (64bit) on [Sat Apr 26 23:53:00 2025] ***
+2025-04-26 23:53:00 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-26 23:53:00 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-26 23:53:00 nodename: green-liveweb40
+2025-04-26 23:53:00 machine: x86_64
+2025-04-26 23:53:00 clock source: unix
+2025-04-26 23:53:00 pcre jit disabled
+2025-04-26 23:53:00 detected number of CPU cores: 4
+2025-04-26 23:53:00 current working directory: /home/creditapp
+2025-04-26 23:53:00 detected binary path: /usr/local/bin/uwsgi
+2025-04-26 23:53:00 *** dumping internal routing table ***
+2025-04-26 23:53:00 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-26 23:53:00 *** end of the internal routing table ***
+2025-04-26 23:53:00 chdir() to /home/creditapp/
+2025-04-26 23:53:00 your processes number limit is 256
+2025-04-26 23:53:00 Python main interpreter initialized at 0x7e8c450d6ab0
+2025-04-26 23:53:00 python threads support enabled
+2025-04-26 23:53:00 your server socket listen backlog is limited to 100 connections
+2025-04-26 23:53:00 your mercy for graceful operations on workers is 60 seconds
+2025-04-26 23:53:00 setting request body buffering size to 65536 bytes
+2025-04-26 23:53:00 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-26 23:53:00 *** Operational MODE: single process ***
+2025-04-26 23:53:00 spawned 2 offload threads for uWSGI worker 1
+2025-04-26 23:53:48 your processes number limit is 256
+2025-04-26 23:53:48 your memory page size is 4096 bytes
+2025-04-26 23:53:48 detected max file descriptor number: 123456
+2025-04-26 23:53:48 building mime-types dictionary from file /etc/mime.types...
+2025-04-26 23:53:48 1516 entry found
+2025-04-26 23:53:48 lock engine: pthread robust mutexes
+2025-04-26 23:53:48 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-26 23:53:48 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7774ba70eab0 pid: 1 (default app)
+2025-04-26 23:53:48 *** uWSGI is running in multiple interpreter mode ***
+2025-04-26 23:53:48 spawned uWSGI master process (pid: 1)
+2025-04-26 23:53:48 spawned uWSGI worker 1 (pid: 17, cores: 1)
+2025-04-26 23:53:48 metrics collector thread started
+2025-04-26 23:53:48 spawned 2 offload threads for uWSGI worker 1
+2025-04-26 23:53:49 Sat Apr 26 23:53:49 2025 - *** /etc/uwsgi/creditapp.pythonanywhere.com.ini has been touched... grace them all !!! ***
+2025-04-26 23:53:49 ...gracefully killing workers...
+2025-04-26 23:53:49 Gracefully killing worker 1 (pid: 17)...
+2025-04-26 23:53:54 *** Starting uWSGI 2.0.28 (64bit) on [Sat Apr 26 23:53:53 2025] ***
+2025-04-26 23:53:54 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-26 23:53:54 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-26 23:53:54 nodename: green-liveweb40
+2025-04-26 23:53:54 machine: x86_64
+2025-04-26 23:53:54 clock source: unix
+2025-04-26 23:53:54 pcre jit disabled
+2025-04-26 23:53:54 detected number of CPU cores: 4
+2025-04-26 23:53:54 current working directory: /home/creditapp
+2025-04-26 23:53:54 detected binary path: /usr/local/bin/uwsgi
+2025-04-26 23:53:54 *** dumping internal routing table ***
+2025-04-26 23:53:54 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-26 23:53:54 *** end of the internal routing table ***
+2025-04-26 23:53:54 chdir() to /home/creditapp/
+2025-04-26 23:53:54 your processes number limit is 256
+2025-04-26 23:53:54 your memory page size is 4096 bytes
+2025-04-26 23:53:54 detected max file descriptor number: 123456
+2025-04-26 23:53:54 building mime-types dictionary from file /etc/mime.types...
+2025-04-26 23:53:54 1516 entry found
+2025-04-26 23:53:54 lock engine: pthread robust mutexes
+2025-04-26 23:53:54 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-26 23:53:54 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-26 23:53:54 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-26 23:53:54 Python main interpreter initialized at 0x71d2ab7e6ab0
+2025-04-26 23:53:54 python threads support enabled
+2025-04-26 23:53:54 your server socket listen backlog is limited to 100 connections
+2025-04-26 23:53:54 your mercy for graceful operations on workers is 60 seconds
+2025-04-26 23:53:54 setting request body buffering size to 65536 bytes
+2025-04-26 23:53:54 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-26 23:53:54 *** Operational MODE: single process ***
+2025-04-26 23:53:54 initialized 38 metrics
+2025-04-26 23:53:54 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x71d2ab7e6ab0 pid: 1 (default app)
+2025-04-26 23:53:54 *** uWSGI is running in multiple interpreter mode ***
+2025-04-26 23:53:54 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-26 23:53:54 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-26 23:53:54 metrics collector thread started
+2025-04-26 23:53:54 spawned 2 offload threads for uWSGI worker 1
+2025-04-26 23:53:55 announcing my loyalty to the Emperor...
+2025-04-27 00:24:28 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 00:24:27 2025] ***
+2025-04-27 00:24:28 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 00:24:28 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 00:24:28 nodename: green-liveweb40
+2025-04-27 00:24:28 machine: x86_64
+2025-04-27 00:24:28 clock source: unix
+2025-04-27 00:24:28 pcre jit disabled
+2025-04-27 00:24:28 detected number of CPU cores: 4
+2025-04-27 00:24:28 current working directory: /home/creditapp
+2025-04-27 00:24:28 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 00:24:28 *** dumping internal routing table ***
+2025-04-27 00:24:28 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 00:24:28 *** end of the internal routing table ***
+2025-04-27 00:24:28 chdir() to /home/creditapp/
+2025-04-27 00:24:28 your processes number limit is 256
+2025-04-27 00:24:28 your memory page size is 4096 bytes
+2025-04-27 00:24:28 detected max file descriptor number: 123456
+2025-04-27 00:24:28 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 00:24:28 1516 entry found
+2025-04-27 00:24:28 lock engine: pthread robust mutexes
+2025-04-27 00:24:28 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 00:24:28 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 8
+2025-04-27 00:24:28 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 00:27:57 Sun Apr 27 00:27:57 2025 - *** /var/www/creditapp_pythonanywhere_com_wsgi.py has been touched... grace them all !!! ***
+2025-04-27 00:27:57 ...gracefully killing workers...
+2025-04-27 00:27:57 Gracefully killing worker 1 (pid: 7)...
+2025-04-27 00:27:59 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 00:29:43 Sun Apr 27 00:29:43 2025 - *** /etc/uwsgi/creditapp.pythonanywhere.com.ini has been touched... grace them all !!! ***
+2025-04-27 00:29:43 ...gracefully killing workers...
+2025-04-27 00:29:43 Gracefully killing worker 1 (pid: 12)...
+2025-04-27 00:29:50 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 00:29:48 2025] ***
+2025-04-27 00:29:50 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 00:29:50 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 00:29:50 nodename: green-liveweb40
+2025-04-27 00:29:50 machine: x86_64
+2025-04-27 00:29:50 clock source: unix
+2025-04-27 00:29:50 pcre jit disabled
+2025-04-27 00:29:50 detected number of CPU cores: 4
+2025-04-27 00:29:50 current working directory: /home/creditapp
+2025-04-27 00:29:50 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 00:29:50 *** dumping internal routing table ***
+2025-04-27 00:29:50 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 00:29:50 *** end of the internal routing table ***
+2025-04-27 00:29:50 chdir() to /home/creditapp/
+2025-04-27 00:29:50 your processes number limit is 256
+2025-04-27 00:29:50 your memory page size is 4096 bytes
+2025-04-27 00:29:50 detected max file descriptor number: 123456
+2025-04-27 00:29:50 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 00:29:50 1516 entry found
+2025-04-27 00:29:50 lock engine: pthread robust mutexes
+2025-04-27 00:29:50 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 00:29:50 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 00:29:50 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 00:29:50 Python main interpreter initialized at 0x7dfcd279fab0
+2025-04-27 00:29:50 python threads support enabled
+2025-04-27 00:29:50 your server socket listen backlog is limited to 100 connections
+2025-04-27 00:29:50 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 00:29:50 setting request body buffering size to 65536 bytes
+2025-04-27 00:29:50 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 00:29:50 *** Operational MODE: single process ***
+2025-04-27 00:29:50 initialized 38 metrics
+2025-04-27 00:29:50 WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x7dfcd279fab0 pid: 1 (default app)
+2025-04-27 00:29:50 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 00:29:50 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 00:29:50 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 00:29:50 metrics collector thread started
+2025-04-27 00:29:50 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 00:29:51 announcing my loyalty to the Emperor...
+2025-04-27 00:35:57 Sun Apr 27 00:35:57 2025 - received message 0 from emperor
+2025-04-27 00:35:57 SIGINT/SIGTERM received...killing workers...
+2025-04-27 00:35:58 worker 1 buried after 1 seconds
+2025-04-27 00:36:05 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 00:36:02 2025] ***
+2025-04-27 00:36:05 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 00:36:05 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 00:36:05 nodename: green-liveweb40
+2025-04-27 00:36:05 machine: x86_64
+2025-04-27 00:36:05 clock source: unix
+2025-04-27 00:36:05 pcre jit disabled
+2025-04-27 00:36:05 detected number of CPU cores: 4
+2025-04-27 00:36:05 chdir() to /home/creditapp/
+2025-04-27 00:36:05 your processes number limit is 256
+2025-04-27 00:36:05 your memory page size is 4096 bytes
+2025-04-27 00:36:05 detected max file descriptor number: 123456
+2025-04-27 00:36:05 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 00:36:05 1516 entry found
+2025-04-27 00:36:05 lock engine: pthread robust mutexes
+2025-04-27 00:36:05 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 00:36:05 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 00:36:05 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 00:36:05 Python main interpreter initialized at 0x7efa9af77ab0
+2025-04-27 00:36:05 python threads support enabled
+2025-04-27 00:36:05 your server socket listen backlog is limited to 100 connections
+2025-04-27 00:36:05 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 00:36:05 setting request body buffering size to 65536 bytes
+2025-04-27 00:36:05 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 00:36:05 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 00:36:05 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 00:36:05 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 00:36:05 metrics collector thread started
+2025-04-27 00:36:05 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 00:36:44 Sun Apr 27 00:36:44 2025 - received message 0 from emperor
+2025-04-27 00:36:44 SIGINT/SIGTERM received...killing workers...
+2025-04-27 00:36:50 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 00:36:49 2025] ***
+2025-04-27 00:36:50 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 00:36:50 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 00:36:50 nodename: green-liveweb40
+2025-04-27 00:36:50 machine: x86_64
+2025-04-27 00:36:50 clock source: unix
+2025-04-27 00:36:50 pcre jit disabled
+2025-04-27 00:36:50 detected number of CPU cores: 4
+2025-04-27 00:36:50 current working directory: /home/creditapp
+2025-04-27 00:36:50 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 00:36:50 *** dumping internal routing table ***
+2025-04-27 00:36:50 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 00:36:50 *** end of the internal routing table ***
+2025-04-27 00:36:50 chdir() to /home/creditapp/
+2025-04-27 00:36:50 your processes number limit is 256
+2025-04-27 00:36:50 your memory page size is 4096 bytes
+2025-04-27 00:36:50 detected max file descriptor number: 123456
+2025-04-27 00:36:50 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 00:36:50 1516 entry found
+2025-04-27 00:36:50 lock engine: pthread robust mutexes
+2025-04-27 00:36:50 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 00:36:50 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 00:36:50 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 00:36:50 Python main interpreter initialized at 0x72978b1b6ab0
+2025-04-27 00:36:50 python threads support enabled
+2025-04-27 00:36:50 your server socket listen backlog is limited to 100 connections
+2025-04-27 00:36:50 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 00:36:50 setting request body buffering size to 65536 bytes
+2025-04-27 00:36:50 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 00:36:50 *** Operational MODE: single process ***
+2025-04-27 00:36:50 initialized 38 metrics
+2025-04-27 00:36:50 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x72978b1b6ab0 pid: 1 (default app)
+2025-04-27 00:36:50 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 00:36:50 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 00:36:50 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 00:36:50 metrics collector thread started
+2025-04-27 00:36:50 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 00:36:58 announcing my loyalty to the Emperor...
+2025-04-27 00:37:04 Sun Apr 27 00:37:04 2025 - received message 0 from emperor
+2025-04-27 00:37:04 SIGINT/SIGTERM received...killing workers...
+2025-04-27 00:37:05 worker 1 buried after 1 seconds
+2025-04-27 00:37:05 goodbye to uWSGI.
+2025-04-27 00:37:05 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-27 00:37:11 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 00:37:10 2025] ***
+2025-04-27 00:37:11 detected number of CPU cores: 4
+2025-04-27 00:37:11 current working directory: /home/creditapp
+2025-04-27 00:37:11 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 00:37:11 *** dumping internal routing table ***
+2025-04-27 00:37:11 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 00:37:11 *** end of the internal routing table ***
+2025-04-27 00:37:11 chdir() to /home/creditapp/
+2025-04-27 00:37:11 your processes number limit is 256
+2025-04-27 00:37:11 your memory page size is 4096 bytes
+2025-04-27 00:37:11 detected max file descriptor number: 123456
+2025-04-27 00:37:11 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 00:37:11 1516 entry found
+2025-04-27 00:37:11 lock engine: pthread robust mutexes
+2025-04-27 00:37:11 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 00:37:11 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 00:37:11 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 00:37:11 Python main interpreter initialized at 0x71dcbf14dab0
+2025-04-27 00:37:11 python threads support enabled
+2025-04-27 00:37:11 your server socket listen backlog is limited to 100 connections
+2025-04-27 00:37:11 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 00:37:11 setting request body buffering size to 65536 bytes
+2025-04-27 00:37:11 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 00:37:11 *** Operational MODE: single process ***
+2025-04-27 00:37:11 initialized 38 metrics
+2025-04-27 00:37:11 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x71dcbf14dab0 pid: 1 (default app)
+2025-04-27 00:37:11 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 00:37:11 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 00:37:11 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 00:37:11 metrics collector thread started
+2025-04-27 00:37:11 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 00:37:39 Sun Apr 27 00:37:39 2025 - received message 0 from emperor
+2025-04-27 00:37:39 SIGINT/SIGTERM received...killing workers...
+2025-04-27 00:37:40 goodbye to uWSGI.
+2025-04-27 00:37:40 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-27 00:37:45 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 00:37:44 2025] ***
+2025-04-27 00:37:45 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 00:37:45 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 00:37:45 nodename: green-liveweb40
+2025-04-27 00:37:45 machine: x86_64
+2025-04-27 00:37:45 clock source: unix
+2025-04-27 00:37:45 pcre jit disabled
+2025-04-27 00:37:48 Sun Apr 27 00:37:48 2025 - received message 0 from emperor
+2025-04-27 00:37:48 SIGINT/SIGTERM received...killing workers...
+2025-04-27 00:37:49 worker 1 buried after 1 seconds
+2025-04-27 00:37:49 goodbye to uWSGI.
+2025-04-27 00:37:49 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-27 00:37:56 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 00:37:55 2025] ***
+2025-04-27 00:37:56 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 00:37:56 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 00:37:56 nodename: green-liveweb40
+2025-04-27 00:37:56 machine: x86_64
+2025-04-27 00:37:56 clock source: unix
+2025-04-27 00:37:56 pcre jit disabled
+2025-04-27 00:37:56 detected number of CPU cores: 4
+2025-04-27 00:37:56 current working directory: /home/creditapp
+2025-04-27 00:37:56 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 00:37:56 *** dumping internal routing table ***
+2025-04-27 00:37:56 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 00:37:56 *** end of the internal routing table ***
+2025-04-27 00:37:56 chdir() to /home/creditapp/
+2025-04-27 00:37:56 your processes number limit is 256
+2025-04-27 00:37:56 your memory page size is 4096 bytes
+2025-04-27 00:37:56 detected max file descriptor number: 123456
+2025-04-27 00:37:56 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 00:37:56 1516 entry found
+2025-04-27 00:37:56 lock engine: pthread robust mutexes
+2025-04-27 00:37:56 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 00:37:56 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 00:37:56 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 00:37:56 Python main interpreter initialized at 0x78a93fb3cab0
+2025-04-27 00:37:56 python threads support enabled
+2025-04-27 00:37:56 your server socket listen backlog is limited to 100 connections
+2025-04-27 00:37:56 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 00:37:56 setting request body buffering size to 65536 bytes
+2025-04-27 00:37:56 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 00:37:56 *** Operational MODE: single process ***
+2025-04-27 00:37:56 initialized 38 metrics
+2025-04-27 00:37:56 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x78a93fb3cab0 pid: 1 (default app)
+2025-04-27 00:37:56 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 00:37:56 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 00:37:56 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 00:37:56 metrics collector thread started
+2025-04-27 00:37:56 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 00:38:02 announcing my loyalty to the Emperor...
+2025-04-27 00:52:06 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 00:52:04 2025] ***
+2025-04-27 00:52:06 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 00:52:06 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 00:52:06 nodename: green-liveweb40
+2025-04-27 00:52:06 machine: x86_64
+2025-04-27 00:52:06 clock source: unix
+2025-04-27 00:52:06 pcre jit disabled
+2025-04-27 00:52:06 detected number of CPU cores: 4
+2025-04-27 00:52:06 current working directory: /home/creditapp
+2025-04-27 00:52:06 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 00:52:06 *** dumping internal routing table ***
+2025-04-27 00:52:06 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 00:52:06 *** end of the internal routing table ***
+2025-04-27 00:52:06 chdir() to /home/creditapp/
+2025-04-27 00:52:06 your processes number limit is 256
+2025-04-27 00:52:06 your memory page size is 4096 bytes
+2025-04-27 00:52:06 detected max file descriptor number: 123456
+2025-04-27 00:52:06 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 00:52:06 1516 entry found
+2025-04-27 00:52:06 lock engine: pthread robust mutexes
+2025-04-27 00:52:06 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 00:52:06 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 00:52:06 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 00:52:06 Python main interpreter initialized at 0x7a4793886ab0
+2025-04-27 00:52:06 python threads support enabled
+2025-04-27 00:52:06 your server socket listen backlog is limited to 100 connections
+2025-04-27 00:52:06 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 00:52:06 setting request body buffering size to 65536 bytes
+2025-04-27 00:52:06 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 00:52:06 *** Operational MODE: single process ***
+2025-04-27 00:52:06 initialized 38 metrics
+2025-04-27 00:52:06 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7a4793886ab0 pid: 1 (default app)
+2025-04-27 00:52:06 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 00:52:06 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 00:52:06 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 00:52:06 metrics collector thread started
+2025-04-27 00:52:06 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 00:52:19 announcing my loyalty to the Emperor...
+2025-04-27 12:44:07 Sun Apr 27 12:44:07 2025 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /login (ip 10.0.4.170) !!!
+2025-04-27 12:44:07 Sun Apr 27 12:44:07 2025 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during POST /login (10.0.4.170)
+2025-04-27 13:24:13 Sun Apr 27 13:24:13 2025 - received message 0 from emperor
+2025-04-27 13:24:13 SIGINT/SIGTERM received...killing workers...
+2025-04-27 13:24:14 worker 1 buried after 1 seconds
+2025-04-27 13:24:14 goodbye to uWSGI.
+2025-04-27 13:24:20 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 13:24:19 2025] ***
+2025-04-27 13:24:20 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 13:24:20 nodename: green-liveweb40
+2025-04-27 13:24:20 machine: x86_64
+2025-04-27 13:24:20 clock source: unix
+2025-04-27 13:24:20 pcre jit disabled
+2025-04-27 13:24:20 detected number of CPU cores: 4
+2025-04-27 13:24:20 current working directory: /home/creditapp
+2025-04-27 13:24:20 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 13:24:20 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 13:24:20 *** end of the internal routing table ***
+2025-04-27 13:24:20 chdir() to /home/creditapp/
+2025-04-27 13:24:20 your processes number limit is 256
+2025-04-27 13:24:20 Python main interpreter initialized at 0x7e9b05f66ab0
+2025-04-27 13:24:20 python threads support enabled
+2025-04-27 13:24:20 your server socket listen backlog is limited to 100 connections
+2025-04-27 13:24:20 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 13:24:20 setting request body buffering size to 65536 bytes
+2025-04-27 13:24:20 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 13:24:20 *** Operational MODE: single process ***
+2025-04-27 13:24:20 initialized 38 metrics
+2025-04-27 13:24:20 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7e9b05f66ab0 pid: 1 (default app)
+2025-04-27 13:24:20 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 13:24:20 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 13:24:20 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 13:24:20 metrics collector thread started
+2025-04-27 13:24:20 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 13:24:23 announcing my loyalty to the Emperor...
+2025-04-27 13:49:01 Sun Apr 27 13:49:01 2025 - received message 0 from emperor
+2025-04-27 13:49:01 SIGINT/SIGTERM received...killing workers...
+2025-04-27 13:49:02 worker 1 buried after 1 seconds
+2025-04-27 13:49:02 goodbye to uWSGI.
+2025-04-27 13:49:02 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-27 13:49:13 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 13:49:11 2025] ***
+2025-04-27 13:49:13 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 13:49:13 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 13:49:13 nodename: green-liveweb40
+2025-04-27 13:49:13 machine: x86_64
+2025-04-27 13:49:13 clock source: unix
+2025-04-27 13:49:13 pcre jit disabled
+2025-04-27 13:49:13 detected number of CPU cores: 4
+2025-04-27 13:49:13 current working directory: /home/creditapp
+2025-04-27 13:49:13 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 13:49:13 *** dumping internal routing table ***
+2025-04-27 13:49:13 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 13:49:13 *** end of the internal routing table ***
+2025-04-27 13:49:13 chdir() to /home/creditapp/
+2025-04-27 13:49:13 your processes number limit is 256
+2025-04-27 13:49:13 your memory page size is 4096 bytes
+2025-04-27 13:49:13 detected max file descriptor number: 123456
+2025-04-27 13:49:13 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 13:49:13 1516 entry found
+2025-04-27 13:49:13 lock engine: pthread robust mutexes
+2025-04-27 13:49:13 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 13:49:13 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 13:49:13 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 13:49:13 Python main interpreter initialized at 0x7f1173ed3ab0
+2025-04-27 13:49:13 python threads support enabled
+2025-04-27 13:49:13 your server socket listen backlog is limited to 100 connections
+2025-04-27 13:49:13 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 13:49:13 setting request body buffering size to 65536 bytes
+2025-04-27 13:49:13 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 13:49:13 *** Operational MODE: single process ***
+2025-04-27 13:49:13 initialized 38 metrics
+2025-04-27 13:49:13 WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x7f1173ed3ab0 pid: 1 (default app)
+2025-04-27 13:49:13 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 13:49:13 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 13:49:13 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 13:49:13 metrics collector thread started
+2025-04-27 13:49:13 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 13:49:18 announcing my loyalty to the Emperor...
+2025-04-27 15:02:25 Sun Apr 27 15:02:25 2025 - received message 0 from emperor
+2025-04-27 15:02:25 SIGINT/SIGTERM received...killing workers...
+2025-04-27 15:02:35 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 15:02:31 2025] ***
+2025-04-27 15:02:35 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 15:02:35 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 15:02:35 nodename: green-liveweb40
+2025-04-27 15:02:35 machine: x86_64
+2025-04-27 15:02:35 clock source: unix
+2025-04-27 15:02:35 pcre jit disabled
+2025-04-27 15:02:35 detected number of CPU cores: 4
+2025-04-27 15:02:35 current working directory: /home/creditapp
+2025-04-27 15:02:35 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 15:02:35 *** dumping internal routing table ***
+2025-04-27 15:02:35 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 15:02:35 *** end of the internal routing table ***
+2025-04-27 15:02:35 chdir() to /home/creditapp/
+2025-04-27 15:02:35 your processes number limit is 256
+2025-04-27 15:02:35 your memory page size is 4096 bytes
+2025-04-27 15:02:35 detected max file descriptor number: 123456
+2025-04-27 15:02:35 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 15:02:35 1516 entry found
+2025-04-27 15:02:35 lock engine: pthread robust mutexes
+2025-04-27 15:02:35 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 15:02:35 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 15:02:35 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 15:02:35 Python main interpreter initialized at 0x7c042afffab0
+2025-04-27 15:02:35 python threads support enabled
+2025-04-27 15:02:35 your server socket listen backlog is limited to 100 connections
+2025-04-27 15:02:35 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 15:02:35 setting request body buffering size to 65536 bytes
+2025-04-27 15:02:35 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 15:02:35 *** Operational MODE: single process ***
+2025-04-27 15:02:35 initialized 38 metrics
+2025-04-27 15:02:35 WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x7c042afffab0 pid: 1 (default app)
+2025-04-27 15:02:35 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 15:02:35 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 15:02:35 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 15:02:35 metrics collector thread started
+2025-04-27 15:02:35 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 15:02:37 announcing my loyalty to the Emperor...
+2025-04-27 15:15:40 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 15:15:37 2025] ***
+2025-04-27 15:15:40 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 15:15:40 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 15:15:40 nodename: green-liveweb46
+2025-04-27 15:15:40 machine: x86_64
+2025-04-27 15:15:40 clock source: unix
+2025-04-27 15:15:40 pcre jit disabled
+2025-04-27 15:15:40 detected number of CPU cores: 4
+2025-04-27 15:15:40 current working directory: /home/creditapp
+2025-04-27 15:15:40 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 15:15:40 *** dumping internal routing table ***
+2025-04-27 15:15:40 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 15:15:40 *** end of the internal routing table ***
+2025-04-27 15:15:40 chdir() to /home/creditapp/
+2025-04-27 15:15:40 your processes number limit is 256
+2025-04-27 15:15:40 your memory page size is 4096 bytes
+2025-04-27 15:15:40 detected max file descriptor number: 123456
+2025-04-27 15:15:40 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 15:15:40 1516 entry found
+2025-04-27 15:15:40 lock engine: pthread robust mutexes
+2025-04-27 15:15:40 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 15:15:40 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 15:15:40 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 15:15:40 Python main interpreter initialized at 0x7220eba5cab0
+2025-04-27 15:15:40 python threads support enabled
+2025-04-27 15:15:40 your server socket listen backlog is limited to 100 connections
+2025-04-27 15:15:40 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 15:15:40 setting request body buffering size to 65536 bytes
+2025-04-27 15:15:40 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 15:15:40 *** Operational MODE: single process ***
+2025-04-27 15:15:40 initialized 38 metrics
+2025-04-27 15:15:40 WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x7220eba5cab0 pid: 1 (default app)
+2025-04-27 15:15:40 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 15:15:40 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 15:15:40 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 15:15:40 metrics collector thread started
+2025-04-27 15:15:40 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 15:15:40 announcing my loyalty to the Emperor...
+2025-04-27 15:16:17 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 15:16:15 2025] ***
+2025-04-27 15:16:17 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 15:16:17 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 15:16:17 nodename: green-liveweb40
+2025-04-27 15:16:17 machine: x86_64
+2025-04-27 15:16:17 clock source: unix
+2025-04-27 15:16:17 pcre jit disabled
+2025-04-27 15:16:17 detected number of CPU cores: 4
+2025-04-27 15:16:17 current working directory: /home/creditapp
+2025-04-27 15:16:17 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 15:16:17 *** dumping internal routing table ***
+2025-04-27 15:16:17 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 15:16:17 *** end of the internal routing table ***
+2025-04-27 15:16:17 chdir() to /home/creditapp/
+2025-04-27 15:16:17 your processes number limit is 256
+2025-04-27 15:16:17 your memory page size is 4096 bytes
+2025-04-27 15:16:17 detected max file descriptor number: 123456
+2025-04-27 15:16:17 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 15:16:17 1516 entry found
+2025-04-27 15:16:17 lock engine: pthread robust mutexes
+2025-04-27 15:16:17 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 15:16:17 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 15:16:17 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 15:16:17 Python main interpreter initialized at 0x702bfdd68ab0
+2025-04-27 15:16:17 python threads support enabled
+2025-04-27 15:16:17 your server socket listen backlog is limited to 100 connections
+2025-04-27 15:16:17 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 15:16:17 setting request body buffering size to 65536 bytes
+2025-04-27 15:16:17 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 15:16:17 *** Operational MODE: single process ***
+2025-04-27 15:16:17 initialized 38 metrics
+2025-04-27 15:16:17 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x702bfdd68ab0 pid: 1 (default app)
+2025-04-27 15:16:17 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 15:16:17 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 15:16:17 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 15:16:17 metrics collector thread started
+2025-04-27 15:16:17 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 15:16:17 announcing my loyalty to the Emperor...
+2025-04-27 19:26:39 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-27 19:26:47 detected number of CPU cores: 4
+2025-04-27 19:26:47 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 19:26:52 announcing my loyalty to the Emperor...
+2025-04-27 21:35:47 worker 1 buried after 1 seconds
+2025-04-27 21:35:47 goodbye to uWSGI.
+2025-04-27 21:35:47 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-27 21:35:54 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 21:35:52 2025] ***
+2025-04-27 21:35:54 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 21:35:54 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 21:35:54 nodename: green-liveweb40
+2025-04-27 21:35:54 machine: x86_64
+2025-04-27 21:35:54 clock source: unix
+2025-04-27 21:35:54 pcre jit disabled
+2025-04-27 21:35:54 detected number of CPU cores: 4
+2025-04-27 21:35:54 current working directory: /home/creditapp
+2025-04-27 21:35:54 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 21:35:54 *** dumping internal routing table ***
+2025-04-27 21:35:54 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 21:35:54 *** end of the internal routing table ***
+2025-04-27 21:35:54 chdir() to /home/creditapp/
+2025-04-27 21:35:54 your processes number limit is 256
+2025-04-27 21:35:54 your memory page size is 4096 bytes
+2025-04-27 21:35:54 detected max file descriptor number: 123456
+2025-04-27 21:35:54 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 21:35:54 1516 entry found
+2025-04-27 21:35:54 lock engine: pthread robust mutexes
+2025-04-27 21:35:54 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 21:35:54 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 21:35:54 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 21:35:54 Python main interpreter initialized at 0x7248cc72aab0
+2025-04-27 21:35:54 python threads support enabled
+2025-04-27 21:35:54 your server socket listen backlog is limited to 100 connections
+2025-04-27 21:35:54 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 21:35:54 setting request body buffering size to 65536 bytes
+2025-04-27 21:35:54 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 21:35:54 *** Operational MODE: single process ***
+2025-04-27 21:35:54 initialized 38 metrics
+2025-04-27 21:35:54 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7248cc72aab0 pid: 1 (default app)
+2025-04-27 21:35:54 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 21:35:54 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 21:35:54 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 21:35:54 metrics collector thread started
+2025-04-27 21:35:54 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 21:36:05 announcing my loyalty to the Emperor...
+2025-04-27 22:01:10 Sun Apr 27 22:01:10 2025 - received message 0 from emperor
+2025-04-27 22:01:10 SIGINT/SIGTERM received...killing workers...
+2025-04-27 22:01:11 worker 1 buried after 1 seconds
+2025-04-27 22:01:11 goodbye to uWSGI.
+2025-04-27 22:01:11 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-27 23:20:06 Sun Apr 27 23:20:06 2025 - received message 0 from emperor
+2025-04-27 23:20:06 SIGINT/SIGTERM received...killing workers...
+2025-04-27 23:20:07 worker 1 buried after 1 seconds
+2025-04-27 23:20:07 goodbye to uWSGI.
+2025-04-27 23:20:07 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-27 23:20:16 *** Starting uWSGI 2.0.28 (64bit) on [Sun Apr 27 23:20:15 2025] ***
+2025-04-27 23:20:16 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-27 23:20:16 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-27 23:20:16 nodename: green-liveweb40
+2025-04-27 23:20:16 machine: x86_64
+2025-04-27 23:20:16 clock source: unix
+2025-04-27 23:20:16 pcre jit disabled
+2025-04-27 23:20:16 detected number of CPU cores: 4
+2025-04-27 23:20:16 current working directory: /home/creditapp
+2025-04-27 23:20:16 detected binary path: /usr/local/bin/uwsgi
+2025-04-27 23:20:16 *** dumping internal routing table ***
+2025-04-27 23:20:16 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-27 23:20:16 *** end of the internal routing table ***
+2025-04-27 23:20:16 chdir() to /home/creditapp/
+2025-04-27 23:20:16 your processes number limit is 256
+2025-04-27 23:20:16 your memory page size is 4096 bytes
+2025-04-27 23:20:16 detected max file descriptor number: 123456
+2025-04-27 23:20:16 building mime-types dictionary from file /etc/mime.types...
+2025-04-27 23:20:16 1516 entry found
+2025-04-27 23:20:16 lock engine: pthread robust mutexes
+2025-04-27 23:20:16 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-27 23:20:16 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-27 23:20:16 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-27 23:20:16 Python main interpreter initialized at 0x7938975d5ab0
+2025-04-27 23:20:16 python threads support enabled
+2025-04-27 23:20:16 your server socket listen backlog is limited to 100 connections
+2025-04-27 23:20:16 your mercy for graceful operations on workers is 60 seconds
+2025-04-27 23:20:16 setting request body buffering size to 65536 bytes
+2025-04-27 23:20:16 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-27 23:20:16 *** Operational MODE: single process ***
+2025-04-27 23:20:16 initialized 38 metrics
+2025-04-27 23:20:16 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7938975d5ab0 pid: 1 (default app)
+2025-04-27 23:20:16 *** uWSGI is running in multiple interpreter mode ***
+2025-04-27 23:20:16 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-27 23:20:16 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-27 23:20:16 metrics collector thread started
+2025-04-27 23:20:16 spawned 2 offload threads for uWSGI worker 1
+2025-04-27 23:21:22 announcing my loyalty to the Emperor...
+2025-04-28 00:11:11 Mon Apr 28 00:11:11 2025 - received message 0 from emperor
+2025-04-28 00:11:11 SIGINT/SIGTERM received...killing workers...
+2025-04-28 00:11:12 worker 1 buried after 1 seconds
+2025-04-28 00:11:12 goodbye to uWSGI.
+2025-04-28 00:11:12 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 00:11:19 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 00:11:17 2025] ***
+2025-04-28 00:11:19 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 00:11:19 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 00:11:19 nodename: green-liveweb40
+2025-04-28 00:11:19 machine: x86_64
+2025-04-28 00:11:19 clock source: unix
+2025-04-28 00:11:19 pcre jit disabled
+2025-04-28 00:11:19 detected number of CPU cores: 4
+2025-04-28 00:11:19 current working directory: /home/creditapp
+2025-04-28 00:11:19 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 00:11:19 *** dumping internal routing table ***
+2025-04-28 00:11:19 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 00:11:19 *** end of the internal routing table ***
+2025-04-28 00:11:19 chdir() to /home/creditapp/
+2025-04-28 00:11:19 your processes number limit is 256
+2025-04-28 00:11:19 your memory page size is 4096 bytes
+2025-04-28 00:11:19 detected max file descriptor number: 123456
+2025-04-28 00:11:19 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 00:11:19 1516 entry found
+2025-04-28 00:11:19 lock engine: pthread robust mutexes
+2025-04-28 00:11:19 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 00:11:19 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 00:11:19 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 00:11:19 Python main interpreter initialized at 0x71105fde0ab0
+2025-04-28 00:11:19 python threads support enabled
+2025-04-28 00:11:19 your server socket listen backlog is limited to 100 connections
+2025-04-28 00:11:19 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 00:11:19 setting request body buffering size to 65536 bytes
+2025-04-28 00:11:19 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 00:11:19 *** Operational MODE: single process ***
+2025-04-28 00:11:19 initialized 38 metrics
+2025-04-28 00:11:19 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x71105fde0ab0 pid: 1 (default app)
+2025-04-28 00:11:19 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 00:11:19 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 00:11:19 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 00:11:19 metrics collector thread started
+2025-04-28 00:11:19 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 00:11:40 announcing my loyalty to the Emperor...
+2025-04-28 19:52:24 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 19:52:23 2025] ***
+2025-04-28 19:52:24 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 19:52:24 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 19:52:24 nodename: green-liveweb40
+2025-04-28 19:52:24 machine: x86_64
+2025-04-28 19:52:24 clock source: unix
+2025-04-28 19:52:24 pcre jit disabled
+2025-04-28 19:52:24 detected number of CPU cores: 4
+2025-04-28 19:52:24 current working directory: /home/creditapp
+2025-04-28 19:52:24 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 19:52:24 *** dumping internal routing table ***
+2025-04-28 19:52:24 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 19:52:24 *** end of the internal routing table ***
+2025-04-28 19:52:24 chdir() to /home/creditapp/
+2025-04-28 19:52:24 your processes number limit is 256
+2025-04-28 19:52:24 your memory page size is 4096 bytes
+2025-04-28 19:52:24 detected max file descriptor number: 123456
+2025-04-28 19:52:24 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 19:52:24 1516 entry found
+2025-04-28 19:52:24 lock engine: pthread robust mutexes
+2025-04-28 19:52:24 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 19:52:24 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 19:52:24 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 19:52:24 Python main interpreter initialized at 0x7f42c7a7cab0
+2025-04-28 19:52:24 python threads support enabled
+2025-04-28 19:52:24 your server socket listen backlog is limited to 100 connections
+2025-04-28 19:52:24 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 19:52:24 setting request body buffering size to 65536 bytes
+2025-04-28 19:52:24 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 19:52:24 *** Operational MODE: single process ***
+2025-04-28 19:52:24 initialized 38 metrics
+2025-04-28 19:52:24 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7f42c7a7cab0 pid: 1 (default app)
+2025-04-28 19:52:24 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 19:52:24 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 19:52:24 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 19:52:24 metrics collector thread started
+2025-04-28 19:52:24 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 19:52:41 announcing my loyalty to the Emperor...
+2025-04-28 19:53:17 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 19:53:16 2025] ***
+2025-04-28 19:53:17 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 19:53:17 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 19:53:17 nodename: green-liveweb34
+2025-04-28 19:53:17 machine: x86_64
+2025-04-28 19:53:17 clock source: unix
+2025-04-28 19:53:17 pcre jit disabled
+2025-04-28 19:53:17 detected number of CPU cores: 4
+2025-04-28 19:53:17 current working directory: /home/creditapp
+2025-04-28 19:53:17 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 19:53:17 *** dumping internal routing table ***
+2025-04-28 19:53:17 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 19:53:17 *** end of the internal routing table ***
+2025-04-28 19:53:17 chdir() to /home/creditapp/
+2025-04-28 19:53:17 your processes number limit is 256
+2025-04-28 19:53:17 your memory page size is 4096 bytes
+2025-04-28 19:53:17 detected max file descriptor number: 123456
+2025-04-28 19:53:17 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 19:53:17 1516 entry found
+2025-04-28 19:53:17 lock engine: pthread robust mutexes
+2025-04-28 19:53:17 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 19:53:17 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 19:53:17 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 19:53:17 Python main interpreter initialized at 0x78591678aab0
+2025-04-28 19:53:17 python threads support enabled
+2025-04-28 19:53:17 your server socket listen backlog is limited to 100 connections
+2025-04-28 19:53:17 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 19:53:17 setting request body buffering size to 65536 bytes
+2025-04-28 19:53:17 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 19:53:17 *** Operational MODE: single process ***
+2025-04-28 19:53:17 initialized 38 metrics
+2025-04-28 19:53:17 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x78591678aab0 pid: 1 (default app)
+2025-04-28 19:53:17 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 19:53:17 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 19:53:17 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 19:53:17 metrics collector thread started
+2025-04-28 19:53:17 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 19:53:17 announcing my loyalty to the Emperor...
+2025-04-28 20:19:58 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 20:19:57 2025] ***
+2025-04-28 20:19:58 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 20:19:58 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 20:19:58 nodename: green-liveweb34
+2025-04-28 20:19:58 machine: x86_64
+2025-04-28 20:19:58 clock source: unix
+2025-04-28 20:19:58 pcre jit disabled
+2025-04-28 20:19:58 detected number of CPU cores: 4
+2025-04-28 20:19:58 current working directory: /home/creditapp
+2025-04-28 20:19:58 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 20:19:58 *** dumping internal routing table ***
+2025-04-28 20:19:58 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 20:19:58 *** end of the internal routing table ***
+2025-04-28 20:19:58 chdir() to /home/creditapp/
+2025-04-28 20:19:58 setting request body buffering size to 65536 bytes
+2025-04-28 20:19:58 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 20:19:58 *** Operational MODE: single process ***
+2025-04-28 20:19:58 initialized 38 metrics
+2025-04-28 20:19:58 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7bdbc2e96ab0 pid: 1 (default app)
+2025-04-28 20:19:58 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 20:19:58 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 20:19:58 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 21:02:04 Mon Apr 28 21:02:04 2025 - *** /var/www/creditapp_pythonanywhere_com_wsgi.py has been touched... grace them all !!! ***
+2025-04-28 21:02:04 ...gracefully killing workers...
+2025-04-28 21:02:04 Gracefully killing worker 1 (pid: 2)...
+2025-04-28 21:02:06 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:02:05 2025] ***
+2025-04-28 21:02:06 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:02:06 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:02:06 nodename: green-liveweb34
+2025-04-28 21:02:06 machine: x86_64
+2025-04-28 21:02:06 clock source: unix
+2025-04-28 21:02:06 pcre jit disabled
+2025-04-28 21:02:06 detected number of CPU cores: 4
+2025-04-28 21:02:06 current working directory: /home/creditapp
+2025-04-28 21:02:06 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:02:06 *** dumping internal routing table ***
+2025-04-28 21:02:06 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:02:06 *** end of the internal routing table ***
+2025-04-28 21:02:06 chdir() to /home/creditapp/
+2025-04-28 21:02:06 your processes number limit is 256
+2025-04-28 21:02:06 your memory page size is 4096 bytes
+2025-04-28 21:02:06 detected max file descriptor number: 123456
+2025-04-28 21:02:06 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:02:06 1516 entry found
+2025-04-28 21:02:06 lock engine: pthread robust mutexes
+2025-04-28 21:02:06 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:02:06 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 8
+2025-04-28 21:02:06 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:02:06 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:02:06 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:02:06 Python main interpreter initialized at 0x7eec723c7ab0
+2025-04-28 21:02:06 python threads support enabled
+2025-04-28 21:02:06 your server socket listen backlog is limited to 100 connections
+2025-04-28 21:02:06 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 21:02:06 setting request body buffering size to 65536 bytes
+2025-04-28 21:02:06 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 21:02:06 *** Operational MODE: single process ***
+2025-04-28 21:02:06 initialized 38 metrics
+2025-04-28 21:02:06 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7eec723c7ab0 pid: 1 (default app)
+2025-04-28 21:02:06 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 21:02:06 spawned uWSGI master process (pid: 1)
+2025-04-28 21:02:06 spawned uWSGI worker 1 (pid: 7, cores: 1)
+2025-04-28 21:02:06 metrics collector thread started
+2025-04-28 21:02:06 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 21:03:40 Mon Apr 28 21:03:40 2025 - *** /etc/uwsgi/creditapp.pythonanywhere.com.ini has been touched... grace them all !!! ***
+2025-04-28 21:03:40 ...gracefully killing workers...
+2025-04-28 21:03:40 Gracefully killing worker 1 (pid: 7)...
+2025-04-28 21:03:45 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:03:44 2025] ***
+2025-04-28 21:03:45 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:03:45 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:03:45 nodename: green-liveweb34
+2025-04-28 21:03:45 machine: x86_64
+2025-04-28 21:03:45 clock source: unix
+2025-04-28 21:03:45 pcre jit disabled
+2025-04-28 21:03:45 detected number of CPU cores: 4
+2025-04-28 21:03:45 current working directory: /home/creditapp
+2025-04-28 21:03:45 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:03:45 *** dumping internal routing table ***
+2025-04-28 21:03:45 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:03:45 *** end of the internal routing table ***
+2025-04-28 21:03:45 chdir() to /home/creditapp/
+2025-04-28 21:03:45 your processes number limit is 256
+2025-04-28 21:03:45 your memory page size is 4096 bytes
+2025-04-28 21:03:45 detected max file descriptor number: 123456
+2025-04-28 21:03:45 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:03:45 1516 entry found
+2025-04-28 21:03:45 lock engine: pthread robust mutexes
+2025-04-28 21:03:45 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:03:45 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:03:45 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-28 21:03:45 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:03:45 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:03:45 Python main interpreter initialized at 0x5ab3eed5e6f0
+2025-04-28 21:03:45 python threads support enabled
+2025-04-28 21:03:45 your server socket listen backlog is limited to 100 connections
+2025-04-28 21:03:45 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 21:03:45 setting request body buffering size to 65536 bytes
+2025-04-28 21:03:45 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 21:03:45 *** Operational MODE: single process ***
+2025-04-28 21:03:45 initialized 38 metrics
+2025-04-28 21:03:45 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5ab3eed5e6f0 pid: 1 (default app)
+2025-04-28 21:03:45 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 21:03:45 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 21:03:45 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 21:03:45 metrics collector thread started
+2025-04-28 21:03:45 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 21:08:28 worker 1 buried after 1 seconds
+2025-04-28 21:08:28 goodbye to uWSGI.
+2025-04-28 21:08:28 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:08:39 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:08:32 2025] ***
+2025-04-28 21:08:39 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:08:39 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:08:39 nodename: green-liveweb34
+2025-04-28 21:08:39 machine: x86_64
+2025-04-28 21:08:39 clock source: unix
+2025-04-28 21:08:39 pcre jit disabled
+2025-04-28 21:08:39 detected number of CPU cores: 4
+2025-04-28 21:08:39 current working directory: /home/creditapp
+2025-04-28 21:08:39 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:08:39 *** dumping internal routing table ***
+2025-04-28 21:08:39 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:08:39 *** end of the internal routing table ***
+2025-04-28 21:08:39 chdir() to /home/creditapp/
+2025-04-28 21:08:39 your processes number limit is 256
+2025-04-28 21:08:39 your memory page size is 4096 bytes
+2025-04-28 21:08:39 detected max file descriptor number: 123456
+2025-04-28 21:08:39 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:08:39 1516 entry found
+2025-04-28 21:08:39 lock engine: pthread robust mutexes
+2025-04-28 21:08:39 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:08:39 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:08:39 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-28 21:08:39 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:08:39 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:08:39 Python main interpreter initialized at 0x577cfd4306f0
+2025-04-28 21:08:39 python threads support enabled
+2025-04-28 21:08:39 your server socket listen backlog is limited to 100 connections
+2025-04-28 21:08:39 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 21:08:39 setting request body buffering size to 65536 bytes
+2025-04-28 21:08:39 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 21:08:39 *** Operational MODE: single process ***
+2025-04-28 21:08:39 initialized 38 metrics
+2025-04-28 21:08:39 WSGI app 0 (mountpoint='') ready in 7 seconds on interpreter 0x577cfd4306f0 pid: 1 (default app)
+2025-04-28 21:08:39 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 21:08:39 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 21:08:39 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 21:08:39 metrics collector thread started
+2025-04-28 21:08:39 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 21:08:41 Mon Apr 28 21:08:41 2025 - received message 0 from emperor
+2025-04-28 21:08:41 SIGINT/SIGTERM received...killing workers...
+2025-04-28 21:08:42 worker 1 buried after 1 seconds
+2025-04-28 21:08:42 goodbye to uWSGI.
+2025-04-28 21:08:42 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:08:49 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:08:48 2025] ***
+2025-04-28 21:08:49 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:08:49 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:08:49 nodename: green-liveweb34
+2025-04-28 21:08:49 machine: x86_64
+2025-04-28 21:08:49 clock source: unix
+2025-04-28 21:08:49 pcre jit disabled
+2025-04-28 21:08:49 detected number of CPU cores: 4
+2025-04-28 21:08:49 current working directory: /home/creditapp
+2025-04-28 21:08:49 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:08:49 *** dumping internal routing table ***
+2025-04-28 21:08:49 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:08:49 *** end of the internal routing table ***
+2025-04-28 21:08:49 chdir() to /home/creditapp/
+2025-04-28 21:08:49 your processes number limit is 256
+2025-04-28 21:08:49 your memory page size is 4096 bytes
+2025-04-28 21:08:49 detected max file descriptor number: 123456
+2025-04-28 21:08:49 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:08:49 1516 entry found
+2025-04-28 21:08:49 lock engine: pthread robust mutexes
+2025-04-28 21:08:49 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:08:49 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:08:49 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-28 21:08:49 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:08:49 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:08:49 Python main interpreter initialized at 0x6269338b66f0
+2025-04-28 21:08:49 python threads support enabled
+2025-04-28 21:08:49 your server socket listen backlog is limited to 100 connections
+2025-04-28 21:08:49 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 21:08:49 setting request body buffering size to 65536 bytes
+2025-04-28 21:08:49 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 21:08:49 *** Operational MODE: single process ***
+2025-04-28 21:08:49 initialized 38 metrics
+2025-04-28 21:08:49 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x6269338b66f0 pid: 1 (default app)
+2025-04-28 21:08:49 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 21:08:49 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 21:08:49 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 21:08:49 metrics collector thread started
+2025-04-28 21:09:46 Mon Apr 28 21:09:46 2025 - received message 0 from emperor
+2025-04-28 21:09:46 SIGINT/SIGTERM received...killing workers...
+2025-04-28 21:09:47 worker 1 buried after 1 seconds
+2025-04-28 21:09:47 goodbye to uWSGI.
+2025-04-28 21:09:47 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:10:02 announcing my loyalty to the Emperor...
+2025-04-28 21:10:37 Mon Apr 28 21:10:37 2025 - received message 0 from emperor
+2025-04-28 21:10:37 SIGINT/SIGTERM received...killing workers...
+2025-04-28 21:10:38 worker 1 buried after 1 seconds
+2025-04-28 21:10:38 goodbye to uWSGI.
+2025-04-28 21:10:38 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:10:44 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:10:42 2025] ***
+2025-04-28 21:10:44 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:10:44 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:10:44 nodename: green-liveweb34
+2025-04-28 21:10:44 machine: x86_64
+2025-04-28 21:10:44 clock source: unix
+2025-04-28 21:10:44 pcre jit disabled
+2025-04-28 21:10:44 detected number of CPU cores: 4
+2025-04-28 21:10:44 current working directory: /home/creditapp
+2025-04-28 21:10:44 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:10:44 *** dumping internal routing table ***
+2025-04-28 21:10:44 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:10:44 *** end of the internal routing table ***
+2025-04-28 21:10:44 chdir() to /home/creditapp/app
+2025-04-28 21:10:44 your processes number limit is 256
+2025-04-28 21:10:44 your memory page size is 4096 bytes
+2025-04-28 21:10:44 detected max file descriptor number: 123456
+2025-04-28 21:10:44 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:10:44 1516 entry found
+2025-04-28 21:10:44 lock engine: pthread robust mutexes
+2025-04-28 21:10:44 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:10:44 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:10:44 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:10:44 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:10:44 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:10:44 Python main interpreter initialized at 0x7b080f8f7ab0
+2025-04-28 21:10:44 python threads support enabled
+2025-04-28 21:10:44 your server socket listen backlog is limited to 100 connections
+2025-04-28 21:10:44 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 21:10:44 setting request body buffering size to 65536 bytes
+2025-04-28 21:10:44 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 21:10:44 *** Operational MODE: single process ***
+2025-04-28 21:10:44 initialized 38 metrics
+2025-04-28 21:10:44 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7b080f8f7ab0 pid: 1 (default app)
+2025-04-28 21:10:44 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 21:10:44 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 21:10:44 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 21:10:44 metrics collector thread started
+2025-04-28 21:10:44 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 21:10:51 announcing my loyalty to the Emperor...
+2025-04-28 21:28:45 Mon Apr 28 21:28:45 2025 - *** /var/www/creditapp_pythonanywhere_com_wsgi.py has been touched... grace them all !!! ***
+2025-04-28 21:28:45 ...gracefully killing workers...
+2025-04-28 21:28:45 Gracefully killing worker 1 (pid: 2)...
+2025-04-28 21:28:49 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:28:49 2025] ***
+2025-04-28 21:28:49 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:28:49 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:28:49 nodename: green-liveweb34
+2025-04-28 21:28:49 machine: x86_64
+2025-04-28 21:28:49 clock source: unix
+2025-04-28 21:28:49 pcre jit disabled
+2025-04-28 21:28:49 detected number of CPU cores: 4
+2025-04-28 21:28:49 current working directory: /home/creditapp
+2025-04-28 21:28:49 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:28:49 *** dumping internal routing table ***
+2025-04-28 21:28:49 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:28:49 *** end of the internal routing table ***
+2025-04-28 21:28:49 chdir() to /home/creditapp/app
+2025-04-28 21:28:49 your processes number limit is 256
+2025-04-28 21:28:49 your memory page size is 4096 bytes
+2025-04-28 21:28:49 detected max file descriptor number: 123456
+2025-04-28 21:28:49 
+2025-04-28 21:28:49 Python runtime state: 
+2025-04-28 21:28:49 core initialized
+2025-04-28 21:28:49 
+2025-04-28 21:28:49 ModuleNotFoundError
+2025-04-28 21:28:49 : 
+2025-04-28 21:28:49 No module named 'encodings'
+2025-04-28 21:28:49 
+2025-04-28 21:28:49 
+2025-04-28 21:28:49 Current thread 0x
+2025-04-28 21:28:49 000075b61801d780
+2025-04-28 21:28:49  (most recent call first):
+2025-04-28 21:28:49   <no Python frame>
+2025-04-28 21:28:49 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:28:55 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:28:55 2025] ***
+2025-04-28 21:28:55 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:28:55 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:28:55 nodename: green-liveweb34
+2025-04-28 21:28:55 machine: x86_64
+2025-04-28 21:28:55 clock source: unix
+2025-04-28 21:28:55 pcre jit disabled
+2025-04-28 21:28:55 detected number of CPU cores: 4
+2025-04-28 21:28:55 current working directory: /home/creditapp
+2025-04-28 21:28:55 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:28:55 *** dumping internal routing table ***
+2025-04-28 21:28:55 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:28:55 *** end of the internal routing table ***
+2025-04-28 21:28:55 chdir() to /home/creditapp/app
+2025-04-28 21:28:55 your processes number limit is 256
+2025-04-28 21:28:55 your memory page size is 4096 bytes
+2025-04-28 21:28:55 detected max file descriptor number: 123456
+2025-04-28 21:28:55 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:28:55 1516 entry found
+2025-04-28 21:28:55 lock engine: pthread robust mutexes
+2025-04-28 21:28:55 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:28:55 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:28:55 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:28:55 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:28:55 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:28:55 Fatal Python error: 
+2025-04-28 21:28:55 Failed to import encodings module
+2025-04-28 21:28:55 
+2025-04-28 21:28:55 Python runtime state: 
+2025-04-28 21:28:55 core initialized
+2025-04-28 21:28:55 
+2025-04-28 21:28:55 ModuleNotFoundError
+2025-04-28 21:28:55 : 
+2025-04-28 21:28:55 No module named 'encodings'
+2025-04-28 21:28:55 
+2025-04-28 21:28:55 
+2025-04-28 21:28:55 Current thread 0x
+2025-04-28 21:28:55 0000751fe1f7c780
+2025-04-28 21:28:55  (most recent call first):
+2025-04-28 21:28:55   <no Python frame>
+2025-04-28 21:28:55 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:29:02 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:29:02 2025] ***
+2025-04-28 21:29:02 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:29:02 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:29:02 nodename: green-liveweb34
+2025-04-28 21:29:02 machine: x86_64
+2025-04-28 21:29:02 clock source: unix
+2025-04-28 21:29:02 pcre jit disabled
+2025-04-28 21:29:02 detected number of CPU cores: 4
+2025-04-28 21:29:02 current working directory: /home/creditapp
+2025-04-28 21:29:02 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:29:02 *** dumping internal routing table ***
+2025-04-28 21:29:02 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:29:02 *** end of the internal routing table ***
+2025-04-28 21:29:02 chdir() to /home/creditapp/app
+2025-04-28 21:29:02 your processes number limit is 256
+2025-04-28 21:29:02 your memory page size is 4096 bytes
+2025-04-28 21:29:02 detected max file descriptor number: 123456
+2025-04-28 21:29:02 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:29:02 1516 entry found
+2025-04-28 21:29:02 lock engine: pthread robust mutexes
+2025-04-28 21:29:02 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:29:02 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:29:02 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:29:02 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:29:02 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:29:02 Fatal Python error: 
+2025-04-28 21:29:02 Failed to import encodings module
+2025-04-28 21:29:02 
+2025-04-28 21:29:02 Python runtime state: 
+2025-04-28 21:29:02 core initialized
+2025-04-28 21:29:02 
+2025-04-28 21:29:02 ModuleNotFoundError
+2025-04-28 21:29:02 : 
+2025-04-28 21:29:02 No module named 'encodings'
+2025-04-28 21:29:02 
+2025-04-28 21:29:02 
+2025-04-28 21:29:02 Current thread 0x
+2025-04-28 21:29:02 00007926f86f9780
+2025-04-28 21:29:02  (most recent call first):
+2025-04-28 21:29:02   <no Python frame>
+2025-04-28 21:29:02 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:29:09 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:29:08 2025] ***
+2025-04-28 21:29:09 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:29:09 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:29:09 nodename: green-liveweb34
+2025-04-28 21:29:09 machine: x86_64
+2025-04-28 21:29:09 clock source: unix
+2025-04-28 21:29:09 pcre jit disabled
+2025-04-28 21:29:09 detected number of CPU cores: 4
+2025-04-28 21:29:09 current working directory: /home/creditapp
+2025-04-28 21:29:09 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:29:09 *** dumping internal routing table ***
+2025-04-28 21:29:09 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:29:09 *** end of the internal routing table ***
+2025-04-28 21:29:09 chdir() to /home/creditapp/app
+2025-04-28 21:29:09 your processes number limit is 256
+2025-04-28 21:29:09 your memory page size is 4096 bytes
+2025-04-28 21:29:09 Fatal Python error: 
+2025-04-28 21:29:09 Failed to import encodings module
+2025-04-28 21:29:09 
+2025-04-28 21:29:09 Python runtime state: 
+2025-04-28 21:29:09 core initialized
+2025-04-28 21:29:09 
+2025-04-28 21:29:09 ModuleNotFoundError
+2025-04-28 21:29:09 : 
+2025-04-28 21:29:15 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:29:15 2025] ***
+2025-04-28 21:29:15 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:29:15 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:29:15 nodename: green-liveweb34
+2025-04-28 21:29:15 machine: x86_64
+2025-04-28 21:29:15 clock source: unix
+2025-04-28 21:29:15 pcre jit disabled
+2025-04-28 21:29:15 detected number of CPU cores: 4
+2025-04-28 21:29:15 current working directory: /home/creditapp
+2025-04-28 21:29:15 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:29:15 *** dumping internal routing table ***
+2025-04-28 21:29:15 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:29:15 *** end of the internal routing table ***
+2025-04-28 21:29:15 chdir() to /home/creditapp/app
+2025-04-28 21:29:15 your processes number limit is 256
+2025-04-28 21:29:15 your memory page size is 4096 bytes
+2025-04-28 21:29:15 detected max file descriptor number: 123456
+2025-04-28 21:29:15 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:29:15 1516 entry found
+2025-04-28 21:29:15 lock engine: pthread robust mutexes
+2025-04-28 21:29:15 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:29:15 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:29:15 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:29:15   <no Python frame>
+2025-04-28 21:29:15 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:29:24 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:29:24 2025] ***
+2025-04-28 21:29:24 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:29:24 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:29:24 nodename: green-liveweb34
+2025-04-28 21:29:24 machine: x86_64
+2025-04-28 21:29:24 clock source: unix
+2025-04-28 21:29:24 pcre jit disabled
+2025-04-28 21:29:24 detected number of CPU cores: 4
+2025-04-28 21:29:24 current working directory: /home/creditapp
+2025-04-28 21:29:24 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:29:24 *** dumping internal routing table ***
+2025-04-28 21:29:24 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:29:24 *** end of the internal routing table ***
+2025-04-28 21:29:24 chdir() to /home/creditapp/app
+2025-04-28 21:29:24 your processes number limit is 256
+2025-04-28 21:29:24 your memory page size is 4096 bytes
+2025-04-28 21:29:24 detected max file descriptor number: 123456
+2025-04-28 21:29:24 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:29:24 1516 entry found
+2025-04-28 21:29:24 lock engine: pthread robust mutexes
+2025-04-28 21:29:24 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:29:24 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:29:24 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:29:24 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:29:24 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:29:24 Fatal Python error: 
+2025-04-28 21:29:24 Failed to import encodings module
+2025-04-28 21:29:24 
+2025-04-28 21:29:24 Python runtime state: 
+2025-04-28 21:29:24 core initialized
+2025-04-28 21:29:24 
+2025-04-28 21:29:24 ModuleNotFoundError
+2025-04-28 21:29:24 : 
+2025-04-28 21:29:24 No module named 'encodings'
+2025-04-28 21:29:24 
+2025-04-28 21:29:24 
+2025-04-28 21:29:24 Current thread 0x
+2025-04-28 21:29:24 0000754c9b16e780
+2025-04-28 21:29:24  (most recent call first):
+2025-04-28 21:29:24   <no Python frame>
+2025-04-28 21:29:24 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:29:33 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:29:33 2025] ***
+2025-04-28 21:29:33 *** end of the internal routing table ***
+2025-04-28 21:29:33 chdir() to /home/creditapp/app
+2025-04-28 21:29:33 your processes number limit is 256
+2025-04-28 21:29:33 your memory page size is 4096 bytes
+2025-04-28 21:29:33 detected max file descriptor number: 123456
+2025-04-28 21:29:33 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:29:33 1516 entry found
+2025-04-28 21:29:33 
+2025-04-28 21:29:33 Current thread 0x
+2025-04-28 21:29:33 0000732d22f82780
+2025-04-28 21:29:33  (most recent call first):
+2025-04-28 21:29:33   <no Python frame>
+2025-04-28 21:29:33 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:30:07 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:30:07 2025] ***
+2025-04-28 21:30:07 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:30:07 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:30:07 nodename: green-liveweb34
+2025-04-28 21:30:07 machine: x86_64
+2025-04-28 21:30:07 clock source: unix
+2025-04-28 21:30:07 pcre jit disabled
+2025-04-28 21:30:07 detected number of CPU cores: 4
+2025-04-28 21:30:07 current working directory: /home/creditapp
+2025-04-28 21:30:07 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:30:07 *** dumping internal routing table ***
+2025-04-28 21:30:07 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:30:07 *** end of the internal routing table ***
+2025-04-28 21:30:07 chdir() to /home/creditapp/app
+2025-04-28 21:30:07 your processes number limit is 256
+2025-04-28 21:30:07 your memory page size is 4096 bytes
+2025-04-28 21:30:07 detected max file descriptor number: 123456
+2025-04-28 21:30:07 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:30:07 1516 entry found
+2025-04-28 21:30:07 lock engine: pthread robust mutexes
+2025-04-28 21:30:07 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:30:07 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:30:07 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:30:07 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:30:07 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:30:07 Fatal Python error: 
+2025-04-28 21:30:07 Failed to import encodings module
+2025-04-28 21:30:07 
+2025-04-28 21:30:07 Python runtime state: 
+2025-04-28 21:30:07 core initialized
+2025-04-28 21:30:07 
+2025-04-28 21:30:07 ModuleNotFoundError
+2025-04-28 21:30:07 : 
+2025-04-28 21:30:07 No module named 'encodings'
+2025-04-28 21:30:07 
+2025-04-28 21:30:07 
+2025-04-28 21:30:07 Current thread 0x
+2025-04-28 21:30:07 000077ad380e2780
+2025-04-28 21:30:07  (most recent call first):
+2025-04-28 21:30:07   <no Python frame>
+2025-04-28 21:30:07 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:30:20 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:30:20 2025] ***
+2025-04-28 21:30:20 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:30:20 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:30:20 nodename: green-liveweb34
+2025-04-28 21:30:20 machine: x86_64
+2025-04-28 21:30:20 clock source: unix
+2025-04-28 21:30:20 pcre jit disabled
+2025-04-28 21:30:20 detected number of CPU cores: 4
+2025-04-28 21:30:20 current working directory: /home/creditapp
+2025-04-28 21:30:20 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:30:20 *** dumping internal routing table ***
+2025-04-28 21:30:20 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:30:20 *** end of the internal routing table ***
+2025-04-28 21:30:20 chdir() to /home/creditapp/app
+2025-04-28 21:30:20 your processes number limit is 256
+2025-04-28 21:30:20 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:30:20 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:30:20 Fatal Python error: 
+2025-04-28 21:30:20 Failed to import encodings module
+2025-04-28 21:30:20 
+2025-04-28 21:30:20 Python runtime state: 
+2025-04-28 21:30:20 core initialized
+2025-04-28 21:30:20 
+2025-04-28 21:30:35 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:30:35 2025] ***
+2025-04-28 21:30:35 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:30:35 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:30:35 nodename: green-liveweb34
+2025-04-28 21:30:35 machine: x86_64
+2025-04-28 21:30:35 clock source: unix
+2025-04-28 21:30:35 pcre jit disabled
+2025-04-28 21:30:35 detected number of CPU cores: 4
+2025-04-28 21:30:35 current working directory: /home/creditapp
+2025-04-28 21:30:35 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:30:35 *** dumping internal routing table ***
+2025-04-28 21:30:35 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:30:35 *** end of the internal routing table ***
+2025-04-28 21:30:35 chdir() to /home/creditapp/app
+2025-04-28 21:30:35 your processes number limit is 256
+2025-04-28 21:30:35 your memory page size is 4096 bytes
+2025-04-28 21:30:35 detected max file descriptor number: 123456
+2025-04-28 21:30:35 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:30:35 
+2025-04-28 21:30:35 
+2025-04-28 21:30:35 Current thread 0x
+2025-04-28 21:30:35 00007f33ab1c7780
+2025-04-28 21:30:35  (most recent call first):
+2025-04-28 21:30:35   <no Python frame>
+2025-04-28 21:30:35 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:30:50 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:30:50 2025] ***
+2025-04-28 21:30:50 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:30:50 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:30:50 nodename: green-liveweb34
+2025-04-28 21:30:50 machine: x86_64
+2025-04-28 21:30:50 clock source: unix
+2025-04-28 21:30:50 pcre jit disabled
+2025-04-28 21:30:50 detected number of CPU cores: 4
+2025-04-28 21:30:50 current working directory: /home/creditapp
+2025-04-28 21:30:50 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:31:06 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:31:06 2025] ***
+2025-04-28 21:31:06 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:31:06 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:31:06 nodename: green-liveweb34
+2025-04-28 21:31:06 machine: x86_64
+2025-04-28 21:31:06 clock source: unix
+2025-04-28 21:31:06 pcre jit disabled
+2025-04-28 21:31:06 detected number of CPU cores: 4
+2025-04-28 21:31:06 current working directory: /home/creditapp
+2025-04-28 21:31:06 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:31:06 *** dumping internal routing table ***
+2025-04-28 21:31:06 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:31:06 *** end of the internal routing table ***
+2025-04-28 21:31:06 chdir() to /home/creditapp/app
+2025-04-28 21:31:06 your processes number limit is 256
+2025-04-28 21:31:06 your memory page size is 4096 bytes
+2025-04-28 21:31:06 detected max file descriptor number: 123456
+2025-04-28 21:31:06 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:31:06 1516 entry found
+2025-04-28 21:31:06 lock engine: pthread robust mutexes
+2025-04-28 21:31:06 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:31:06 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:31:06 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:31:06 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:31:06 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:31:06 Fatal Python error: 
+2025-04-28 21:31:06 Failed to import encodings module
+2025-04-28 21:31:06 
+2025-04-28 21:31:06 Python runtime state: 
+2025-04-28 21:31:06 core initialized
+2025-04-28 21:31:06 
+2025-04-28 21:31:06 ModuleNotFoundError
+2025-04-28 21:31:06 : 
+2025-04-28 21:31:06 No module named 'encodings'
+2025-04-28 21:31:06 
+2025-04-28 21:31:06 
+2025-04-28 21:31:06 Current thread 0x
+2025-04-28 21:31:06 0000790eb44d6780
+2025-04-28 21:31:06  (most recent call first):
+2025-04-28 21:31:06   <no Python frame>
+2025-04-28 21:31:06 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:31:42 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:31:42 2025] ***
+2025-04-28 21:31:42 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:31:42 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:31:42 nodename: green-liveweb34
+2025-04-28 21:31:42 machine: x86_64
+2025-04-28 21:31:42 clock source: unix
+2025-04-28 21:31:42 pcre jit disabled
+2025-04-28 21:31:42 detected number of CPU cores: 4
+2025-04-28 21:31:42 current working directory: /home/creditapp
+2025-04-28 21:31:42 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:31:42 *** dumping internal routing table ***
+2025-04-28 21:31:42 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:31:42 *** end of the internal routing table ***
+2025-04-28 21:31:42 chdir() to /home/creditapp/app
+2025-04-28 21:31:42 your processes number limit is 256
+2025-04-28 21:31:42 your memory page size is 4096 bytes
+2025-04-28 21:31:42 detected max file descriptor number: 123456
+2025-04-28 21:31:42 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:31:42 1516 entry found
+2025-04-28 21:31:42 lock engine: pthread robust mutexes
+2025-04-28 21:31:42 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:31:42 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:31:42 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:31:42 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:31:42 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:31:42 Fatal Python error: 
+2025-04-28 21:31:42 Failed to import encodings module
+2025-04-28 21:31:42 
+2025-04-28 21:31:42 Python runtime state: 
+2025-04-28 21:31:42 core initialized
+2025-04-28 21:31:42 
+2025-04-28 21:31:42 ModuleNotFoundError
+2025-04-28 21:31:42 : 
+2025-04-28 21:31:42 No module named 'encodings'
+2025-04-28 21:31:42 
+2025-04-28 21:31:42 
+2025-04-28 21:31:42 Current thread 0x
+2025-04-28 21:31:42 000079b1ac9eb780
+2025-04-28 21:31:42  (most recent call first):
+2025-04-28 21:31:42   <no Python frame>
+2025-04-28 21:31:42 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:32:01 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:32:00 2025] ***
+2025-04-28 21:32:01 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:32:01 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:32:01 nodename: green-liveweb34
+2025-04-28 21:32:01 machine: x86_64
+2025-04-28 21:32:01 clock source: unix
+2025-04-28 21:32:01 pcre jit disabled
+2025-04-28 21:32:01 detected number of CPU cores: 4
+2025-04-28 21:32:01 current working directory: /home/creditapp
+2025-04-28 21:32:01 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:32:01 *** dumping internal routing table ***
+2025-04-28 21:32:01 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:32:01 *** end of the internal routing table ***
+2025-04-28 21:32:01 chdir() to /home/creditapp/app
+2025-04-28 21:32:01 your processes number limit is 256
+2025-04-28 21:32:01 your memory page size is 4096 bytes
+2025-04-28 21:32:01 detected max file descriptor number: 123456
+2025-04-28 21:32:01 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:32:01 1516 entry found
+2025-04-28 21:32:01 lock engine: pthread robust mutexes
+2025-04-28 21:32:01 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:32:01 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:32:01 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:32:01 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:32:21 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:32:21 2025] ***
+2025-04-28 21:32:21 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:32:21 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:32:21 nodename: green-liveweb34
+2025-04-28 21:32:21 machine: x86_64
+2025-04-28 21:32:21 clock source: unix
+2025-04-28 21:32:21 pcre jit disabled
+2025-04-28 21:32:21 detected number of CPU cores: 4
+2025-04-28 21:32:21 current working directory: /home/creditapp
+2025-04-28 21:32:21 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:32:21 *** dumping internal routing table ***
+2025-04-28 21:32:21 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:32:21 *** end of the internal routing table ***
+2025-04-28 21:32:21 chdir() to /home/creditapp/app
+2025-04-28 21:32:21 your processes number limit is 256
+2025-04-28 21:32:21 your memory page size is 4096 bytes
+2025-04-28 21:32:21 detected max file descriptor number: 123456
+2025-04-28 21:32:21 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:32:21 1516 entry found
+2025-04-28 21:32:21 lock engine: pthread robust mutexes
+2025-04-28 21:32:21 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:32:21 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:32:21 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:32:21 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:32:21 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:32:21 Fatal Python error: 
+2025-04-28 21:32:21 Failed to import encodings module
+2025-04-28 21:32:21 
+2025-04-28 21:32:21 Python runtime state: 
+2025-04-28 21:32:21 core initialized
+2025-04-28 21:32:21 
+2025-04-28 21:32:21 ModuleNotFoundError
+2025-04-28 21:32:21 : 
+2025-04-28 21:32:21 No module named 'encodings'
+2025-04-28 21:32:21 
+2025-04-28 21:32:21 
+2025-04-28 21:32:21 Current thread 0x
+2025-04-28 21:32:21 00007fc535e58780
+2025-04-28 21:32:21  (most recent call first):
+2025-04-28 21:32:21   <no Python frame>
+2025-04-28 21:32:21 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:32:43 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:32:43 2025] ***
+2025-04-28 21:32:43 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:32:43 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:32:43 nodename: green-liveweb34
+2025-04-28 21:32:43 machine: x86_64
+2025-04-28 21:32:43 clock source: unix
+2025-04-28 21:32:43 pcre jit disabled
+2025-04-28 21:32:43 detected number of CPU cores: 4
+2025-04-28 21:32:43 current working directory: /home/creditapp
+2025-04-28 21:32:43 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:32:43 *** dumping internal routing table ***
+2025-04-28 21:32:43 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:32:43 *** end of the internal routing table ***
+2025-04-28 21:32:43 chdir() to /home/creditapp/app
+2025-04-28 21:32:43 your processes number limit is 256
+2025-04-28 21:32:43 your memory page size is 4096 bytes
+2025-04-28 21:32:43 detected max file descriptor number: 123456
+2025-04-28 21:32:43 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:33:08 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:33:08 2025] ***
+2025-04-28 21:33:08 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:33:08 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:33:08 nodename: green-liveweb34
+2025-04-28 21:33:08 machine: x86_64
+2025-04-28 21:33:08 clock source: unix
+2025-04-28 21:33:08 pcre jit disabled
+2025-04-28 21:33:08 ModuleNotFoundError
+2025-04-28 21:33:08 : 
+2025-04-28 21:33:08 No module named 'encodings'
+2025-04-28 21:33:08 
+2025-04-28 21:33:08 
+2025-04-28 21:33:08 Current thread 0x
+2025-04-28 21:33:08 0000776373d9c780
+2025-04-28 21:33:08  (most recent call first):
+2025-04-28 21:33:08   <no Python frame>
+2025-04-28 21:33:08 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:33:31 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:33:31 2025] ***
+2025-04-28 21:33:31 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:33:31 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:33:31 nodename: green-liveweb34
+2025-04-28 21:33:31 machine: x86_64
+2025-04-28 21:33:31 clock source: unix
+2025-04-28 21:33:31 pcre jit disabled
+2025-04-28 21:33:31 detected number of CPU cores: 4
+2025-04-28 21:33:31 current working directory: /home/creditapp
+2025-04-28 21:33:31 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:33:31 *** dumping internal routing table ***
+2025-04-28 21:33:31 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:33:31 *** end of the internal routing table ***
+2025-04-28 21:33:31 chdir() to /home/creditapp/app
+2025-04-28 21:33:31 your processes number limit is 256
+2025-04-28 21:33:31 your memory page size is 4096 bytes
+2025-04-28 21:33:31 detected max file descriptor number: 123456
+2025-04-28 21:33:31 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:33:31 1516 entry found
+2025-04-28 21:33:31 lock engine: pthread robust mutexes
+2025-04-28 21:33:31 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:33:31 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:33:31 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:33:31 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:33:31 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:33:31 Fatal Python error: 
+2025-04-28 21:33:31 Failed to import encodings module
+2025-04-28 21:33:31 
+2025-04-28 21:33:31 Python runtime state: 
+2025-04-28 21:33:31 core initialized
+2025-04-28 21:33:31 
+2025-04-28 21:33:31 ModuleNotFoundError
+2025-04-28 21:33:31 : 
+2025-04-28 21:33:31 No module named 'encodings'
+2025-04-28 21:33:31 
+2025-04-28 21:33:31 
+2025-04-28 21:33:31 Current thread 0x
+2025-04-28 21:33:31 00007d4be157b780
+2025-04-28 21:33:31  (most recent call first):
+2025-04-28 21:33:31   <no Python frame>
+2025-04-28 21:33:31 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:33:54 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:33:54 2025] ***
+2025-04-28 21:33:54 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:33:54 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:33:54 nodename: green-liveweb34
+2025-04-28 21:33:54 machine: x86_64
+2025-04-28 21:33:54 clock source: unix
+2025-04-28 21:33:54 pcre jit disabled
+2025-04-28 21:33:54 detected number of CPU cores: 4
+2025-04-28 21:33:54 current working directory: /home/creditapp
+2025-04-28 21:33:54 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:33:54 *** dumping internal routing table ***
+2025-04-28 21:33:54 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:33:54 *** end of the internal routing table ***
+2025-04-28 21:33:54 chdir() to /home/creditapp/app
+2025-04-28 21:33:54 your processes number limit is 256
+2025-04-28 21:33:54 your memory page size is 4096 bytes
+2025-04-28 21:33:54 detected max file descriptor number: 123456
+2025-04-28 21:33:54 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:33:54 1516 entry found
+2025-04-28 21:33:54 lock engine: pthread robust mutexes
+2025-04-28 21:33:54 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:33:54 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:33:54 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:33:54 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:33:54 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:33:54 Fatal Python error: 
+2025-04-28 21:33:54 Failed to import encodings module
+2025-04-28 21:33:54 
+2025-04-28 21:33:54 Python runtime state: 
+2025-04-28 21:33:54 core initialized
+2025-04-28 21:33:54 
+2025-04-28 21:33:54 ModuleNotFoundError
+2025-04-28 21:33:54 : 
+2025-04-28 21:33:54 No module named 'encodings'
+2025-04-28 21:33:54 
+2025-04-28 21:33:54 
+2025-04-28 21:33:54 Current thread 0x
+2025-04-28 21:33:54 00007929484c7780
+2025-04-28 21:33:54  (most recent call first):
+2025-04-28 21:33:54   <no Python frame>
+2025-04-28 21:33:54 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:34:47 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:34:47 2025] ***
+2025-04-28 21:34:47 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:34:47 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:34:47 nodename: green-liveweb34
+2025-04-28 21:34:47 machine: x86_64
+2025-04-28 21:34:47 clock source: unix
+2025-04-28 21:34:47 pcre jit disabled
+2025-04-28 21:34:47 detected number of CPU cores: 4
+2025-04-28 21:34:47 current working directory: /home/creditapp
+2025-04-28 21:34:47 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:34:47 *** dumping internal routing table ***
+2025-04-28 21:34:47 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:34:47 *** end of the internal routing table ***
+2025-04-28 21:34:47 chdir() to /home/creditapp/app
+2025-04-28 21:34:47 your processes number limit is 256
+2025-04-28 21:34:47 your memory page size is 4096 bytes
+2025-04-28 21:34:47 detected max file descriptor number: 123456
+2025-04-28 21:34:47 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:34:47 1516 entry found
+2025-04-28 21:34:47 lock engine: pthread robust mutexes
+2025-04-28 21:34:47 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:34:47 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:34:47 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:34:47 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:34:47 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:34:47 Fatal Python error: 
+2025-04-28 21:34:47 Failed to import encodings module
+2025-04-28 21:34:47 
+2025-04-28 21:34:47 Python runtime state: 
+2025-04-28 21:34:47 core initialized
+2025-04-28 21:35:16 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:35:15 2025] ***
+2025-04-28 21:35:16 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:35:16 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:35:16 nodename: green-liveweb34
+2025-04-28 21:35:16 machine: x86_64
+2025-04-28 21:35:16 clock source: unix
+2025-04-28 21:35:16 pcre jit disabled
+2025-04-28 21:35:16 detected number of CPU cores: 4
+2025-04-28 21:35:16 current working directory: /home/creditapp
+2025-04-28 21:35:16 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:35:16 *** dumping internal routing table ***
+2025-04-28 21:35:16 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:35:16 *** end of the internal routing table ***
+2025-04-28 21:35:16 chdir() to /home/creditapp/app
+2025-04-28 21:35:16 your processes number limit is 256
+2025-04-28 21:35:16 your memory page size is 4096 bytes
+2025-04-28 21:35:16 detected max file descriptor number: 123456
+2025-04-28 21:35:16 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:35:16 1516 entry found
+2025-04-28 21:35:16 lock engine: pthread robust mutexes
+2025-04-28 21:35:16 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:35:16 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:35:16 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:35:16 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:35:16 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:35:16 Fatal Python error: 
+2025-04-28 21:35:16 Failed to import encodings module
+2025-04-28 21:35:16 
+2025-04-28 21:35:16 Python runtime state: 
+2025-04-28 21:35:16 core initialized
+2025-04-28 21:35:16 
+2025-04-28 21:35:16 ModuleNotFoundError
+2025-04-28 21:35:16 : 
+2025-04-28 21:35:16 No module named 'encodings'
+2025-04-28 21:35:16 
+2025-04-28 21:35:16 
+2025-04-28 21:35:16 Current thread 0x
+2025-04-28 21:35:16 00007e1a31e3d780
+2025-04-28 21:35:16  (most recent call first):
+2025-04-28 21:35:16   <no Python frame>
+2025-04-28 21:35:16 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:35:43 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:35:42 2025] ***
+2025-04-28 21:35:43 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:35:43 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:35:43 nodename: green-liveweb34
+2025-04-28 21:35:43 machine: x86_64
+2025-04-28 21:35:43 clock source: unix
+2025-04-28 21:35:43 pcre jit disabled
+2025-04-28 21:35:43 detected number of CPU cores: 4
+2025-04-28 21:35:43 current working directory: /home/creditapp
+2025-04-28 21:35:43 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:35:43 *** dumping internal routing table ***
+2025-04-28 21:35:43 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:35:43 *** end of the internal routing table ***
+2025-04-28 21:35:43 chdir() to /home/creditapp/app
+2025-04-28 21:35:43 your processes number limit is 256
+2025-04-28 21:35:43 your memory page size is 4096 bytes
+2025-04-28 21:35:43 detected max file descriptor number: 123456
+2025-04-28 21:35:43 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:35:43 1516 entry found
+2025-04-28 21:35:43 lock engine: pthread robust mutexes
+2025-04-28 21:35:43 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:35:43 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:35:43 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:35:43 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:35:43 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:35:43 Python runtime state: 
+2025-04-28 21:35:43 core initialized
+2025-04-28 21:35:43 
+2025-04-28 21:35:43 ModuleNotFoundError
+2025-04-28 21:35:43 : 
+2025-04-28 21:35:43 No module named 'encodings'
+2025-04-28 21:35:43 
+2025-04-28 21:35:43 
+2025-04-28 21:35:43 Current thread 0x
+2025-04-28 21:35:43 00007d84788f0780
+2025-04-28 21:35:43  (most recent call first):
+2025-04-28 21:35:43   <no Python frame>
+2025-04-28 21:35:43 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:36:13 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:36:13 2025] ***
+2025-04-28 21:36:13 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:36:13 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:36:13 nodename: green-liveweb34
+2025-04-28 21:36:13 machine: x86_64
+2025-04-28 21:36:13 clock source: unix
+2025-04-28 21:36:13 pcre jit disabled
+2025-04-28 21:36:13 detected number of CPU cores: 4
+2025-04-28 21:36:13 current working directory: /home/creditapp
+2025-04-28 21:36:13 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:36:13 *** dumping internal routing table ***
+2025-04-28 21:36:13 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:36:13 *** end of the internal routing table ***
+2025-04-28 21:36:13 chdir() to /home/creditapp/app
+2025-04-28 21:36:13 your processes number limit is 256
+2025-04-28 21:36:13 your memory page size is 4096 bytes
+2025-04-28 21:36:13 detected max file descriptor number: 123456
+2025-04-28 21:36:13 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:36:13 1516 entry found
+2025-04-28 21:36:13 lock engine: pthread robust mutexes
+2025-04-28 21:36:13 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:36:13 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:36:13 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:36:13 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:36:13 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:36:13 Fatal Python error: 
+2025-04-28 21:36:13 Failed to import encodings module
+2025-04-28 21:36:13 
+2025-04-28 21:36:13 Python runtime state: 
+2025-04-28 21:36:13 core initialized
+2025-04-28 21:36:13 
+2025-04-28 21:36:13 ModuleNotFoundError
+2025-04-28 21:36:13 : 
+2025-04-28 21:36:13 No module named 'encodings'
+2025-04-28 21:36:13 
+2025-04-28 21:36:13 
+2025-04-28 21:36:13 Current thread 0x
+2025-04-28 21:36:13 00007c4dfae29780
+2025-04-28 21:36:13  (most recent call first):
+2025-04-28 21:36:13   <no Python frame>
+2025-04-28 21:36:13 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:36:43 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:36:43 2025] ***
+2025-04-28 21:36:43 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:36:43 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:36:43 nodename: green-liveweb34
+2025-04-28 21:36:43 machine: x86_64
+2025-04-28 21:36:43 clock source: unix
+2025-04-28 21:36:43 pcre jit disabled
+2025-04-28 21:36:43 detected number of CPU cores: 4
+2025-04-28 21:36:43 current working directory: /home/creditapp
+2025-04-28 21:36:43 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:36:43 *** dumping internal routing table ***
+2025-04-28 21:36:43 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:36:43 *** end of the internal routing table ***
+2025-04-28 21:36:43 chdir() to /home/creditapp/app
+2025-04-28 21:36:43 your processes number limit is 256
+2025-04-28 21:36:43 your memory page size is 4096 bytes
+2025-04-28 21:36:43 detected max file descriptor number: 123456
+2025-04-28 21:36:43 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:36:43 1516 entry found
+2025-04-28 21:36:43 lock engine: pthread robust mutexes
+2025-04-28 21:36:43 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:36:43 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:36:43 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:37:14 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:37:14 2025] ***
+2025-04-28 21:37:14 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:37:14 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:37:14 nodename: green-liveweb34
+2025-04-28 21:37:14 machine: x86_64
+2025-04-28 21:37:14 clock source: unix
+2025-04-28 21:37:14 pcre jit disabled
+2025-04-28 21:37:14 detected number of CPU cores: 4
+2025-04-28 21:37:14 current working directory: /home/creditapp
+2025-04-28 21:37:14 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:37:14 *** dumping internal routing table ***
+2025-04-28 21:37:14 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:37:14 *** end of the internal routing table ***
+2025-04-28 21:37:14 chdir() to /home/creditapp/app
+2025-04-28 21:37:14 your processes number limit is 256
+2025-04-28 21:37:14 your memory page size is 4096 bytes
+2025-04-28 21:37:14 detected max file descriptor number: 123456
+2025-04-28 21:37:14 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:37:14 1516 entry found
+2025-04-28 21:37:14 lock engine: pthread robust mutexes
+2025-04-28 21:37:14 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:37:14 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:37:14 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:37:14 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:37:14  (most recent call first):
+2025-04-28 21:37:14   <no Python frame>
+2025-04-28 21:37:14 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:37:48 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:37:48 *** end of the internal routing table ***
+2025-04-28 21:37:48 chdir() to /home/creditapp/app
+2025-04-28 21:37:48 your processes number limit is 256
+2025-04-28 21:37:48 your memory page size is 4096 bytes
+2025-04-28 21:37:48 detected max file descriptor number: 123456
+2025-04-28 21:37:48 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:37:48 1516 entry found
+2025-04-28 21:37:48 lock engine: pthread robust mutexes
+2025-04-28 21:37:48 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:37:48 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:37:48 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:37:48 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:37:48 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:37:48 Fatal Python error: 
+2025-04-28 21:37:48 Failed to import encodings module
+2025-04-28 21:37:48 
+2025-04-28 21:37:48 Python runtime state: 
+2025-04-28 21:37:48 core initialized
+2025-04-28 21:37:48 
+2025-04-28 21:38:20 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:38:20 2025] ***
+2025-04-28 21:38:20 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:38:20 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:38:20 nodename: green-liveweb34
+2025-04-28 21:38:20 machine: x86_64
+2025-04-28 21:38:20 clock source: unix
+2025-04-28 21:38:20 pcre jit disabled
+2025-04-28 21:38:20 detected number of CPU cores: 4
+2025-04-28 21:38:20 current working directory: /home/creditapp
+2025-04-28 21:38:20 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:38:20 *** dumping internal routing table ***
+2025-04-28 21:38:20 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:38:20 *** end of the internal routing table ***
+2025-04-28 21:38:20 chdir() to /home/creditapp/app
+2025-04-28 21:38:20 your processes number limit is 256
+2025-04-28 21:38:20 your memory page size is 4096 bytes
+2025-04-28 21:38:20 detected max file descriptor number: 123456
+2025-04-28 21:38:20 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:38:20 1516 entry found
+2025-04-28 21:38:20 lock engine: pthread robust mutexes
+2025-04-28 21:38:20 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:38:20 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:38:20 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:38:20 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:38:20 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:38:20 Fatal Python error: 
+2025-04-28 21:38:20 Failed to import encodings module
+2025-04-28 21:38:20 
+2025-04-28 21:38:20 Python runtime state: 
+2025-04-28 21:38:20 core initialized
+2025-04-28 21:38:20 
+2025-04-28 21:38:20 ModuleNotFoundError
+2025-04-28 21:38:20 : 
+2025-04-28 21:38:20 No module named 'encodings'
+2025-04-28 21:38:20 
+2025-04-28 21:38:20 
+2025-04-28 21:38:20 Current thread 0x
+2025-04-28 21:38:20 00007131e29b7780
+2025-04-28 21:38:20  (most recent call first):
+2025-04-28 21:38:20   <no Python frame>
+2025-04-28 21:38:20 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:38:55 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:38:55 2025] ***
+2025-04-28 21:38:55 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:38:55 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:38:55 nodename: green-liveweb34
+2025-04-28 21:38:55 machine: x86_64
+2025-04-28 21:38:55 clock source: unix
+2025-04-28 21:38:55 pcre jit disabled
+2025-04-28 21:38:55 detected number of CPU cores: 4
+2025-04-28 21:38:55 current working directory: /home/creditapp
+2025-04-28 21:38:55 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:38:55 *** dumping internal routing table ***
+2025-04-28 21:38:55 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:38:55 *** end of the internal routing table ***
+2025-04-28 21:38:55 chdir() to /home/creditapp/app
+2025-04-28 21:38:55 your processes number limit is 256
+2025-04-28 21:38:55 your memory page size is 4096 bytes
+2025-04-28 21:38:55 detected max file descriptor number: 123456
+2025-04-28 21:38:55 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:38:55 1516 entry found
+2025-04-28 21:38:55 lock engine: pthread robust mutexes
+2025-04-28 21:38:55 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:38:55 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:38:55 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:38:55 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:38:55 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:38:55 Fatal Python error: 
+2025-04-28 21:38:55 Failed to import encodings module
+2025-04-28 21:38:55 
+2025-04-28 21:38:55 Python runtime state: 
+2025-04-28 21:38:55 core initialized
+2025-04-28 21:38:55 
+2025-04-28 21:38:55 ModuleNotFoundError
+2025-04-28 21:38:55 : 
+2025-04-28 21:38:55 No module named 'encodings'
+2025-04-28 21:38:55 
+2025-04-28 21:38:55 
+2025-04-28 21:38:55 Current thread 0x
+2025-04-28 21:38:55 00007ea0fb08a780
+2025-04-28 21:38:55  (most recent call first):
+2025-04-28 21:38:55   <no Python frame>
+2025-04-28 21:38:55 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:39:31 No module named 'encodings'
+2025-04-28 21:39:31 
+2025-04-28 21:39:31 
+2025-04-28 21:39:31 Current thread 0x
+2025-04-28 21:39:31 000075380f9ff780
+2025-04-28 21:39:31  (most recent call first):
+2025-04-28 21:39:31   <no Python frame>
+2025-04-28 21:39:31 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:39:31 *** dumping internal routing table ***
+2025-04-28 21:39:31 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:39:31 *** end of the internal routing table ***
+2025-04-28 21:39:31 chdir() to /home/creditapp/app
+2025-04-28 21:39:31 your processes number limit is 256
+2025-04-28 21:39:31 your memory page size is 4096 bytes
+2025-04-28 21:39:31 detected max file descriptor number: 123456
+2025-04-28 21:39:31 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:39:31 1516 entry found
+2025-04-28 21:39:31 lock engine: pthread robust mutexes
+2025-04-28 21:39:31 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:39:31 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:39:31 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:39:31 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:39:31 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:39:31 Fatal Python error: 
+2025-04-28 21:39:31 Failed to import encodings module
+2025-04-28 21:39:31 
+2025-04-28 21:39:31 Python runtime state: 
+2025-04-28 21:39:31 core initialized
+2025-04-28 21:39:31 
+2025-04-28 21:39:31 ModuleNotFoundError
+2025-04-28 21:39:31 : 
+2025-04-28 21:40:08 *** dumping internal routing table ***
+2025-04-28 21:40:08 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:40:08 *** end of the internal routing table ***
+2025-04-28 21:40:08 chdir() to /home/creditapp/app
+2025-04-28 21:40:08 your processes number limit is 256
+2025-04-28 21:40:08 your memory page size is 4096 bytes
+2025-04-28 21:40:08 detected max file descriptor number: 123456
+2025-04-28 21:40:08 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:40:08 1516 entry found
+2025-04-28 21:40:08 lock engine: pthread robust mutexes
+2025-04-28 21:40:08 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:40:08 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:40:08 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:40:08 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:40:08 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:40:08 Fatal Python error: 
+2025-04-28 21:40:08 Failed to import encodings module
+2025-04-28 21:40:08 
+2025-04-28 21:40:08 Python runtime state: 
+2025-04-28 21:40:08 core initialized
+2025-04-28 21:40:08 
+2025-04-28 21:40:08 ModuleNotFoundError
+2025-04-28 21:40:08 : 
+2025-04-28 21:40:08 No module named 'encodings'
+2025-04-28 21:40:08 
+2025-04-28 21:40:08 
+2025-04-28 21:40:08 Current thread 0x
+2025-04-28 21:40:08 00007233d65a8780
+2025-04-28 21:40:08  (most recent call first):
+2025-04-28 21:40:08   <no Python frame>
+2025-04-28 21:40:08 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:40:46 1516 entry found
+2025-04-28 21:40:46 lock engine: pthread robust mutexes
+2025-04-28 21:40:46 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:40:46 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:40:46 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:40:46 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:40:46 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:40:46 Fatal Python error: 
+2025-04-28 21:40:46 Current thread 0x
+2025-04-28 21:40:46 0000718d39bfe780
+2025-04-28 21:40:46  (most recent call first):
+2025-04-28 21:40:46   <no Python frame>
+2025-04-28 21:40:46 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:41:23 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:41:22 2025] ***
+2025-04-28 21:41:23 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:41:23 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:41:23 nodename: green-liveweb34
+2025-04-28 21:41:23 machine: x86_64
+2025-04-28 21:41:23 clock source: unix
+2025-04-28 21:41:23 pcre jit disabled
+2025-04-28 21:41:23 detected number of CPU cores: 4
+2025-04-28 21:41:23 current working directory: /home/creditapp
+2025-04-28 21:41:23 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:41:23 *** dumping internal routing table ***
+2025-04-28 21:41:23 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:41:23 *** end of the internal routing table ***
+2025-04-28 21:41:23 chdir() to /home/creditapp/app
+2025-04-28 21:41:23 your processes number limit is 256
+2025-04-28 21:41:23 your memory page size is 4096 bytes
+2025-04-28 21:41:23 detected max file descriptor number: 123456
+2025-04-28 21:41:23 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:41:23 1516 entry found
+2025-04-28 21:41:23 lock engine: pthread robust mutexes
+2025-04-28 21:41:23 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:41:23 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:41:23 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:41:23 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:41:23 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:41:23 Fatal Python error: 
+2025-04-28 21:41:23 Failed to import encodings module
+2025-04-28 21:41:23 
+2025-04-28 21:41:23 Python runtime state: 
+2025-04-28 21:41:23 core initialized
+2025-04-28 21:41:23 
+2025-04-28 21:41:23 ModuleNotFoundError
+2025-04-28 21:41:23 : 
+2025-04-28 21:41:23 No module named 'encodings'
+2025-04-28 21:41:23 
+2025-04-28 21:41:23 
+2025-04-28 21:41:23 Current thread 0x
+2025-04-28 21:41:23 000071ffd3b14780
+2025-04-28 21:41:23  (most recent call first):
+2025-04-28 21:41:23   <no Python frame>
+2025-04-28 21:41:23 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:42:02 No module named 'encodings'
+2025-04-28 21:42:02 
+2025-04-28 21:42:02 
+2025-04-28 21:42:02 Current thread 0x
+2025-04-28 21:42:02 00007136c1b43780
+2025-04-28 21:42:02  (most recent call first):
+2025-04-28 21:42:02   <no Python frame>
+2025-04-28 21:42:02 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:42:41 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:42:41 2025] ***
+2025-04-28 21:42:41 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:42:41 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:42:41 nodename: green-liveweb34
+2025-04-28 21:42:41 machine: x86_64
+2025-04-28 21:42:41 clock source: unix
+2025-04-28 21:42:41 pcre jit disabled
+2025-04-28 21:42:41 detected number of CPU cores: 4
+2025-04-28 21:42:41 current working directory: /home/creditapp
+2025-04-28 21:42:41 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:42:41 *** dumping internal routing table ***
+2025-04-28 21:42:41 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:42:41 *** end of the internal routing table ***
+2025-04-28 21:42:41 chdir() to /home/creditapp/app
+2025-04-28 21:42:41 your processes number limit is 256
+2025-04-28 21:42:41 your memory page size is 4096 bytes
+2025-04-28 21:42:41 detected max file descriptor number: 123456
+2025-04-28 21:42:41 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:42:41 1516 entry found
+2025-04-28 21:42:41 lock engine: pthread robust mutexes
+2025-04-28 21:42:41 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:42:41 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:42:41 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:42:41 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:42:41 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:42:41 Fatal Python error: 
+2025-04-28 21:42:41 Failed to import encodings module
+2025-04-28 21:42:41 
+2025-04-28 21:42:41 Python runtime state: 
+2025-04-28 21:42:41 core initialized
+2025-04-28 21:42:41 
+2025-04-28 21:42:41 ModuleNotFoundError
+2025-04-28 21:42:41 : 
+2025-04-28 21:42:41 No module named 'encodings'
+2025-04-28 21:42:41 
+2025-04-28 21:42:41 
+2025-04-28 21:43:24 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:43:24 2025] ***
+2025-04-28 21:43:24 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:43:24 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:43:24 nodename: green-liveweb34
+2025-04-28 21:43:24 machine: x86_64
+2025-04-28 21:43:24 clock source: unix
+2025-04-28 21:43:24 pcre jit disabled
+2025-04-28 21:43:24 detected number of CPU cores: 4
+2025-04-28 21:43:24 current working directory: /home/creditapp
+2025-04-28 21:43:24 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:43:24 *** dumping internal routing table ***
+2025-04-28 21:43:24 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:43:24 *** end of the internal routing table ***
+2025-04-28 21:43:24 chdir() to /home/creditapp/app
+2025-04-28 21:43:24 your processes number limit is 256
+2025-04-28 21:43:24 your memory page size is 4096 bytes
+2025-04-28 21:43:24 detected max file descriptor number: 123456
+2025-04-28 21:43:24 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:43:24 1516 entry found
+2025-04-28 21:43:24 lock engine: pthread robust mutexes
+2025-04-28 21:43:24 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:43:24 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:43:24 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:43:24 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:43:24 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:43:24 Fatal Python error: 
+2025-04-28 21:43:24 Failed to import encodings module
+2025-04-28 21:43:24 
+2025-04-28 21:43:24 Python runtime state: 
+2025-04-28 21:43:24 core initialized
+2025-04-28 21:43:24 
+2025-04-28 21:43:24 ModuleNotFoundError
+2025-04-28 21:43:24 : 
+2025-04-28 21:43:24 No module named 'encodings'
+2025-04-28 21:43:24 
+2025-04-28 21:43:24 
+2025-04-28 21:43:24 Current thread 0x
+2025-04-28 21:43:24 00007aabf13da780
+2025-04-28 21:43:24  (most recent call first):
+2025-04-28 21:43:24   <no Python frame>
+2025-04-28 21:43:24 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:44:09 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:44:09 2025] ***
+2025-04-28 21:44:09 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:44:09 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:44:09 nodename: green-liveweb34
+2025-04-28 21:44:09 machine: x86_64
+2025-04-28 21:44:09 clock source: unix
+2025-04-28 21:44:09 pcre jit disabled
+2025-04-28 21:44:09 detected number of CPU cores: 4
+2025-04-28 21:44:09 current working directory: /home/creditapp
+2025-04-28 21:44:09 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:44:09 *** dumping internal routing table ***
+2025-04-28 21:44:09 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:44:09 *** end of the internal routing table ***
+2025-04-28 21:44:09 chdir() to /home/creditapp/app
+2025-04-28 21:44:09 your processes number limit is 256
+2025-04-28 21:44:09 your memory page size is 4096 bytes
+2025-04-28 21:44:09 detected max file descriptor number: 123456
+2025-04-28 21:44:09 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:44:09 1516 entry found
+2025-04-28 21:44:09 lock engine: pthread robust mutexes
+2025-04-28 21:44:09 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:44:09 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:44:09 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:44:09 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:44:09 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:44:09 Fatal Python error: 
+2025-04-28 21:44:09 Failed to import encodings module
+2025-04-28 21:44:09 
+2025-04-28 21:44:09 Python runtime state: 
+2025-04-28 21:44:09 core initialized
+2025-04-28 21:44:09 
+2025-04-28 21:44:09 ModuleNotFoundError
+2025-04-28 21:44:09 : 
+2025-04-28 21:44:09 No module named 'encodings'
+2025-04-28 21:44:09 
+2025-04-28 21:44:09 
+2025-04-28 21:44:09 Current thread 0x
+2025-04-28 21:44:09 00007a7e4f694780
+2025-04-28 21:44:09  (most recent call first):
+2025-04-28 21:44:09   <no Python frame>
+2025-04-28 21:44:09 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:44:54 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:44:53 2025] ***
+2025-04-28 21:44:54 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:44:54 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:44:54 nodename: green-liveweb34
+2025-04-28 21:44:54 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:44:54 *** dumping internal routing table ***
+2025-04-28 21:44:54 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:44:54 *** end of the internal routing table ***
+2025-04-28 21:44:54 chdir() to /home/creditapp/app
+2025-04-28 21:44:54 your processes number limit is 256
+2025-04-28 21:44:54 your memory page size is 4096 bytes
+2025-04-28 21:44:54 detected max file descriptor number: 123456
+2025-04-28 21:44:54 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:44:54 1516 entry found
+2025-04-28 21:44:54 lock engine: pthread robust mutexes
+2025-04-28 21:44:54 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:44:54 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:44:54 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:44:54 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:44:54 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:44:54 Fatal Python error: 
+2025-04-28 21:44:54 Failed to import encodings module
+2025-04-28 21:44:54 
+2025-04-28 21:44:54 Python runtime state: 
+2025-04-28 21:44:54 core initialized
+2025-04-28 21:44:54 
+2025-04-28 21:44:54 ModuleNotFoundError
+2025-04-28 21:44:54 : 
+2025-04-28 21:44:54 No module named 'encodings'
+2025-04-28 21:44:54 
+2025-04-28 21:44:54 
+2025-04-28 21:44:54 Current thread 0x
+2025-04-28 21:44:54 00007c07b1247780
+2025-04-28 21:44:54  (most recent call first):
+2025-04-28 21:44:54   <no Python frame>
+2025-04-28 21:44:54 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:46:21 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:46:21 2025] ***
+2025-04-28 21:46:21 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:46:21 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:46:21 nodename: green-liveweb34
+2025-04-28 21:46:21 machine: x86_64
+2025-04-28 21:46:21 clock source: unix
+2025-04-28 21:46:21 pcre jit disabled
+2025-04-28 21:46:21 detected number of CPU cores: 4
+2025-04-28 21:46:21 current working directory: /home/creditapp
+2025-04-28 21:46:21 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:46:21 *** dumping internal routing table ***
+2025-04-28 21:46:21 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:46:21 *** end of the internal routing table ***
+2025-04-28 21:46:21 chdir() to /home/creditapp/app
+2025-04-28 21:46:21 your processes number limit is 256
+2025-04-28 21:46:21 your memory page size is 4096 bytes
+2025-04-28 21:46:21 detected max file descriptor number: 123456
+2025-04-28 21:46:21 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:46:21 1516 entry found
+2025-04-28 21:46:21 lock engine: pthread robust mutexes
+2025-04-28 21:46:21 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:46:21 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:46:21 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:46:21 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:46:21 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:46:21 Fatal Python error: 
+2025-04-28 21:46:21 Failed to import encodings module
+2025-04-28 21:46:21 
+2025-04-28 21:46:21 Python runtime state: 
+2025-04-28 21:46:21 core initialized
+2025-04-28 21:46:21 
+2025-04-28 21:46:21 ModuleNotFoundError
+2025-04-28 21:46:21 : 
+2025-04-28 21:46:21 No module named 'encodings'
+2025-04-28 21:46:21 
+2025-04-28 21:46:21 
+2025-04-28 21:46:21 Current thread 0x
+2025-04-28 21:46:21 00007ec085969780
+2025-04-28 21:46:21  (most recent call first):
+2025-04-28 21:46:21   <no Python frame>
+2025-04-28 21:46:21 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:47:08 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:47:08 Fatal Python error: 
+2025-04-28 21:47:08 Failed to import encodings module
+2025-04-28 21:47:08 
+2025-04-28 21:47:08 Python runtime state: 
+2025-04-28 21:47:08 core initialized
+2025-04-28 21:47:08 
+2025-04-28 21:47:08 ModuleNotFoundError
+2025-04-28 21:47:08 : 
+2025-04-28 21:47:08 No module named 'encodings'
+2025-04-28 21:47:08 
+2025-04-28 21:47:08 
+2025-04-28 21:47:08 Current thread 0x
+2025-04-28 21:47:08 000071341e1e9780
+2025-04-28 21:47:08  (most recent call first):
+2025-04-28 21:47:08   <no Python frame>
+2025-04-28 21:47:08 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:47:08 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:47:08 2025] ***
+2025-04-28 21:47:08 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:47:08 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:47:08 nodename: green-liveweb34
+2025-04-28 21:47:08 machine: x86_64
+2025-04-28 21:47:08 clock source: unix
+2025-04-28 21:47:08 pcre jit disabled
+2025-04-28 21:47:08 detected number of CPU cores: 4
+2025-04-28 21:47:08 current working directory: /home/creditapp
+2025-04-28 21:47:08 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:47:08 *** dumping internal routing table ***
+2025-04-28 21:47:08 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:47:08 *** end of the internal routing table ***
+2025-04-28 21:47:08 chdir() to /home/creditapp/app
+2025-04-28 21:47:08 your processes number limit is 256
+2025-04-28 21:47:08 your memory page size is 4096 bytes
+2025-04-28 21:47:08 detected max file descriptor number: 123456
+2025-04-28 21:47:08 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:47:08 1516 entry found
+2025-04-28 21:47:08 lock engine: pthread robust mutexes
+2025-04-28 21:47:08 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:47:08 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:47:08 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:47:08 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:47:55 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:47:55 2025] ***
+2025-04-28 21:47:55 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:47:55 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:47:55 nodename: green-liveweb34
+2025-04-28 21:47:55 machine: x86_64
+2025-04-28 21:47:55 clock source: unix
+2025-04-28 21:47:55 pcre jit disabled
+2025-04-28 21:47:55 detected number of CPU cores: 4
+2025-04-28 21:47:55 current working directory: /home/creditapp
+2025-04-28 21:47:55 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:47:55 *** dumping internal routing table ***
+2025-04-28 21:47:55 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:47:55 *** end of the internal routing table ***
+2025-04-28 21:47:55 chdir() to /home/creditapp/app
+2025-04-28 21:47:55 your processes number limit is 256
+2025-04-28 21:47:55 your memory page size is 4096 bytes
+2025-04-28 21:47:55 detected max file descriptor number: 123456
+2025-04-28 21:47:55 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:47:55 1516 entry found
+2025-04-28 21:47:55 lock engine: pthread robust mutexes
+2025-04-28 21:47:55 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:47:55 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:47:55 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:47:55 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:47:55 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:47:55 Fatal Python error: 
+2025-04-28 21:47:55 Failed to import encodings module
+2025-04-28 21:47:55 
+2025-04-28 21:47:55 Python runtime state: 
+2025-04-28 21:47:55 core initialized
+2025-04-28 21:47:55 
+2025-04-28 21:47:55 Current thread 0x
+2025-04-28 21:47:55 000079f2c5937780
+2025-04-28 21:47:55  (most recent call first):
+2025-04-28 21:47:55   <no Python frame>
+2025-04-28 21:47:55 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:51:15 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:51:15 2025] ***
+2025-04-28 21:51:15 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:51:15 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:51:15 nodename: green-liveweb34
+2025-04-28 21:51:15 machine: x86_64
+2025-04-28 21:51:15 clock source: unix
+2025-04-28 21:51:15 pcre jit disabled
+2025-04-28 21:51:15 detected number of CPU cores: 4
+2025-04-28 21:51:15 current working directory: /home/creditapp
+2025-04-28 21:51:15 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:51:15 *** dumping internal routing table ***
+2025-04-28 21:51:15 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:51:15 *** end of the internal routing table ***
+2025-04-28 21:51:15 chdir() to /home/creditapp/app
+2025-04-28 21:51:15 your processes number limit is 256
+2025-04-28 21:51:15 your memory page size is 4096 bytes
+2025-04-28 21:51:15 detected max file descriptor number: 123456
+2025-04-28 21:51:15 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:51:15 1516 entry found
+2025-04-28 21:51:15 lock engine: pthread robust mutexes
+2025-04-28 21:51:15 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:51:15 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:51:15 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:51:15 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:51:15 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:51:15 Fatal Python error: 
+2025-04-28 21:51:15 Failed to import encodings module
+2025-04-28 21:51:15 
+2025-04-28 21:51:15 Python runtime state: 
+2025-04-28 21:51:15 core initialized
+2025-04-28 21:51:15 
+2025-04-28 21:51:15 ModuleNotFoundError
+2025-04-28 21:51:15 : 
+2025-04-28 21:51:15 No module named 'encodings'
+2025-04-28 21:51:15 
+2025-04-28 21:51:15 
+2025-04-28 21:51:15 Current thread 0x
+2025-04-28 21:51:15 00007291d42a7780
+2025-04-28 21:51:15  (most recent call first):
+2025-04-28 21:51:15   <no Python frame>
+2025-04-28 21:51:15 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:52:10 machine: x86_64
+2025-04-28 21:52:10 clock source: unix
+2025-04-28 21:52:10 pcre jit disabled
+2025-04-28 21:52:10 detected number of CPU cores: 4
+2025-04-28 21:52:10 current working directory: /home/creditapp
+2025-04-28 21:52:10 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:52:10 *** dumping internal routing table ***
+2025-04-28 21:52:10 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:52:10 *** end of the internal routing table ***
+2025-04-28 21:52:10 chdir() to /home/creditapp/app
+2025-04-28 21:52:10 your processes number limit is 256
+2025-04-28 21:52:10 your memory page size is 4096 bytes
+2025-04-28 21:52:10 detected max file descriptor number: 123456
+2025-04-28 21:52:10 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:52:10 1516 entry found
+2025-04-28 21:52:10 lock engine: pthread robust mutexes
+2025-04-28 21:52:10 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:52:10 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:52:09 2025] ***
+2025-04-28 21:52:10 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:52:10 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:52:10 nodename: green-liveweb34
+2025-04-28 21:53:05 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:53:04 2025] ***
+2025-04-28 21:53:05 current working directory: /home/creditapp
+2025-04-28 21:53:05 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:53:05 *** dumping internal routing table ***
+2025-04-28 21:53:05 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:53:05 *** end of the internal routing table ***
+2025-04-28 21:53:05 chdir() to /home/creditapp/app
+2025-04-28 21:53:05 your processes number limit is 256
+2025-04-28 21:53:05 your memory page size is 4096 bytes
+2025-04-28 21:53:05 detected max file descriptor number: 123456
+2025-04-28 21:53:05 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:53:58 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:53:58 2025] ***
+2025-04-28 21:53:58 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:53:58 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:53:58 nodename: green-liveweb34
+2025-04-28 21:53:58 machine: x86_64
+2025-04-28 21:53:58 clock source: unix
+2025-04-28 21:53:58 pcre jit disabled
+2025-04-28 21:53:58 detected number of CPU cores: 4
+2025-04-28 21:53:58 current working directory: /home/creditapp
+2025-04-28 21:53:58 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:53:58 *** dumping internal routing table ***
+2025-04-28 21:53:58 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:53:58 *** end of the internal routing table ***
+2025-04-28 21:53:58 chdir() to /home/creditapp/app
+2025-04-28 21:53:58 your processes number limit is 256
+2025-04-28 21:53:58 your memory page size is 4096 bytes
+2025-04-28 21:53:58 detected max file descriptor number: 123456
+2025-04-28 21:53:58 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:53:58 1516 entry found
+2025-04-28 21:53:58 lock engine: pthread robust mutexes
+2025-04-28 21:53:58 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:53:58 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:53:58 Python version: 3.13.1 (main, Jan 16 2025, 13:50:41) [GCC 11.4.0]
+2025-04-28 21:53:58 !!! Python Home is not a directory: /home/creditapp/.virtualenvs/creditapp-venv !!!
+2025-04-28 21:53:58 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 21:53:58 Fatal Python error: 
+2025-04-28 21:53:58 Failed to import encodings module
+2025-04-28 21:53:58 
+2025-04-28 21:53:58 Python runtime state: 
+2025-04-28 21:53:58 core initialized
+2025-04-28 21:53:58 
+2025-04-28 21:53:58 ModuleNotFoundError
+2025-04-28 21:53:58 : 
+2025-04-28 21:53:58 No module named 'encodings'
+2025-04-28 21:53:58 
+2025-04-28 21:53:58 
+2025-04-28 21:53:58 Current thread 0x
+2025-04-28 21:53:58 000070b504def780
+2025-04-28 21:53:58  (most recent call first):
+2025-04-28 21:53:58   <no Python frame>
+2025-04-28 21:53:58 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 21:54:53 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:54:52 2025] ***
+2025-04-28 21:54:53 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:54:53 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:54:53 nodename: green-liveweb34
+2025-04-28 21:54:53 machine: x86_64
+2025-04-28 21:54:53 clock source: unix
+2025-04-28 21:54:53 pcre jit disabled
+2025-04-28 21:54:53 detected number of CPU cores: 4
+2025-04-28 21:54:53 current working directory: /home/creditapp
+2025-04-28 21:54:53 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:54:53 *** dumping internal routing table ***
+2025-04-28 21:54:53 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:54:53 *** end of the internal routing table ***
+2025-04-28 21:54:53 chdir() to /home/creditapp/app
+2025-04-28 21:54:53 your processes number limit is 256
+2025-04-28 21:54:53 your memory page size is 4096 bytes
+2025-04-28 21:54:53 detected max file descriptor number: 123456
+2025-04-28 21:54:53 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:54:53 1516 entry found
+2025-04-28 21:54:53 lock engine: pthread robust mutexes
+2025-04-28 21:54:53 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:54:53 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:54:53 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-28 21:54:53 Python main interpreter initialized at 0x559d016536f0
+2025-04-28 21:54:53 python threads support enabled
+2025-04-28 21:54:53 your server socket listen backlog is limited to 100 connections
+2025-04-28 21:54:53 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 21:54:53 setting request body buffering size to 65536 bytes
+2025-04-28 21:54:53 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 21:54:53 *** Operational MODE: single process ***
+2025-04-28 21:54:53 initialized 38 metrics
+2025-04-28 21:54:53 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x559d016536f0 pid: 1 (default app)
+2025-04-28 21:54:53 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 21:54:53 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 21:54:53 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 21:54:53 metrics collector thread started
+2025-04-28 21:54:53 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 21:55:59 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 21:55:58 2025] ***
+2025-04-28 21:55:59 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 21:55:59 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 21:55:59 nodename: green-liveweb34
+2025-04-28 21:55:59 machine: x86_64
+2025-04-28 21:55:59 clock source: unix
+2025-04-28 21:55:59 pcre jit disabled
+2025-04-28 21:55:59 detected number of CPU cores: 4
+2025-04-28 21:55:59 current working directory: /home/creditapp
+2025-04-28 21:55:59 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 21:55:59 *** dumping internal routing table ***
+2025-04-28 21:55:59 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 21:55:59 *** end of the internal routing table ***
+2025-04-28 21:55:59 chdir() to /home/creditapp/app
+2025-04-28 21:55:59 your processes number limit is 256
+2025-04-28 21:55:59 your memory page size is 4096 bytes
+2025-04-28 21:55:59 detected max file descriptor number: 123456
+2025-04-28 21:55:59 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 21:55:59 1516 entry found
+2025-04-28 21:55:59 lock engine: pthread robust mutexes
+2025-04-28 21:55:59 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 21:55:59 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 21:55:59 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-28 21:55:59 Python main interpreter initialized at 0x5b7f858c66f0
+2025-04-28 21:55:59 python threads support enabled
+2025-04-28 21:55:59 your server socket listen backlog is limited to 100 connections
+2025-04-28 21:55:59 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 21:55:59 setting request body buffering size to 65536 bytes
+2025-04-28 21:55:59 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 21:55:59 *** Operational MODE: single process ***
+2025-04-28 21:55:59 initialized 38 metrics
+2025-04-28 21:55:59 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5b7f858c66f0 pid: 1 (default app)
+2025-04-28 21:55:59 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 21:55:59 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 21:55:59 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 21:55:59 metrics collector thread started
+2025-04-28 21:55:59 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 23:46:40 Mon Apr 28 23:46:40 2025 - received message 0 from emperor
+2025-04-28 23:46:40 SIGINT/SIGTERM received...killing workers...
+2025-04-28 23:46:41 worker 1 buried after 1 seconds
+2025-04-28 23:46:41 goodbye to uWSGI.
+2025-04-28 23:46:41 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 23:47:38 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 23:47:37 2025] ***
+2025-04-28 23:47:38 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 23:47:38 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 23:47:38 nodename: green-liveweb34
+2025-04-28 23:47:38 machine: x86_64
+2025-04-28 23:47:38 clock source: unix
+2025-04-28 23:47:38 pcre jit disabled
+2025-04-28 23:47:38 detected number of CPU cores: 4
+2025-04-28 23:47:38 current working directory: /home/creditapp
+2025-04-28 23:47:38 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 23:47:38 *** dumping internal routing table ***
+2025-04-28 23:47:38 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 23:47:38 *** end of the internal routing table ***
+2025-04-28 23:47:38 chdir() to /home/creditapp/app
+2025-04-28 23:47:38 your processes number limit is 256
+2025-04-28 23:47:38 your memory page size is 4096 bytes
+2025-04-28 23:47:38 detected max file descriptor number: 123456
+2025-04-28 23:47:38 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 23:47:38 1516 entry found
+2025-04-28 23:47:38 lock engine: pthread robust mutexes
+2025-04-28 23:47:38 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 23:47:38 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 23:47:38 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-28 23:47:38 Python main interpreter initialized at 0x5e8d947a36f0
+2025-04-28 23:47:38 python threads support enabled
+2025-04-28 23:47:38 your server socket listen backlog is limited to 100 connections
+2025-04-28 23:47:38 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 23:47:38 setting request body buffering size to 65536 bytes
+2025-04-28 23:47:38 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 23:47:38 *** Operational MODE: single process ***
+2025-04-28 23:47:38 initialized 38 metrics
+2025-04-28 23:47:38 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5e8d947a36f0 pid: 1 (default app)
+2025-04-28 23:47:38 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 23:47:38 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 23:47:38 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 23:47:38 metrics collector thread started
+2025-04-28 23:47:38 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 23:55:45 Mon Apr 28 23:55:45 2025 - received message 0 from emperor
+2025-04-28 23:55:45 SIGINT/SIGTERM received...killing workers...
+2025-04-28 23:55:46 worker 1 buried after 1 seconds
+2025-04-28 23:55:46 goodbye to uWSGI.
+2025-04-28 23:55:46 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-28 23:56:46 *** Starting uWSGI 2.0.28 (64bit) on [Mon Apr 28 23:56:45 2025] ***
+2025-04-28 23:56:46 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-28 23:56:46 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-28 23:56:46 nodename: green-liveweb34
+2025-04-28 23:56:46 machine: x86_64
+2025-04-28 23:56:46 clock source: unix
+2025-04-28 23:56:46 pcre jit disabled
+2025-04-28 23:56:46 detected number of CPU cores: 4
+2025-04-28 23:56:46 current working directory: /home/creditapp
+2025-04-28 23:56:46 detected binary path: /usr/local/bin/uwsgi
+2025-04-28 23:56:46 *** dumping internal routing table ***
+2025-04-28 23:56:46 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-28 23:56:46 *** end of the internal routing table ***
+2025-04-28 23:56:46 chdir() to /home/creditapp/app
+2025-04-28 23:56:46 your processes number limit is 256
+2025-04-28 23:56:46 your memory page size is 4096 bytes
+2025-04-28 23:56:46 detected max file descriptor number: 123456
+2025-04-28 23:56:46 building mime-types dictionary from file /etc/mime.types...
+2025-04-28 23:56:46 1516 entry found
+2025-04-28 23:56:46 lock engine: pthread robust mutexes
+2025-04-28 23:56:46 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-28 23:56:46 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-28 23:56:46 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-28 23:56:46 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 23:56:46 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-28 23:56:46 Python main interpreter initialized at 0x6417260c76f0
+2025-04-28 23:56:46 python threads support enabled
+2025-04-28 23:56:46 your server socket listen backlog is limited to 100 connections
+2025-04-28 23:56:46 your mercy for graceful operations on workers is 60 seconds
+2025-04-28 23:56:46 setting request body buffering size to 65536 bytes
+2025-04-28 23:56:46 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-28 23:56:46 *** Operational MODE: single process ***
+2025-04-28 23:56:46 initialized 38 metrics
+2025-04-28 23:56:46 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x6417260c76f0 pid: 1 (default app)
+2025-04-28 23:56:46 *** uWSGI is running in multiple interpreter mode ***
+2025-04-28 23:56:46 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-28 23:56:46 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-28 23:56:46 metrics collector thread started
+2025-04-28 23:56:46 spawned 2 offload threads for uWSGI worker 1
+2025-04-28 23:56:59 announcing my loyalty to the Emperor...
+2025-04-29 00:06:08 Tue Apr 29 00:06:08 2025 - received message 0 from emperor
+2025-04-29 00:06:08 SIGINT/SIGTERM received...killing workers...
+2025-04-29 00:06:09 worker 1 buried after 1 seconds
+2025-04-29 00:06:09 goodbye to uWSGI.
+2025-04-29 00:06:09 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-29 00:06:17 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 00:06:15 2025] ***
+2025-04-29 00:06:17 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 00:06:17 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 00:06:17 nodename: green-liveweb34
+2025-04-29 00:06:17 machine: x86_64
+2025-04-29 00:06:17 clock source: unix
+2025-04-29 00:06:17 pcre jit disabled
+2025-04-29 00:06:17 detected number of CPU cores: 4
+2025-04-29 00:06:17 current working directory: /home/creditapp
+2025-04-29 00:06:17 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 00:06:17 *** dumping internal routing table ***
+2025-04-29 00:06:17 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-29 00:06:17 *** end of the internal routing table ***
+2025-04-29 00:06:17 chdir() to /home/creditapp/app
+2025-04-29 00:06:17 your processes number limit is 256
+2025-04-29 00:06:17 your memory page size is 4096 bytes
+2025-04-29 00:06:17 detected max file descriptor number: 123456
+2025-04-29 00:06:17 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 00:06:17 1516 entry found
+2025-04-29 00:06:17 lock engine: pthread robust mutexes
+2025-04-29 00:06:17 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 00:06:17 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 00:06:17 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 00:06:17 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:06:17 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:06:17 Python main interpreter initialized at 0x5f81be0586f0
+2025-04-29 00:06:17 python threads support enabled
+2025-04-29 00:06:17 your server socket listen backlog is limited to 100 connections
+2025-04-29 00:06:17 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 00:06:17 setting request body buffering size to 65536 bytes
+2025-04-29 00:06:17 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 00:06:17 *** Operational MODE: single process ***
+2025-04-29 00:06:17 initialized 38 metrics
+2025-04-29 00:06:17 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5f81be0586f0 pid: 1 (default app)
+2025-04-29 00:06:17 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 00:06:17 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 00:06:17 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 00:06:17 metrics collector thread started
+2025-04-29 00:06:17 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 00:06:18 announcing my loyalty to the Emperor...
+2025-04-29 00:13:55 Tue Apr 29 00:13:55 2025 - received message 0 from emperor
+2025-04-29 00:13:55 SIGINT/SIGTERM received...killing workers...
+2025-04-29 00:13:56 worker 1 buried after 1 seconds
+2025-04-29 00:13:56 goodbye to uWSGI.
+2025-04-29 00:13:56 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-29 00:14:02 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 00:14:00 2025] ***
+2025-04-29 00:14:02 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 00:14:02 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 00:14:02 nodename: green-liveweb34
+2025-04-29 00:14:02 machine: x86_64
+2025-04-29 00:14:02 clock source: unix
+2025-04-29 00:14:02 pcre jit disabled
+2025-04-29 00:14:02 detected number of CPU cores: 4
+2025-04-29 00:14:02 current working directory: /home/creditapp
+2025-04-29 00:14:02 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 00:14:02 *** dumping internal routing table ***
+2025-04-29 00:14:02 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-29 00:14:02 *** end of the internal routing table ***
+2025-04-29 00:14:02 chdir() to /home/creditapp/app
+2025-04-29 00:14:02 your processes number limit is 256
+2025-04-29 00:14:02 your memory page size is 4096 bytes
+2025-04-29 00:14:02 detected max file descriptor number: 123456
+2025-04-29 00:14:02 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 00:14:02 1516 entry found
+2025-04-29 00:14:02 lock engine: pthread robust mutexes
+2025-04-29 00:14:02 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 00:14:02 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 00:14:02 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 00:14:02 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:14:02 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:14:02 Python main interpreter initialized at 0x5a35c21cd6f0
+2025-04-29 00:14:02 python threads support enabled
+2025-04-29 00:14:02 your server socket listen backlog is limited to 100 connections
+2025-04-29 00:14:02 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 00:14:02 setting request body buffering size to 65536 bytes
+2025-04-29 00:14:02 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 00:14:02 *** Operational MODE: single process ***
+2025-04-29 00:14:02 initialized 38 metrics
+2025-04-29 00:14:02 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5a35c21cd6f0 pid: 1 (default app)
+2025-04-29 00:14:02 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 00:14:02 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 00:14:02 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 00:14:02 metrics collector thread started
+2025-04-29 00:14:02 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 00:14:23 announcing my loyalty to the Emperor...
+2025-04-29 00:29:18 worker 1 buried after 1 seconds
+2025-04-29 00:29:18 goodbye to uWSGI.
+2025-04-29 00:29:18 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-29 00:29:24 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 00:29:23 2025] ***
+2025-04-29 00:29:24 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 00:29:24 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 00:29:24 nodename: green-liveweb34
+2025-04-29 00:29:24 machine: x86_64
+2025-04-29 00:29:24 clock source: unix
+2025-04-29 00:29:24 pcre jit disabled
+2025-04-29 00:29:24 detected number of CPU cores: 4
+2025-04-29 00:29:24 current working directory: /home/creditapp
+2025-04-29 00:29:24 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 00:29:24 *** dumping internal routing table ***
+2025-04-29 00:29:24 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-29 00:29:24 *** end of the internal routing table ***
+2025-04-29 00:29:24 chdir() to /home/creditapp/app
+2025-04-29 00:29:24 your processes number limit is 256
+2025-04-29 00:29:24 your memory page size is 4096 bytes
+2025-04-29 00:29:24 detected max file descriptor number: 123456
+2025-04-29 00:29:24 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 00:29:24 1516 entry found
+2025-04-29 00:29:24 lock engine: pthread robust mutexes
+2025-04-29 00:29:24 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 00:29:24 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 00:29:24 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 00:29:24 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:29:24 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:29:24 Python main interpreter initialized at 0x60878d50a6f0
+2025-04-29 00:29:24 python threads support enabled
+2025-04-29 00:29:24 your server socket listen backlog is limited to 100 connections
+2025-04-29 00:29:24 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 00:29:24 setting request body buffering size to 65536 bytes
+2025-04-29 00:29:24 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 00:29:24 *** Operational MODE: single process ***
+2025-04-29 00:29:24 initialized 38 metrics
+2025-04-29 00:29:24 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x60878d50a6f0 pid: 1 (default app)
+2025-04-29 00:29:24 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 00:29:24 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 00:29:24 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 00:29:24 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 00:29:24 metrics collector thread started
+2025-04-29 00:29:55 announcing my loyalty to the Emperor...
+2025-04-29 00:41:41 Tue Apr 29 00:41:41 2025 - received message 0 from emperor
+2025-04-29 00:41:41 SIGINT/SIGTERM received...killing workers...
+2025-04-29 00:41:42 worker 1 buried after 1 seconds
+2025-04-29 00:41:42 goodbye to uWSGI.
+2025-04-29 00:41:42 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-29 00:41:48 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 00:41:46 2025] ***
+2025-04-29 00:41:48 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 00:41:48 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 00:41:48 nodename: green-liveweb34
+2025-04-29 00:41:48 machine: x86_64
+2025-04-29 00:41:48 clock source: unix
+2025-04-29 00:41:48 pcre jit disabled
+2025-04-29 00:41:48 detected number of CPU cores: 4
+2025-04-29 00:41:48 current working directory: /home/creditapp
+2025-04-29 00:41:48 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 00:41:48 *** dumping internal routing table ***
+2025-04-29 00:41:48 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-29 00:41:48 *** end of the internal routing table ***
+2025-04-29 00:41:48 chdir() to /home/creditapp/app
+2025-04-29 00:41:48 your processes number limit is 256
+2025-04-29 00:41:48 your memory page size is 4096 bytes
+2025-04-29 00:41:48 detected max file descriptor number: 123456
+2025-04-29 00:41:48 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 00:41:48 1516 entry found
+2025-04-29 00:41:48 lock engine: pthread robust mutexes
+2025-04-29 00:41:48 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 00:41:48 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 00:41:48 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 00:41:48 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:41:48 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:41:48 Python main interpreter initialized at 0x60abf9da76f0
+2025-04-29 00:41:48 python threads support enabled
+2025-04-29 00:41:48 your server socket listen backlog is limited to 100 connections
+2025-04-29 00:41:48 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 00:41:48 setting request body buffering size to 65536 bytes
+2025-04-29 00:41:48 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 00:41:48 *** Operational MODE: single process ***
+2025-04-29 00:41:48 initialized 38 metrics
+2025-04-29 00:41:48 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x60abf9da76f0 pid: 1 (default app)
+2025-04-29 00:41:48 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 00:41:48 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 00:41:48 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 00:41:48 metrics collector thread started
+2025-04-29 00:41:48 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 00:41:55 announcing my loyalty to the Emperor...
+2025-04-29 00:45:32 Tue Apr 29 00:45:32 2025 - received message 0 from emperor
+2025-04-29 00:45:32 SIGINT/SIGTERM received...killing workers...
+2025-04-29 00:45:33 worker 1 buried after 1 seconds
+2025-04-29 00:45:33 goodbye to uWSGI.
+2025-04-29 00:45:33 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-29 00:45:38 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 00:45:37 2025] ***
+2025-04-29 00:45:38 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 00:45:38 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 00:45:38 nodename: green-liveweb34
+2025-04-29 00:45:38 machine: x86_64
+2025-04-29 00:45:38 clock source: unix
+2025-04-29 00:45:38 pcre jit disabled
+2025-04-29 00:45:38 detected number of CPU cores: 4
+2025-04-29 00:45:38 current working directory: /home/creditapp
+2025-04-29 00:45:38 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 00:45:38 *** dumping internal routing table ***
+2025-04-29 00:45:38 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-29 00:45:38 *** end of the internal routing table ***
+2025-04-29 00:45:38 chdir() to /home/creditapp/app
+2025-04-29 00:45:38 your processes number limit is 256
+2025-04-29 00:45:38 your memory page size is 4096 bytes
+2025-04-29 00:45:38 detected max file descriptor number: 123456
+2025-04-29 00:45:38 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 00:45:38 1516 entry found
+2025-04-29 00:45:38 lock engine: pthread robust mutexes
+2025-04-29 00:45:38 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 00:45:38 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 00:45:38 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 00:45:38 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:45:38 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:45:38 Python main interpreter initialized at 0x62900052c6f0
+2025-04-29 00:45:38 python threads support enabled
+2025-04-29 00:45:38 your server socket listen backlog is limited to 100 connections
+2025-04-29 00:45:38 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 00:45:38 setting request body buffering size to 65536 bytes
+2025-04-29 00:45:38 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 00:45:38 *** Operational MODE: single process ***
+2025-04-29 00:45:38 initialized 38 metrics
+2025-04-29 00:45:38 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x62900052c6f0 pid: 1 (default app)
+2025-04-29 00:45:38 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 00:45:38 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 00:45:38 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 00:45:38 metrics collector thread started
+2025-04-29 00:45:38 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 00:46:17 Tue Apr 29 00:46:17 2025 - received message 0 from emperor
+2025-04-29 00:46:17 SIGINT/SIGTERM received...killing workers...
+2025-04-29 00:46:18 worker 1 buried after 1 seconds
+2025-04-29 00:46:18 goodbye to uWSGI.
+2025-04-29 00:46:18 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-29 00:46:23 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 00:46:22 2025] ***
+2025-04-29 00:46:23 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 00:46:23 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 00:46:23 nodename: green-liveweb34
+2025-04-29 00:46:23 machine: x86_64
+2025-04-29 00:46:23 clock source: unix
+2025-04-29 00:46:23 pcre jit disabled
+2025-04-29 00:46:23 detected number of CPU cores: 4
+2025-04-29 00:46:23 current working directory: /home/creditapp
+2025-04-29 00:46:23 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 00:46:23 *** dumping internal routing table ***
+2025-04-29 00:46:23 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-29 00:46:23 *** end of the internal routing table ***
+2025-04-29 00:46:23 chdir() to /home/creditapp/app
+2025-04-29 00:46:23 your processes number limit is 256
+2025-04-29 00:46:23 your memory page size is 4096 bytes
+2025-04-29 00:46:23 detected max file descriptor number: 123456
+2025-04-29 00:46:23 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 00:46:23 1516 entry found
+2025-04-29 00:46:23 lock engine: pthread robust mutexes
+2025-04-29 00:46:23 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 00:46:23 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 00:46:23 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 00:46:23 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:46:23 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:46:23 Python main interpreter initialized at 0x5d1ead74e6f0
+2025-04-29 00:46:23 python threads support enabled
+2025-04-29 00:46:23 your server socket listen backlog is limited to 100 connections
+2025-04-29 00:46:23 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 00:46:23 setting request body buffering size to 65536 bytes
+2025-04-29 00:46:23 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 00:46:23 *** Operational MODE: single process ***
+2025-04-29 00:46:23 initialized 38 metrics
+2025-04-29 00:46:23 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5d1ead74e6f0 pid: 1 (default app)
+2025-04-29 00:46:23 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 00:46:23 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 00:46:23 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 00:46:23 metrics collector thread started
+2025-04-29 00:46:23 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 00:46:31 announcing my loyalty to the Emperor...
+2025-04-29 00:54:15 Tue Apr 29 00:54:15 2025 - received message 0 from emperor
+2025-04-29 00:54:15 SIGINT/SIGTERM received...killing workers...
+2025-04-29 00:54:16 worker 1 buried after 1 seconds
+2025-04-29 00:54:16 goodbye to uWSGI.
+2025-04-29 00:54:16 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-29 00:54:23 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 00:54:22 2025] ***
+2025-04-29 00:54:23 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 00:54:23 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 00:54:23 nodename: green-liveweb34
+2025-04-29 00:54:23 machine: x86_64
+2025-04-29 00:54:23 detected number of CPU cores: 4
+2025-04-29 00:54:23 current working directory: /home/creditapp
+2025-04-29 00:54:23 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 00:54:23 *** dumping internal routing table ***
+2025-04-29 00:54:23 *** end of the internal routing table ***
+2025-04-29 00:54:23 chdir() to /home/creditapp/app
+2025-04-29 00:54:23 your processes number limit is 256
+2025-04-29 00:54:23 your memory page size is 4096 bytes
+2025-04-29 00:54:23 detected max file descriptor number: 123456
+2025-04-29 00:54:23 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 00:54:23 1516 entry found
+2025-04-29 00:54:23 lock engine: pthread robust mutexes
+2025-04-29 00:54:23 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 00:54:23 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 00:54:23 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 00:54:23 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 00:54:23 Python main interpreter initialized at 0x5963bbaf76f0
+2025-04-29 00:54:23 python threads support enabled
+2025-04-29 00:54:23 your server socket listen backlog is limited to 100 connections
+2025-04-29 00:54:23 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 00:54:23 setting request body buffering size to 65536 bytes
+2025-04-29 00:54:23 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 00:54:23 *** Operational MODE: single process ***
+2025-04-29 00:54:23 initialized 38 metrics
+2025-04-29 00:54:23 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5963bbaf76f0 pid: 1 (default app)
+2025-04-29 00:54:23 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 00:54:23 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 00:54:23 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 00:54:23 metrics collector thread started
+2025-04-29 00:54:23 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 00:54:24 announcing my loyalty to the Emperor...
+2025-04-29 02:44:57 Tue Apr 29 02:44:57 2025 - received message 0 from emperor
+2025-04-29 02:44:57 SIGINT/SIGTERM received...killing workers...
+2025-04-29 02:44:58 worker 1 buried after 1 seconds
+2025-04-29 02:44:58 goodbye to uWSGI.
+2025-04-29 02:44:58 VACUUM: unix socket /var/sockets/creditapp.pythonanywhere.com/socket removed.
+2025-04-29 02:45:04 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 02:45:03 2025] ***
+2025-04-29 02:45:04 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 02:45:04 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 02:45:04 nodename: green-liveweb34
+2025-04-29 02:45:04 machine: x86_64
+2025-04-29 02:45:04 clock source: unix
+2025-04-29 02:45:04 pcre jit disabled
+2025-04-29 02:45:04 detected number of CPU cores: 4
+2025-04-29 02:45:04 current working directory: /home/creditapp
+2025-04-29 02:45:04 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 02:45:04 *** dumping internal routing table ***
+2025-04-29 02:45:04 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-29 02:45:04 *** end of the internal routing table ***
+2025-04-29 02:45:04 chdir() to /home/creditapp/app
+2025-04-29 02:45:04 your processes number limit is 256
+2025-04-29 02:45:04 your memory page size is 4096 bytes
+2025-04-29 02:45:04 detected max file descriptor number: 123456
+2025-04-29 02:45:04 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 02:45:04 1516 entry found
+2025-04-29 02:45:04 lock engine: pthread robust mutexes
+2025-04-29 02:45:04 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 02:45:04 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 02:45:04 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 02:45:04 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 02:45:04 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 02:45:04 Python main interpreter initialized at 0x61e4201186f0
+2025-04-29 02:45:04 python threads support enabled
+2025-04-29 02:45:04 your server socket listen backlog is limited to 100 connections
+2025-04-29 02:45:04 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 02:45:04 setting request body buffering size to 65536 bytes
+2025-04-29 02:45:04 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 02:45:04 *** Operational MODE: single process ***
+2025-04-29 02:45:04 initialized 38 metrics
+2025-04-29 02:45:04 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x61e4201186f0 pid: 1 (default app)
+2025-04-29 02:45:04 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 02:45:04 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 02:45:04 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 02:45:04 metrics collector thread started
+2025-04-29 02:45:04 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 02:45:09 announcing my loyalty to the Emperor...
+2025-04-29 17:14:17 Tue Apr 29 17:14:17 2025 - received message 0 from emperor
+2025-04-29 17:14:17 SIGINT/SIGTERM received...killing workers...
+2025-04-29 17:14:25 *** Starting uWSGI 2.0.28 (64bit) on [Tue Apr 29 17:14:23 2025] ***
+2025-04-29 17:14:25 compiled with version: 11.4.0 on 16 January 2025 20:41:13
+2025-04-29 17:14:25 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-04-29 17:14:25 nodename: green-liveweb34
+2025-04-29 17:14:25 machine: x86_64
+2025-04-29 17:14:25 clock source: unix
+2025-04-29 17:14:25 pcre jit disabled
+2025-04-29 17:14:25 detected number of CPU cores: 4
+2025-04-29 17:14:25 current working directory: /home/creditapp
+2025-04-29 17:14:25 detected binary path: /usr/local/bin/uwsgi
+2025-04-29 17:14:25 *** dumping internal routing table ***
+2025-04-29 17:14:25 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-04-29 17:14:25 *** end of the internal routing table ***
+2025-04-29 17:14:25 chdir() to /home/creditapp/app
+2025-04-29 17:14:25 your processes number limit is 256
+2025-04-29 17:14:25 your memory page size is 4096 bytes
+2025-04-29 17:14:25 detected max file descriptor number: 123456
+2025-04-29 17:14:25 building mime-types dictionary from file /etc/mime.types...
+2025-04-29 17:14:25 1516 entry found
+2025-04-29 17:14:25 lock engine: pthread robust mutexes
+2025-04-29 17:14:25 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-04-29 17:14:25 uwsgi socket 0 bound to UNIX address /var/sockets/creditapp.pythonanywhere.com/socket fd 3
+2025-04-29 17:14:25 Python version: 3.9.21 (main, Jan 16 2025, 11:31:13)  [GCC 11.4.0]
+2025-04-29 17:14:25 PEP 405 virtualenv detected: /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 17:14:25 Set PythonHome to /home/creditapp/.virtualenvs/creditapp-venv
+2025-04-29 17:14:25 Python main interpreter initialized at 0x6272dbfc26f0
+2025-04-29 17:14:25 python threads support enabled
+2025-04-29 17:14:25 your server socket listen backlog is limited to 100 connections
+2025-04-29 17:14:25 your mercy for graceful operations on workers is 60 seconds
+2025-04-29 17:14:25 setting request body buffering size to 65536 bytes
+2025-04-29 17:14:25 mapped 334256 bytes (326 KB) for 1 cores
+2025-04-29 17:14:25 *** Operational MODE: single process ***
+2025-04-29 17:14:25 initialized 38 metrics
+2025-04-29 17:14:25 WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x6272dbfc26f0 pid: 1 (default app)
+2025-04-29 17:14:25 *** uWSGI is running in multiple interpreter mode ***
+2025-04-29 17:14:25 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-04-29 17:14:25 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-04-29 17:14:25 metrics collector thread started
+2025-04-29 17:14:25 spawned 2 offload threads for uWSGI worker 1
+2025-04-29 17:14:26 announcing my loyalty to the Emperor...
