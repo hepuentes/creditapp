@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
-*.db
+#*.db
 #*.sqlite3
 /instance/
 /.env
@@ -11,4 +11,4 @@ __pycache__/
 /virtualenv/
 /Virtualenv/
 /virtualenvs/
-*.log
+#*.log
