@@ -1,0 +1,554 @@
+/* /static/css/style.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    /* Evitar scroll horizontal innecesario */
+    overflow-x: hidden;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    width: 100%;
+    /* Asegurar que el wrapper no cause overflow */
+    overflow: hidden;
+}
+
+/* Sidebar */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: #212529;
+    color: #fff;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+#sidebar.collapsed {
+    min-width: 80px;
+    max-width: 80px;
+}
+
+#sidebar.collapsed .sidebar-header h3, 
+#sidebar.collapsed .user-info,
+#sidebar.collapsed .menu-text {
+    display: none;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #343a40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    display: block;
+    color: #adb5bd;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    white-space: nowrap; /* Evitar que el texto del menú se rompa */
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #343a40;
+}
+
+#sidebar ul li.active > a {
+    color: #fff;
+    background: #007bff;
+    /* Usar ::before para el borde izquierdo para evitar problemas de layout */
+}
+
+#sidebar ul li.active > a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #fff;
+}
+
+#sidebar ul li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+#sidebar.collapsed ul li a i {
+    margin-right: 0;
+    font-size: 1.2em;
+}
+
+#sidebar ul li a .badge {
+    margin-left: 5px;
+}
+
+.user-info {
+    padding: 15px 20px;
+    border-bottom: 1px solid #343a40;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Evitar que el nombre de usuario se rompa */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-role {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    margin-top: 5px;
+}
+
+/* Contenido */
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    /* Permitir scroll vertical si el contenido es largo */
+    overflow-y: auto;
+}
+
+/* Encabezado móvil */
+.mobile-header {
+    background: #212529;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.mobile-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.mobile-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Overlay para sidebar en móvil */
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Botón para colapsar sidebar en escritorio */
+#toggleSidebar {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Estilos para tablas */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem; /* Añadir margen inferior */
+}
+
+.table th,
+.table td {
+    white-space: nowrap; /* Evitar que el contenido de las celdas se rompa */
+    vertical-align: middle; /* Alinear verticalmente el contenido */
+}
+
+.table th {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Estilos para tarjetas */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+    font-weight: 500;
+}
+
+/* Estilos para formularios */
+.form-label.required::after {
+    content: " *";
+    color: red;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilos para botones */
+.btn {
+    border-radius: 0.25rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Estilos para alertas */
+.alert {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para paginación */
+.pagination {
+    margin-bottom: 0;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Estilos para badges */
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+    border-radius: 0.25rem;
+}
+
+/* Botón de sincronización */
+.sync-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+    border: none;
+}
+
+.sync-button:hover {
+    background-color: #0056b3;
+}
+
+.sync-button i {
+    font-size: 24px;
+}
+
+.sync-button .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+/* Animación de sincronización */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.sync-spinning {
+    animation: spin 2s linear infinite;
+}
+
+/* Formato moneda */
+.formato-moneda {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+input.formato-moneda {
+    text-align: right;
+}
+
+/* Carrito de compras */
+.carrito-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.carrito-item {
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.carrito-item:last-child {
+    border-bottom: none;
+}
+
+.carrito-item .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.carrito-total {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 2px solid #dee2e6;
+}
+
+/* Resultados de búsqueda */
+.search-results {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1050; /* Asegurar que esté sobre otros elementos */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.search-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.search-item:hover {
+    background-color: #e9ecef;
+}
+
+/* Mejoras para accesibilidad */
+.btn:focus, .form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        position: fixed;
+        height: 100%;
+    }
+    
+    #sidebar.active {
+        margin-left: 0;
+    }
+    
+    #content {
+        width: 100%;
+        padding: 15px; /* Reducir padding en móvil */
+    }
+    
+    /* Ajustar tamaño de fuente base para móvil */
+    body {
+        font-size: 0.95rem;
+    }
+    
+    h1.h2 { /* Reducir tamaño de títulos principales */
+        font-size: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem; /* Reducir padding en tarjetas */
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    /* Evitar zoom en inputs en iOS */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+    
+    /* Ajustes para botones en tablas en móvil */
+    .table .btn-group {
+        /* Permitir que los botones se envuelvan */
+        flex-wrap: wrap;
+        gap: 5px; 
+    }
+    
+    .table .btn-group .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem; /* Reducir tamaño de fuente */
+    }
+    
+    .table .btn-group .btn i {
+        margin-right: 0; /* Ocultar texto en botones de tabla */
+    }
+    
+    .table .btn-group .btn span {
+        display: none; /* Ocultar texto en botones de tabla */
+    }
+    
+    /* Ajustes para el carrito en móvil */
+    .carrito-container {
+        max-height: 200px;
+    }
+    
+    /* Ajustar toolbar de botones */
+    .btn-toolbar {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .btn-toolbar .btn-group,
+    .btn-toolbar .input-group {
+        margin-bottom: 0; /* Eliminar margen inferior extra */
+    }
+    
+    /* Ajustar paginación en móvil */
+    .pagination {
+        justify-content: center;
+        flex-wrap: wrap; /* Permitir que la paginación se envuelva */
+    }
+    
+    .page-item {
+        margin-bottom: 5px; /* Espacio entre elementos de paginación si se envuelven */
+    }
+    
+    /* Ajustar dashboard cards */
+    .dashboard-card .card-value {
+        font-size: 1.8rem;
+    }
+    .dashboard-card .card-icon {
+        font-size: 2rem;
+    }
+}
+
+/* Tema oscuro (opcional, si se implementa un selector) */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-theme .table {
+    color: #e0e0e0;
+}
+
+body.dark-theme .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    background-color: #333;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-theme .form-control::placeholder {
+    color: #6c757d;
+}
+
+body.dark-theme .search-results {
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-theme .search-item:hover {
+    background-color: #444;
+}
+
+body.dark-theme .mobile-header,
+body.dark-theme #sidebar {
+    background: #1e1e1e;
+}
+
+body.dark-theme #sidebar .sidebar-header {
+    background: #2a2a2a;
+}
+
+body.dark-theme #sidebar ul li a {
+    color: #adb5bd;
+}
+
+body.dark-theme #sidebar ul li a:hover {
+    color: #fff;
+    background: #2a2a2a;
+}
+
+body.dark-theme #sidebar ul li.active > a {
+    color: #fff;
+    background: #0056b3; /* Ajustar color activo para tema oscuro */
+}
+
+/* Asegurar que el contenido no se oculte detrás del header móvil fijo */
+body {
+    padding-top: 60px; /* Altura aproximada del mobile-header */
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 0; /* Eliminar padding en escritorio */
+    }
+}
+

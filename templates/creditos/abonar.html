@@ -1,0 +1,167 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Abonar a Crédito - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Abonar a Crédito #{{ credito.id }}</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('detalle_credito', credito_id=credito.id) }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Información del Crédito -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header">
+                <h5 class="mb-0">Información del Crédito</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Cliente:</strong> {{ credito.cliente.nombre }}</p>
+                <p><strong>Documento:</strong> {{ credito.cliente.documento }}</p>
+                <p><strong>Monto Total:</strong> <span class="formato-moneda">{{ credito.monto_total }}</span></p>
+                <p><strong>Saldo Pendiente:</strong> <span class="formato-moneda">{{ credito.saldo_pendiente }}</span></p>
+                <p><strong>Estado:</strong> 
+                    {% if credito.estado == 'Pendiente' %}
+                        <span class="badge bg-warning">Pendiente</span>
+                    {% elif credito.estado == 'Pagado' %}
+                        <span class="badge bg-success">Pagado</span>
+                    {% elif credito.estado == 'Vencido' %}
+                        <span class="badge bg-danger">Vencido</span>
+                    {% endif %}
+                </p>
+                {% if credito.mora > 0 %}
+                <p><strong>Mora:</strong> <span class="formato-moneda text-danger">{{ credito.mora }}</span></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de Abono -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-header">
+                <h5 class="mb-0">Realizar Abono</h5>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('abonar', credito_id=credito.id) }}">
+                    {{ form.hidden_tag() }}
+                    
+                    <div class="mb-3">
+                        {{ form.monto.label(class="form-label required") }}
+                        {{ form.monto(class="form-control formato-moneda" + (" is-invalid" if form.monto.errors else ""), data_decimales="0") }}
+                        {% if form.monto.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.monto.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        <div class="form-text">Saldo pendiente: <span class="formato-moneda">{{ credito.saldo_pendiente }}</span></div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.metodo_pago_id.label(class="form-label required") }}
+                        {{ form.metodo_pago_id(class="form-select" + (" is-invalid" if form.metodo_pago_id.errors else "")) }}
+                        {% if form.metodo_pago_id.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.metodo_pago_id.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.fecha.label(class="form-label required") }}
+                        {{ form.fecha(class="form-control" + (" is-invalid" if form.fecha.errors else ""), type="date") }}
+                        {% if form.fecha.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.fecha.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.notas.label(class="form-label") }}
+                        {{ form.notas(class="form-control" + (" is-invalid" if form.notas.errors else ""), rows="3") }}
+                        {% if form.notas.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.notas.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="fas fa-money-bill-wave"></i> Registrar Abono
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Historial de Pagos -->
+<div class="card shadow mb-4">
+    <div class="card-header">
+        <h5 class="mb-0">Historial de Pagos</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Monto</th>
+                        <th>Método de Pago</th>
+                        <th>Recibido por</th>
+                        <th>Notas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if credito.pagos %}
+                        {% for pago in credito.pagos %}
+                            <tr>
+                                <td>{{ pago.fecha.strftime('%d/%m/%Y') }}</td>
+                                <td class="formato-moneda">{{ pago.monto }}</td>
+                                <td>{{ pago.metodo_pago.nombre }}</td>
+                                <td>{{ pago.usuario.nombre }}</td>
+                                <td>{{ pago.notas }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">No hay pagos registrados.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th class="text-end">Total Pagado:</th>
+                        <th class="formato-moneda">{{ credito.monto_total - credito.saldo_pendiente }}</th>
+                        <th colspan="3"></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Aplicar formato a elementos monetarios
+        aplicarFormatoMoneda();
+    });
+</script>
+{% endblock %}

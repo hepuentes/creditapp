@@ -1,0 +1,84 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}{{ 'Editar' if caja else 'Crear' }} Caja - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">{{ 'Editar' if caja else 'Crear Nueva' }} Caja</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('cajas') }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-lg-6 mx-auto">
+        <div class="card shadow">
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('editar_caja', caja_id=caja.id) if caja else url_for('crear_caja') }}">
+                    {{ form.hidden_tag() }}
+                    
+                    <div class="mb-3">
+                        {{ form.nombre.label(class="form-label required") }}
+                        {{ form.nombre(class="form-control" + (" is-invalid" if form.nombre.errors else "")) }}
+                        {% if form.nombre.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.nombre.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.descripcion.label(class="form-label") }}
+                        {{ form.descripcion(class="form-control" + (" is-invalid" if form.descripcion.errors else ""), rows="3") }}
+                        {% if form.descripcion.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.descripcion.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    {% if not caja %}
+                    <div class="mb-3">
+                        {{ form.saldo_inicial.label(class="form-label required") }}
+                        {{ form.saldo_inicial(class="form-control formato-moneda" + (" is-invalid" if form.saldo_inicial.errors else ""), data_decimales="0") }}
+                        {% if form.saldo_inicial.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.saldo_inicial.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    
+                    <div class="mb-3 form-check">
+                        {{ form.activa(class="form-check-input") }}
+                        {{ form.activa.label(class="form-check-label") }}
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> {{ 'Guardar Cambios' if caja else 'Crear Caja' }}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Aplicar formato a elementos monetarios
+        aplicarFormatoMoneda();
+    });
+</script>
+{% endblock %}

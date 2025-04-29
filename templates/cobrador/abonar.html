@@ -1,0 +1,175 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Registrar Abono - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Registrar Abono</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('cobrador') }}" class="btn btn-sm btn-secondary">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header bg-light">
+                <h5 class="card-title mb-0">Información del Crédito</h5>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>Cliente:</strong>
+                    </div>
+                    <div class="col-md-8">
+                        {{ credito.cliente.nombre }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>Fecha:</strong>
+                    </div>
+                    <div class="col-md-8">
+                        {{ credito.fecha_creacion.strftime('%d/%m/%Y') }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>Monto Total:</strong>
+                    </div>
+                    <div class="col-md-8 formato-moneda">
+                        {{ credito.monto_total }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>Saldo Pendiente:</strong>
+                    </div>
+                    <div class="col-md-8 formato-moneda">
+                        {{ credito.saldo }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>Estado:</strong>
+                    </div>
+                    <div class="col-md-8">
+                        <span class="badge bg-{{ 'success' if credito.estado == 'Pagado' else 'warning' }}">
+                            {{ credito.estado }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Registrar Abono</h5>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('cobrador_abonar', id=credito.id) }}" onsubmit="return validarFormulario()">
+                    <div class="mb-3">
+                        <label for="monto" class="form-label required">Monto</label>
+                        <input type="text" class="form-control formato-moneda" id="monto" name="monto" required>
+                        <div class="form-text">Saldo pendiente: <span class="formato-moneda">{{ credito.saldo }}</span></div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="metodo_pago_id" class="form-label required">Método de Pago</label>
+                        <select class="form-select" id="metodo_pago_id" name="metodo_pago_id" required>
+                            <option value="">Seleccione...</option>
+                            {% for metodo in metodos_pago %}
+                            <option value="{{ metodo.id }}">{{ metodo.nombre }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="notas" class="form-label">Notas</label>
+                        <textarea class="form-control" id="notas" name="notas" rows="2"></textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Registrar Abono</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header bg-light">
+        <h5 class="card-title mb-0">Historial de Abonos</h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Monto</th>
+                        <th>Método de Pago</th>
+                        <th>Registrado por</th>
+                        <th>Notas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for abono in credito.abonos %}
+                    <tr>
+                        <td>{{ abono.fecha_abono.strftime('%d/%m/%Y %H:%M') }}</td>
+                        <td class="formato-moneda">{{ abono.monto }}</td>
+                        <td>{{ abono.metodo_pago.nombre if abono.metodo_pago else 'N/A' }}</td>
+                        <td>{{ abono.usuario.nombre }}</td>
+                        <td>{{ abono.notas }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total Abonado:</th>
+                        <th class="formato-moneda">{{ credito.monto_total - credito.saldo }}</th>
+                        <th colspan="3"></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function validarFormulario() {
+        const monto = desformatearNumero(document.getElementById('monto').value);
+        const saldo = {{ credito.saldo }};
+        const metodoPago = document.getElementById('metodo_pago_id').value;
+        
+        if (monto <= 0) {
+            alert('El monto debe ser mayor que cero');
+            return false;
+        }
+        
+        if (monto > saldo) {
+            alert('El monto no puede ser mayor que el saldo pendiente');
+            return false;
+        }
+        
+        if (!metodoPago) {
+            alert('Debe seleccionar un método de pago');
+            return false;
+        }
+        
+        return true;
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Enfocar el campo de monto al cargar la página
+        document.getElementById('monto').focus();
+    });
+</script>
+{% endblock %}

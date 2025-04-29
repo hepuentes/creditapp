@@ -1,0 +1,73 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Métodos de Pago - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Gestión de Métodos de Pago</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('crear_metodo_pago') }}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Nuevo Método de Pago
+        </a>
+    </div>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Listado de Métodos de Pago</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if metodos_pago %}
+                        {% for metodo in metodos_pago %}
+                            <tr>
+                                <td>{{ metodo.id }}</td>
+                                <td>{{ metodo.nombre }}</td>
+                                <td>{{ metodo.descripcion }}</td>
+                                <td>
+                                    {% if metodo.activo %}
+                                        <span class="badge bg-success">Activo</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">Inactivo</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('editar_metodo_pago', metodo_id=metodo.id) }}" class="btn btn-primary" data-bs-toggle="tooltip" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        {% if metodo.activo %}
+                                            <a href="{{ url_for('desactivar_metodo_pago', metodo_id=metodo.id) }}" class="btn btn-warning" data-bs-toggle="tooltip" title="Desactivar" onclick="return confirm('¿Estás seguro de desactivar este método de pago?')">
+                                                <i class="fas fa-ban"></i>
+                                            </a>
+                                        {% else %}
+                                            <a href="{{ url_for('activar_metodo_pago', metodo_id=metodo.id) }}" class="btn btn-success" data-bs-toggle="tooltip" title="Activar">
+                                                <i class="fas fa-check"></i>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">No hay métodos de pago registrados.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,215 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Dashboard - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Dashboard</h1>
+    {# Puedes añadir botones o filtros aquí si es necesario #}
+</div>
+
+<div class="row">
+    <!-- Ejemplo de Tarjetas de Resumen -->
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card shadow border-start-primary py-2 dashboard-card">
+            <div class="card-body">
+                <div class="row align-items-center no-gutters">
+                    <div class="col me-2">
+                        <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Créditos Activos</span></div>
+                        <div class="text-dark fw-bold h5 mb-0 card-value"><span>{{ resumen.creditos_activos | default(0) }}</span></div>
+                    </div>
+                    <div class="col-auto card-icon">
+                        <i class="fas fa-credit-card fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card shadow border-start-success py-2 dashboard-card">
+            <div class="card-body">
+                <div class="row align-items-center no-gutters">
+                    <div class="col me-2">
+                        <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Saldo Total Pendiente</span></div>
+                        <div class="text-dark fw-bold h5 mb-0 card-value"><span class="formato-moneda">{{ resumen.saldo_total_pendiente | default(0) }}</span></div>
+                    </div>
+                    <div class="col-auto card-icon">
+                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card shadow border-start-info py-2 dashboard-card">
+            <div class="card-body">
+                <div class="row align-items-center no-gutters">
+                    <div class="col me-2">
+                        <div class="text-uppercase text-info fw-bold text-xs mb-1"><span>Clientes Registrados</span></div>
+                        <div class="text-dark fw-bold h5 mb-0 card-value"><span>{{ resumen.clientes_registrados | default(0) }}</span></div>
+                    </div>
+                    <div class="col-auto card-icon">
+                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card shadow border-start-warning py-2 dashboard-card">
+            <div class="card-body">
+                <div class="row align-items-center no-gutters">
+                    <div class="col me-2">
+                        <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span>Créditos Vencidos</span></div>
+                        <div class="text-dark fw-bold h5 mb-0 card-value"><span>{{ resumen.creditos_vencidos | default(0) }}</span></div>
+                    </div>
+                    <div class="col-auto card-icon">
+                        <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ejemplo de Gráficos (requiere Chart.js u otra librería) -->
+{# 
+<div class="row">
+    <div class="col-lg-7 col-xl-8">
+        <div class="card shadow mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6 class="text-primary fw-bold m-0">Resumen de Ingresos</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="ingresosChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 col-xl-4">
+        <div class="card shadow mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6 class="text-primary fw-bold m-0">Fuentes de Ingresos</h6>
+            </div>
+            <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="fuentesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+#}
+
+<!-- Ejemplo de Tabla de Próximos Vencimientos -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Próximos Vencimientos (7 días)</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Crédito ID</th>
+                        <th>Cliente</th>
+                        <th>Fecha Vencimiento</th>
+                        <th>Monto Cuota</th>
+                        <th>Saldo Pendiente</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if proximos_vencimientos %}
+                        {% for credito in proximos_vencimientos %}
+                            <tr>
+                                <td>{{ credito.id }}</td>
+                                <td>{{ credito.cliente.nombre }}</td>
+                                <td>{{ credito.proxima_fecha_vencimiento().strftime("%d/%m/%Y") }}</td>
+                                <td class="formato-moneda">{{ credito.monto_cuota }}</td>
+                                <td class="formato-moneda">{{ credito.saldo_pendiente }}</td>
+                                <td>
+                                    <a href="{{ url_for("detalle_credito", credito_id=credito.id) }}" class="btn btn-sm btn-info" data-bs-toggle="tooltip" title="Ver Detalle">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="{{ url_for("abonar", credito_id=credito.id) }}" class="btn btn-sm btn-success" data-bs-toggle="tooltip" title="Abonar">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="6" class="text-center text-muted">No hay vencimientos próximos.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function()  {
+        // Aplicar formato a los valores del dashboard
+        aplicarFormatoMoneda();
+        
+        // Inicializar gráficos si existen
+        // initCharts(); 
+    });
+
+    // Función de ejemplo para inicializar gráficos
+    /*
+    function initCharts() {
+        const ctxIngresos = document.getElementById("ingresosChart");
+        if (ctxIngresos) {
+            new Chart(ctxIngresos, {
+                type: "line",
+                data: { // Datos de ejemplo
+                    labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
+                    datasets: [{
+                        label: "Ingresos",
+                        data: [1200, 1900, 3000, 5000, 2300, 3200],
+                        borderColor: "rgb(75, 192, 192)",
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+        
+        const ctxFuentes = document.getElementById("fuentesChart");
+        if (ctxFuentes) {
+            new Chart(ctxFuentes, {
+                type: "doughnut",
+                data: { // Datos de ejemplo
+                    labels: ["Ventas", "Intereses", "Otros"],
+                    datasets: [{
+                        label: "Fuentes",
+                        data: [300, 50, 100],
+                        backgroundColor: [
+                            "rgb(255, 99, 132)",
+                            "rgb(54, 162, 235)",
+                            "rgb(255, 205, 86)"
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                 options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+    }
+    */
+</script>
+{% endblock %}

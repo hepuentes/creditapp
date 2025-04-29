@@ -1,0 +1,63 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Mi Perfil - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Mi Perfil</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Información del Usuario
+            </div>
+            <div class="card-body">
+                <p><strong>Nombre:</strong> {{ current_user.nombre }}</p>
+                <p><strong>Email:</strong> {{ current_user.email }}</p>
+                <p><strong>Rol:</strong> {{ current_user.rol | capitalize }}</p>
+                <p><strong>Activo:</strong> {% if current_user.activo %}Sí{% else %}No{% endif %}</p>
+                {# Puedes añadir más información si está disponible en el modelo User #}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        {# Espacio para formulario de cambio de contraseña si se implementa #}
+        {# 
+        <div class="card">
+            <div class="card-header">
+                Cambiar Contraseña
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for("cambiar_password") }}">
+                    {{ form.hidden_tag() }} 
+                    <div class="mb-3">
+                        {{ form.current_password.label(class="form-label") }}
+                        {{ form.current_password(class="form-control" + (" is-invalid" if form.current_password.errors else "")) }}
+                        {% if form.current_password.errors %}
+                            <div class="invalid-feedback d-block">{{ form.current_password.errors[0] }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.new_password.label(class="form-label") }}
+                        {{ form.new_password(class="form-control" + (" is-invalid" if form.new_password.errors else "")) }}
+                        {% if form.new_password.errors %}
+                            <div class="invalid-feedback d-block">{{ form.new_password.errors[0] }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        {{ form.confirm_password.label(class="form-label") }}
+                        {{ form.confirm_password(class="form-control" + (" is-invalid" if form.confirm_password.errors else "")) }}
+                        {% if form.confirm_password.errors %}
+                            <div class="invalid-feedback d-block">{{ form.confirm_password.errors[0] }}</div>
+                        {% endif %}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cambiar Contraseña</button>
+                </form>
+            </div>
+        </div>
+        #}
+    </div>
+</div>
+{% endblock %}

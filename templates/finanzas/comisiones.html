@@ -1,0 +1,183 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Comisiones - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Gestión de Comisiones</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('calcular_comisiones') }}" class="btn btn-primary">
+            <i class="fas fa-calculator"></i> Calcular Comisiones
+        </a>
+    </div>
+</div>
+
+<!-- Filtros -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Filtros</h6>
+    </div>
+    <div class="card-body">
+        <form method="GET" action="{{ url_for('comisiones') }}" class="row g-3">
+            <div class="col-md-4">
+                <label for="vendedor_id" class="form-label">Vendedor</label>
+                <select name="vendedor_id" id="vendedor_id" class="form-select">
+                    <option value="">Todos los vendedores</option>
+                    {% for vendedor in vendedores %}
+                        <option value="{{ vendedor.id }}" {% if request.args.get('vendedor_id')|int == vendedor.id %}selected{% endif %}>{{ vendedor.nombre }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="estado" class="form-label">Estado</label>
+                <select name="estado" id="estado" class="form-select">
+                    <option value="">Todos los estados</option>
+                    <option value="pendiente" {% if request.args.get('estado') == 'pendiente' %}selected{% endif %}>Pendiente</option>
+                    <option value="pagado" {% if request.args.get('estado') == 'pagado' %}selected{% endif %}>Pagado</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="periodo" class="form-label">Periodo</label>
+                <select name="periodo" id="periodo" class="form-select">
+                    <option value="">Todos los periodos</option>
+                    {% for periodo in periodos %}
+                        <option value="{{ periodo }}" {% if request.args.get('periodo') == periodo %}selected{% endif %}>{{ periodo }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-12 text-end">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-filter"></i> Filtrar
+                </button>
+                <a href="{{ url_for('comisiones') }}" class="btn btn-secondary">
+                    <i class="fas fa-undo"></i> Limpiar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Listado de Comisiones -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Listado de Comisiones</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Vendedor</th>
+                        <th>Periodo</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
+                        <th>Fecha Cálculo</th>
+                        <th>Fecha Pago</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if comisiones %}
+                        {% for comision in comisiones %}
+                            <tr>
+                                <td>{{ comision.id }}</td>
+                                <td>{{ comision.vendedor.nombre }}</td>
+                                <td>{{ comision.periodo }}</td>
+                                <td class="formato-moneda">{{ comision.monto }}</td>
+                                <td>
+                                    {% if comision.estado == 'pendiente' %}
+                                        <span class="badge bg-warning">Pendiente</span>
+                                    {% elif comision.estado == 'pagado' %}
+                                        <span class="badge bg-success">Pagado</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ comision.fecha_calculo.strftime('%d/%m/%Y') }}</td>
+                                <td>{{ comision.fecha_pago.strftime('%d/%m/%Y') if comision.fecha_pago else '-' }}</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('detalle_comision', comision_id=comision.id) }}" class="btn btn-info" data-bs-toggle="tooltip" title="Ver Detalle">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        {% if comision.estado == 'pendiente' %}
+                                            <a href="{{ url_for('pagar_comision', comision_id=comision.id) }}" class="btn btn-success" data-bs-toggle="tooltip" title="Marcar como Pagada" onclick="return confirm('¿Estás seguro de marcar esta comisión como pagada?')">
+                                                <i class="fas fa-check"></i>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="8" class="text-center text-muted">No hay comisiones registradas.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Paginación -->
+        {% if pagination and pagination.pages > 1 %}
+        <nav aria-label="Paginación de comisiones">
+            <ul class="pagination justify-content-center mt-4">
+                {% if pagination.has_prev %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('comisiones', page=pagination.prev_num, vendedor_id=request.args.get('vendedor_id', ''), estado=request.args.get('estado', ''), periodo=request.args.get('periodo', '')) }}" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+                
+                {% for page in pagination.iter_pages() %}
+                    {% if page %}
+                        {% if page != pagination.page %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('comisiones', page=page, vendedor_id=request.args.get('vendedor_id', ''), estado=request.args.get('estado', ''), periodo=request.args.get('periodo', '')) }}">{{ page }}</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item active">
+                            <a class="page-link" href="#">{{ page }}</a>
+                        </li>
+                        {% endif %}
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">...</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                
+                {% if pagination.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('comisiones', page=pagination.next_num, vendedor_id=request.args.get('vendedor_id', ''), estado=request.args.get('estado', ''), periodo=request.args.get('periodo', '')) }}" aria-label="Siguiente">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Siguiente">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Aplicar formato a elementos monetarios
+        aplicarFormatoMoneda();
+    });
+</script>
+{% endblock %}

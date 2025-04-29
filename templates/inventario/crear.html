@@ -1,0 +1,62 @@
+{% extends 'admin/dashboard.html' %}
+
+{% block title %}
+    {% if producto %}Editar Producto{% else %}Nuevo Producto{% endif %} - Sistema de Créditos
+{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">{% if producto %}Editar Producto{% else %}Nuevo Producto{% endif %}</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('inventario') }}" class="btn btn-sm btn-secondary">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="codigo" class="form-label">Código</label>
+                        <input type="text" class="form-control" id="codigo" name="codigo" value="{{ producto.codigo if producto else '' }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" value="{{ producto.nombre if producto else '' }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3">{{ producto.descripcion if producto else '' }}</textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="precio_costo" class="form-label">Precio de Costo</label>
+                            <input type="text" class="form-control formato-moneda" id="precio_costo" name="precio_costo" value="{{ producto.precio_costo if producto else '0' }}" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="precio_venta" class="form-label">Precio de Venta</label>
+                            <input type="text" class="form-control formato-moneda" id="precio_venta" name="precio_venta" value="{{ producto.precio_venta if producto else '0' }}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="stock_minimo" class="form-label">Stock Mínimo</label>
+                            <input type="number" class="form-control" id="stock_minimo" name="stock_minimo" value="{{ producto.stock_minimo if producto else '0' }}" min="0" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="categoria" class="form-label">Categoría</label>
+                            <input type="text" class="form-control" id="categoria" name="categoria" value="{{ producto.categoria if producto else '' }}">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

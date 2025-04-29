@@ -1,0 +1,165 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Movimientos de Inventario - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Movimientos de Inventario</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('crear_movimiento_inventario') }}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Nuevo Movimiento
+        </a>
+    </div>
+</div>
+
+<!-- Filtros -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Filtros</h6>
+    </div>
+    <div class="card-body">
+        <form method="GET" action="{{ url_for('movimientos_inventario') }}" class="row g-3">
+            <div class="col-md-4">
+                <label for="producto_id" class="form-label">Producto</label>
+                <select name="producto_id" id="producto_id" class="form-select">
+                    <option value="">Todos los productos</option>
+                    {% for producto in productos %}
+                        <option value="{{ producto.id }}" {% if request.args.get('producto_id')|int == producto.id %}selected{% endif %}>{{ producto.nombre }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="tipo" class="form-label">Tipo</label>
+                <select name="tipo" id="tipo" class="form-select">
+                    <option value="">Todos los tipos</option>
+                    <option value="entrada" {% if request.args.get('tipo') == 'entrada' %}selected{% endif %}>Entrada</option>
+                    <option value="salida" {% if request.args.get('tipo') == 'salida' %}selected{% endif %}>Salida</option>
+                    <option value="ajuste" {% if request.args.get('tipo') == 'ajuste' %}selected{% endif %}>Ajuste</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="fecha_desde" class="form-label">Fecha Desde</label>
+                <input type="date" class="form-control" id="fecha_desde" name="fecha_desde" value="{{ request.args.get('fecha_desde', '') }}">
+            </div>
+            <div class="col-md-4">
+                <label for="fecha_hasta" class="form-label">Fecha Hasta</label>
+                <input type="date" class="form-control" id="fecha_hasta" name="fecha_hasta" value="{{ request.args.get('fecha_hasta', '') }}">
+            </div>
+            <div class="col-12 text-end">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-filter"></i> Filtrar
+                </button>
+                <a href="{{ url_for('movimientos_inventario') }}" class="btn btn-secondary">
+                    <i class="fas fa-undo"></i> Limpiar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Listado de Movimientos -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Listado de Movimientos</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha</th>
+                        <th>Producto</th>
+                        <th>Tipo</th>
+                        <th>Cantidad</th>
+                        <th>Stock Anterior</th>
+                        <th>Stock Nuevo</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if movimientos %}
+                        {% for movimiento in movimientos %}
+                            <tr>
+                                <td>{{ movimiento.id }}</td>
+                                <td>{{ movimiento.fecha.strftime('%d/%m/%Y') }}</td>
+                                <td>{{ movimiento.producto.nombre }}</td>
+                                <td>
+                                    {% if movimiento.tipo == 'entrada' %}
+                                        <span class="badge bg-success">Entrada</span>
+                                    {% elif movimiento.tipo == 'salida' %}
+                                        <span class="badge bg-danger">Salida</span>
+                                    {% else %}
+                                        <span class="badge bg-warning">Ajuste</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ movimiento.cantidad }}</td>
+                                <td>{{ movimiento.stock_anterior }}</td>
+                                <td>{{ movimiento.stock_nuevo }}</td>
+                                <td>{{ movimiento.usuario.nombre }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="8" class="text-center text-muted">No hay movimientos registrados.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Paginación -->
+        {% if pagination and pagination.pages > 1 %}
+        <nav aria-label="Paginación de movimientos">
+            <ul class="pagination justify-content-center mt-4">
+                {% if pagination.has_prev %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('movimientos_inventario', page=pagination.prev_num, producto_id=request.args.get('producto_id', ''), tipo=request.args.get('tipo', ''), fecha_desde=request.args.get('fecha_desde', ''), fecha_hasta=request.args.get('fecha_hasta', '')) }}" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+                
+                {% for page in pagination.iter_pages() %}
+                    {% if page %}
+                        {% if page != pagination.page %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('movimientos_inventario', page=page, producto_id=request.args.get('producto_id', ''), tipo=request.args.get('tipo', ''), fecha_desde=request.args.get('fecha_desde', ''), fecha_hasta=request.args.get('fecha_hasta', '')) }}">{{ page }}</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item active">
+                            <a class="page-link" href="#">{{ page }}</a>
+                        </li>
+                        {% endif %}
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">...</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                
+                {% if pagination.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('movimientos_inventario', page=pagination.next_num, producto_id=request.args.get('producto_id', ''), tipo=request.args.get('tipo', ''), fecha_desde=request.args.get('fecha_desde', ''), fecha_hasta=request.args.get('fecha_hasta', '')) }}" aria-label="Siguiente">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Siguiente">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

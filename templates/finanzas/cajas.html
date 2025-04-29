@@ -1,0 +1,90 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Cajas - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Gestión de Cajas</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('crear_caja') }}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Nueva Caja
+        </a>
+    </div>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Listado de Cajas</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Saldo Actual</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if cajas %}
+                        {% for caja in cajas %}
+                            <tr>
+                                <td>{{ caja.id }}</td>
+                                <td>{{ caja.nombre }}</td>
+                                <td>{{ caja.descripcion }}</td>
+                                <td class="formato-moneda">{{ caja.saldo_actual }}</td>
+                                <td>
+                                    {% if caja.activa %}
+                                        <span class="badge bg-success">Activa</span>
+                                    {% else %}
+                                        <span class="badge bg-danger">Inactiva</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('movimientos_caja_id', caja_id=caja.id) }}" class="btn btn-info" data-bs-toggle="tooltip" title="Ver Movimientos">
+                                            <i class="fas fa-list"></i>
+                                        </a>
+                                        <a href="{{ url_for('crear_movimiento_caja', caja_id=caja.id) }}" class="btn btn-success" data-bs-toggle="tooltip" title="Nuevo Movimiento">
+                                            <i class="fas fa-plus-circle"></i>
+                                        </a>
+                                        <a href="{{ url_for('editar_caja', caja_id=caja.id) }}" class="btn btn-primary" data-bs-toggle="tooltip" title="Editar">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        {% if caja.activa %}
+                                            <a href="{{ url_for('desactivar_caja', caja_id=caja.id) }}" class="btn btn-warning" data-bs-toggle="tooltip" title="Desactivar" onclick="return confirm('¿Estás seguro de desactivar esta caja?')">
+                                                <i class="fas fa-ban"></i>
+                                            </a>
+                                        {% else %}
+                                            <a href="{{ url_for('activar_caja', caja_id=caja.id) }}" class="btn btn-success" data-bs-toggle="tooltip" title="Activar">
+                                                <i class="fas fa-check"></i>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="6" class="text-center text-muted">No hay cajas registradas.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Aplicar formato a elementos monetarios
+        aplicarFormatoMoneda();
+    });
+</script>
+{% endblock %}

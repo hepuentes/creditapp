@@ -1,0 +1,218 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Crear Nuevo Crédito - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Crear Nuevo Crédito</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for("creditos") }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+</div>
+
+<form method="POST" action="{{ url_for("crear_credito") }}" id="form-crear-credito">
+    {{ form.hidden_tag() }}
+    {{ form.items_json(id="items_json") }} {# Campo oculto para enviar el carrito #}
+    {{ form.monto_total(id="monto_total") }} {# Campo oculto para enviar el monto total #}
+    {{ form.cliente_id(id="cliente_id") }} {# Campo oculto para enviar el ID del cliente #}
+
+    <div class="row">
+        <!-- Columna Izquierda: Cliente y Productos -->
+        <div class="col-lg-7 mb-4">
+            <!-- Selección de Cliente -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">1. Seleccionar Cliente</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3 position-relative">
+                        <label for="cliente-search" class="form-label required">Buscar Cliente</label>
+                        <input type="text" class="form-control" id="cliente-search" placeholder="Buscar por nombre o documento..." autocomplete="off">
+                        <div id="cliente-results" class="search-results" style="display: none;"></div>
+                        {% if form.cliente_id.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.cliente_id.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div id="cliente-seleccionado-info" class="mt-2" style="display: none;">
+                        <h6>Cliente Seleccionado:</h6>
+                        <p class="mb-0"><strong id="cliente-nombre"></strong></p>
+                        <p class="text-muted"><small id="cliente-documento"></small></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selección de Productos -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">2. Agregar Productos</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3 position-relative">
+                        <label for="producto-search" class="form-label">Buscar Producto</label>
+                        <input type="text" class="form-control" id="producto-search" placeholder="Buscar por nombre o código..." autocomplete="off">
+                        <div id="producto-results" class="search-results" style="display: none;"></div>
+                        {% if form.items_json.errors %}
+                            <div class="invalid-feedback d-block">
+                                {% for error in form.items_json.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Carrito de Productos -->
+                    <h6>Productos Seleccionados:</h6>
+                    <div id="carrito-items" class="carrito-container border rounded p-2 mb-3">
+                        <p class="text-muted text-center">No hay productos seleccionados</p>
+                    </div>
+                    <div class="carrito-total d-flex justify-content-between align-items-center">
+                        <strong>Total Productos:</strong>
+                        <strong id="carrito-total" class="formato-moneda">0</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Detalles del Crédito -->
+        <div class="col-lg-5 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">3. Detalles del Crédito</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        {{ form.vendedor_id.label(class="form-label required") }}
+                        {{ form.vendedor_id(class="form-select" + (" is-invalid" if form.vendedor_id.errors else "")) }}
+                        {% if form.vendedor_id.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.vendedor_id.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.monto_inicial.label(class="form-label") }}
+                        {{ form.monto_inicial(class="form-control formato-moneda" + (" is-invalid" if form.monto_inicial.errors else ""), data_decimales="0") }}
+                        {% if form.monto_inicial.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.monto_inicial.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        <div class="form-text">Abono inicial (opcional).</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.tasa_interes.label(class="form-label required") }}
+                        <div class="input-group">
+                            {{ form.tasa_interes(class="form-control" + (" is-invalid" if form.tasa_interes.errors else ""), type="number", step="0.01") }}
+                            <span class="input-group-text">%</span>
+                            {% if form.tasa_interes.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.tasa_interes.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.numero_cuotas.label(class="form-label required") }}
+                        {{ form.numero_cuotas(class="form-control" + (" is-invalid" if form.numero_cuotas.errors else ""), type="number", min="1") }}
+                        {% if form.numero_cuotas.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.numero_cuotas.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.periodo_pago.label(class="form-label required") }}
+                        {{ form.periodo_pago(class="form-select" + (" is-invalid" if form.periodo_pago.errors else "")) }}
+                        {% if form.periodo_pago.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.periodo_pago.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.fecha_primer_pago.label(class="form-label required") }}
+                        {{ form.fecha_primer_pago(class="form-control" + (" is-invalid" if form.fecha_primer_pago.errors else ""), type="date") }}
+                        {% if form.fecha_primer_pago.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.fecha_primer_pago.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.notas.label(class="form-label") }}
+                        {{ form.notas(class="form-control" + (" is-invalid" if form.notas.errors else ""), rows="3") }}
+                        {% if form.notas.errors %}
+                            <div class="invalid-feedback">
+                                {% for error in form.notas.errors %}
+                                    {{ error }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-save"></i> Crear Crédito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Inicializar formato moneda
+        aplicarFormatoMoneda();
+        
+        // Inicializar búsqueda de clientes y productos
+        initClienteSearch();
+        initProductoSearch();
+        
+        // Inicializar carrito (recuperar de localStorage si existe)
+        initCarrito();
+        
+        // Lógica para mostrar/ocultar resultados de búsqueda
+        document.addEventListener("click", function(event) {
+            const clienteResults = document.getElementById("cliente-results");
+            const productoResults = document.getElementById("producto-results");
+            const clienteSearch = document.getElementById("cliente-search");
+            const productoSearch = document.getElementById("producto-search");
+
+            if (clienteResults && !clienteSearch.contains(event.target) && !clienteResults.contains(event.target)) {
+                clienteResults.style.display = "none";
+            }
+            if (productoResults && !productoSearch.contains(event.target) && !productoResults.contains(event.target)) {
+                productoResults.style.display = "none";
+            }
+        });
+    });
+</script>
+{% endblock %}

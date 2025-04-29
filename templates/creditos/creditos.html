@@ -1,0 +1,164 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Créditos - Sistema de Créditos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Gestión de Créditos</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="{{ url_for('crear_credito') }}" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Nuevo Crédito
+        </a>
+    </div>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex flex-wrap justify-content-between align-items-center">
+        <h6 class="m-0 font-weight-bold text-primary">Listado de Créditos</h6>
+        <div class="d-flex flex-wrap">
+            <!-- Filtros -->
+            <div class="dropdown me-2 mb-2 mb-md-0">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownEstado" data-bs-toggle="dropdown" aria-expanded="false">
+                    Estado: {{ estado | capitalize if estado else 'Todos' }}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownEstado">
+                    <li><a class="dropdown-item" href="{{ url_for('creditos') }}">Todos</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('creditos', estado='pendiente') }}">Pendiente</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('creditos', estado='pagado') }}">Pagado</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('creditos', estado='vencido') }}">Vencido</a></li>
+                </ul>
+            </div>
+            <!-- Búsqueda -->
+            <form class="d-flex" method="GET" action="{{ url_for('creditos') }}">
+                {% if estado %}
+                <input type="hidden" name="estado" value="{{ estado }}">
+                {% endif %}
+                <input class="form-control me-2" type="search" placeholder="Buscar cliente..." name="q" value="{{ request.args.get('q', '') }}">
+                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Fecha Creación</th>
+                        <th>Monto Total</th>
+                        <th>Saldo Pendiente</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if creditos %}
+                        {% for credito in creditos %}
+                            <tr>
+                                <td>{{ credito.id }}</td>
+                                <td>{{ credito.cliente.nombre }}</td>
+                                <td>{{ credito.fecha_creacion.strftime('%d/%m/%Y') }}</td>
+                                <td class="formato-moneda">{{ credito.monto_total }}</td>
+                                <td class="formato-moneda">{{ credito.saldo_pendiente }}</td>
+                                <td>
+                                    {% if credito.estado == 'Pendiente' %}
+                                        <span class="badge bg-warning">Pendiente</span>
+                                    {% elif credito.estado == 'Pagado' %}
+                                        <span class="badge bg-success">Pagado</span>
+                                    {% elif credito.estado == 'Vencido' %}
+                                        <span class="badge bg-danger">Vencido</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url_for('detalle_credito', credito_id=credito.id) }}" class="btn btn-info" data-bs-toggle="tooltip" title="Ver Detalle">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        {% if credito.estado != 'Pagado' %}
+                                        <a href="{{ url_for('abonar', credito_id=credito.id) }}" class="btn btn-success" data-bs-toggle="tooltip" title="Abonar">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </a>
+                                        {% endif %}
+                                        {% if current_user.rol == 'admin' %}
+                                        <a href="{{ url_for('eliminar_credito', credito_id=credito.id) }}" class="btn btn-danger" data-bs-toggle="tooltip" title="Eliminar" onclick="return confirm('¿Estás seguro de eliminar este crédito? Esta acción no se puede deshacer.')">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="7" class="text-center text-muted">No hay créditos registrados.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Paginación -->
+        {% if pagination and pagination.pages > 1 %}
+        <nav aria-label="Paginación de créditos">
+            <ul class="pagination justify-content-center mt-4">
+                {% if pagination.has_prev %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('creditos', page=pagination.prev_num, estado=estado, q=request.args.get('q', '')) }}" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+                
+                {% for page in pagination.iter_pages() %}
+                    {% if page %}
+                        {% if page != pagination.page %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ url_for('creditos', page=page, estado=estado, q=request.args.get('q', '')) }}">{{ page }}</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item active">
+                            <a class="page-link" href="#">{{ page }}</a>
+                        </li>
+                        {% endif %}
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">...</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                
+                {% if pagination.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('creditos', page=pagination.next_num, estado=estado, q=request.args.get('q', '')) }}" aria-label="Siguiente">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Siguiente">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Aplicar formato a elementos monetarios
+        aplicarFormatoMoneda();
+    });
+</script>
+{% endblock %}
